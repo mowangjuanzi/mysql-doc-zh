@@ -4,15 +4,15 @@
 
 **Abstract**
 
-This is the MySQL™ Reference Manual. It documents MySQL 8.0 through 8.0.17, as well as NDB Cluster releases based on version 8.0 of [`NDB`](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster.html) through 8.0.16-ndb-8.0.16, respectively. It may include documentation of features of MySQL versions that have not yet been released. For information about which versions have been released, see the [MySQL 8.0 Release Notes](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
+这是 MySQL™ 参考手册. 它记录了从 MySQL 8.0 到 8.0.17, 以及分别基于从 8.0 到 8.0.16-ndb-8.0.16 的 [`NDB`](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster.html) 集群版本. 它可能包含尚未发布的 MySQL 版本特性的文档. 有关已发布的版本的信息, 请参阅 [MySQL 8.0 发布说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
 
-**MySQL 8.0 features.**  This manual describes features that are not included in every edition of MySQL 8.0; such features may not be included in the edition of MySQL 8.0 licensed to you. If you have any questions about the features included in your edition of MySQL 8.0, refer to your MySQL 8.0 license agreement or contact your Oracle sales representative.
+**MySQL 8.0 特性.**  这个手册描述的功能可能不包含在 MySQL 8.0 版本中; 这些功能可能不包含在授权给你的 MySQL 8.0 版本中. 如果你对 MySQL 8.0 版本中包含的特性有任何疑问, 请参考您的 MySQL 8.0 l许可协议或联系您的 Oracle 销售代表.
 
-For notes detailing the changes in each release, see the [MySQL 8.0 Release Notes](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
+有关每个版本的详细修改说明, 请参阅 [MySQL 8.0 发布说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
 
-For legal information, including licensing information, see the 
-[Preface and Legal Notices](https://dev.mysql.com/doc/refman/8.0/en/preface.html).
+有关法律信息, 包含许可信息, 请参阅 
+[前言和法律公告](https://dev.mysql.com/doc/refman/8.0/en/preface.html).
 
-For help with using MySQL, please visit either the [MySQL Forums](http://forums.mysql.com/) or [MySQL Mailing Lists](http://lists.mysql.com/), where you can discuss your issues with other MySQL users.
+有关使用 MySQL 的帮助, 请访问 [MySQL 论坛](http://forums.mysql.com/) 或者 [MySQL 邮件列表](http://lists.mysql.com/), 你可以在那里与其他  MySQL用户讨论你的问题.
 
-Document generated on: 2019-03-17 (revision: 61269)
+文档生成于: 2019-03-17 (revision: 61269)
