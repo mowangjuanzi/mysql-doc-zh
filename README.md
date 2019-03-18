@@ -2,7 +2,7 @@
 
 ## Including MySQL NDB Cluster 8.0
 
-**Abstract**
+**摘要**
 
 这是 MySQL™ 参考手册. 它记录了从 MySQL 8.0 到 8.0.17, 以及分别基于从 8.0 到 8.0.16-ndb-8.0.16 的 [`NDB`](https://dev.mysql.com/doc/refman/8.0/en/mysql-cluster.html) 集群版本. 它可能包含尚未发布的 MySQL 版本特性的文档. 有关已发布的版本的信息, 请参阅 [MySQL 8.0 发布说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
 
