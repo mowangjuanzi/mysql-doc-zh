@@ -1,6 +1,6 @@
-# mysql-chinese-doc
+# 简介
 
-## Including MySQL NDB Cluster 8.0
+## 包含 MySQL NDB Cluster 8.0
 
 **摘要**
 
