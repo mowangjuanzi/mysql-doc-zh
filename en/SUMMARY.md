@@ -1,0 +1,7 @@
+# Summary
+
+* [Introduction](README.md)
+* Installing and Upgrading MySQL
+    * Installing MySQL on Linux
+        * [Installing MySQL on Linux Using the MySQL APT Repository](linux-installation-apt-repo.md)
+        * [Deploying MySQL on Linux with Docker](linux-installation-docker.md)
