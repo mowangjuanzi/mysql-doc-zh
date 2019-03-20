@@ -1,8 +1,8 @@
-# 2.5.2 Installing MySQL on Linux Using the MySQL APT Repository
+# 2.5.2 在 Linux 上使用 APT 库安装 MySQL
 
-The MySQL APT repository provides `deb` packages for installing and managing the MySQL server, client, and other components on the following Linux platforms:
+在下列平台, MySQL APT 库为安装和管理 MySQL 服务器，客户端和其他组件提供了 `deb` 包:
 
 - Debian 9
-- Ubuntu 16.04, 17.10, and 18.04
+- Ubuntu 16.04, 17.10, 和 18.04
 
-Instructions for using the MySQL APT Repository are available in [A Quick Guide to Using the MySQL APT Repository](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/).
+在[使用 MySQL APT库的快速参考](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/)中有使用 MySQL APT库的说明.
