@@ -1,10 +1,10 @@
-#### 2.5.6.1 Basic Steps for MySQL Server Deployment with Docker
+#### 2.5.6.1 使用 Docker 部署 MySQL 服务器的基本步骤
 
-> **Warning**
+> **警告**
 >
 > The MySQL Docker images maintained by the MySQL team are built specifically for Linux platforms. Other platforms are not supported, and users using these MySQL Docker images on them are doing so at their own risk. See the [discussion here](https://dev.mysql.com/doc/refman/8.0/en/deploy-mysql-nonlinux-docker.html) for some known limitations for running these containers on non-Linux operating systems.
 
-##### Accepting the License Agreement and Logging in with the Docker Client (for MySQL Enterprise Edition)
+##### 接受许可协议并使用Docker Client登录 (MySQL企业版)
 
 _A subscription is required to use the Docker images for MySQL Enterprise Edition._ Subscriptions work by a Bring Your Own License model; see [How to Buy MySQL Products and Services](https://www.mysql.com/buy-mysql/) for details. You also need to accept the license agreement and log in to the container repository before downloading the MySQL Enterprise Edition image.
 
@@ -46,9 +46,9 @@ Password: password
 Login successful.
 ```
 
-##### Downloading a MySQL Server Docker Image
+##### 下载 MySQL 服务器 Docker 镜像
 
-Downloading the server image in a separate step is not strictly necessary; however, performing this step before you create your Docker container ensures your local image is up to date. To download the MySQL Community Edition image, run this command:
+Downloading the server image in a separate step is not strictly necessary; however, performing this step before you create your Docker container ensures your local image is up to date. 下载 MySQL 社区版镜像, 运行命令:
 
 ```bash
 docker pull mysql/mysql-server:tag
@@ -81,7 +81,7 @@ There are different choices for `tag`, corresponding to the two versions of MySQ
 
 `5.7`, `5.7.y` (`y` is the latest version number in the 5.7 series): MySQL Enterprise Edition 5.7
 
-##### Starting a MySQL Server Instance
+##### 启动 MySQL 服务器实例
 
 Start a new Docker container for the MySQL Community Server with this command:
 
@@ -124,7 +124,7 @@ shell> docker logs mysql1 2>&1 | grep GENERATED
 GENERATED ROOT PASSWORD: Axegh3kAJyDLaRuBemecis&EShOs
 ```
 
-##### Connecting to MySQL Server from within the Container
+##### 从容器内连接到 MySQL 服务器
 
 Once the server is ready, you can run the [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) client within the MySQL Server container you just started, and connect it to the MySQL Server. Use the `docker exec -it` command to start a [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) client inside the Docker container you have started, like the following:
 
@@ -140,7 +140,7 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 
 Substitute `password` with the password of your choice. Once the password is reset, the server is ready for use.
 
-##### Container Shell Access
+##### 容器 Shell 访问
 
 To have shell access to your MySQL Server container, use the `docker exec -it` command to start a bash shell inside the container:
 
@@ -157,31 +157,31 @@ auto.cnf    ca.pem	     client-key.pem  ib_logfile0  ibdata1  mysql       mysql.
 ca-key.pem  client-cert.pem  ib_buffer_pool  ib_logfile1  ibtmp1   mysql.sock  performance_schema  public_key.pem   server-key.pem
 ```
 
-##### Stopping and Deleting a MySQL Container
+##### 停止和删除 MySQL 容器
 
-To stop the MySQL Server container we have created, use this command:
+停止我们创建的 MySQL 服务器容器, 使用这个命令:
 
 ```bash
 docker stop mysql1
 ```
 
-`docker stop` sends a SIGTERM signal to the [mysqld](https://dev.mysql.com/doc/refman/8.0/en/mysqld.html) process, so that the server is shut down gracefully.
+`docker stop` 发送 SIGTERM 信号到 [mysqld](https://dev.mysql.com/doc/refman/8.0/en/mysqld.html) 进程, 以便服务器正常关闭.
 
-Also notice that when the main process of a container ([mysqld](https://dev.mysql.com/doc/refman/8.0/en/mysqld.html) in the case of a MySQL Server container) is stopped, the Docker container stops automatically.
+请注意, 当容器的主进程 (MySQL 服务器容器中的 [mysqld](https://dev.mysql.com/doc/refman/8.0/en/mysqld.html)) 停止时, Docker 容器也会自动停止.
 
-To start the MySQL Server container again:
+再次启动 MySQL 服务器容器:
 
 ```bash
 docker start mysql1
 ```
 
-To stop and start again the MySQL Server container with a single command:
+重启 MySQL 服务器容器:
 
 ```bash
 docker restart mysql1
 ```
 
-To delete the MySQL container, stop it first, and then use the `docker rm` command:
+删除 MySQL 容器, 先停止, 然后使用 `docker rm` 命令:
 
 ```bash
 docker stop mysql1
@@ -192,7 +192,7 @@ docker rm mysql1
 
 If you want the [Docker volume for the server's data directory](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) to be deleted at the same time, add the `-v` option to the `docker rm` command.
 
-##### Upgrading a MySQL Server Container
+##### 升级 MySQL 服务器容器
 
 > **Important**
 >
@@ -237,6 +237,6 @@ When prompted, enter the root password for your old MySQL 5.7 Server.
 docker restart mysql80
 ```
 
-##### More Topics on Deploying MySQL Server with Docker
+##### 使用 Docker 部署 MySQL 服务器的更多主题
 
 For more topics on deploying MySQL Server with Docker like server configuration, persisting data and configuration, server error log, and container environment variables, see [Section 2.5.6.2, “More Topics on Deploying MySQL Server with Docker”](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html).
