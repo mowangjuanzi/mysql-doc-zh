@@ -48,14 +48,14 @@ Login successful.
 
 ##### 下载 MySQL 服务器 Docker 镜像
 
-Downloading the server image in a separate step is not strictly necessary; however, performing this step before you create your Docker container ensures your local image is up to date. 下载 MySQL 社区版镜像, 运行命令:
+Downloading the server image in a separate step is not strictly necessary; 然而, performing this step before you create your Docker container ensures your local image is up to date. 下载 MySQL 社区版镜像, 运行命令:
 
 ```bash
 docker pull mysql/mysql-server:tag
 ```
 The `tag` is the label for the image version you want to pull (for example, `5.5`, `5.6`, `5.7`, `8.0`, or `latest`). If `:tag` is omitted, the `latest` label is used, and the image for the latest GA version of MySQL Community Server is downloaded. Refer to the list of tags for available versions on the [mysql/mysql-server page in the Docker Hub](https://hub.docker.com/r/mysql/mysql-server/tags/).
 
-You can list downloaded Docker images with this command:
+列出已下载的 Docker 镜像:
 
 ```bash
 shell> docker images
@@ -63,13 +63,13 @@ REPOSITORY           TAG                 IMAGE ID            CREATED            
 mysql/mysql-server   latest              3157d7f55f8d        4 weeks ago         241MB
 ```
 
-To download the MySQL Enterprise Edition image from the Docker Store, run this command:
+从 Docker 商店下载 MySQL 企业版镜像:
 
 ```bash
 docker pull  store/oracle/mysql-enterprise-server:tag
 ```
 
-To download the MySQL Enterprise Edition image from the Oracle Container Registry, run this command:
+从 Oracle 容器源下载 MySQL 企业版镜像:
 
 ```bash
 docker pull  container-registry.oracle.com/mysql/enterprise-server:tag
@@ -77,13 +77,13 @@ docker pull  container-registry.oracle.com/mysql/enterprise-server:tag
 
 There are different choices for `tag`, corresponding to the two versions of MySQL Enterprise Edition Docker images provided by the MySQL team at Oracle:
 
-`8.0`, `8.0.x` (`x` is the latest version number in the 8.0 series): MySQL Enterprise Edition 8.0, the latest GA
+`8.0`, `8.0.x` (`x` 是 8.0 系列的最新版本号): MySQL 8.0 企业版，最新的GA
 
-`5.7`, `5.7.y` (`y` is the latest version number in the 5.7 series): MySQL Enterprise Edition 5.7
+`5.7`, `5.7.y` (`y` 是 85.7 系列的最新版本号): MySQL 5.7 企业版
 
 ##### 启动 MySQL 服务器实例
 
-Start a new Docker container for the MySQL Community Server with this command:
+为 MySQL 社区版服务器启动一个新的 Docker 容器:
 
 ```bash
 docker run --name=mysql1 -d mysql/mysql-server:tag
@@ -111,13 +111,13 @@ a24888f0d6f4   mysql/mysql-server   "/entrypoint.sh my..."   14 seconds ago     
 
 The container initialization might take some time. When the server is ready for use, the STATUS of the container in the output of the `docker ps` command changes from `(health: starting)` to `(healthy)`.
 
-The `-d` option used in the `docker run` command above makes the container run in the background. Use this command to monitor the output from the container:
+The `-d` option used in the `docker run` command above makes the container run in the background. 使用这个命令监视容器的输出:
 
 ```bash
 docker logs mysql1
 ```
 
-Once initialization is finished, the command's output is going to contain the random password generated for the root user; check the password with, for example, this command:
+初始化完成后, 命令输出包含为 root 用户生成的随机密码; 例如, 使用这个命令查询密码:
 
 ```bash
 shell> docker logs mysql1 2>&1 | grep GENERATED
@@ -132,24 +132,24 @@ Once the server is ready, you can run the [mysql](https://dev.mysql.com/doc/refm
 docker exec -it mysql1 mysql -uroot -p
 ```
 
-When asked, enter the generated root password (see the last step in [Starting a MySQL Server Instance](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server) above on how to find the password). Because the [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) option is true by default, after you have connected a [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) client to the server, you must reset the server root password by issuing this statement:
+当询问时, 输入生成的 root 密码 (see the last step in [Starting a MySQL Server Instance](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server) above on how to find the password). 因为 [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) 选项默认为 true, 当 [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 客户端连接服务器之后, 你必须通过发出此语句重置服务器 root 密码:
 
 ```bash
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 ```
 
-Substitute `password` with the password of your choice. Once the password is reset, the server is ready for use.
+Substitute `password` with the password of your choice. 重置密码后, 服务器就可以使用了.
 
 ##### 容器 Shell 访问
 
-To have shell access to your MySQL Server container, use the `docker exec -it` command to start a bash shell inside the container:
+让 shell 访问 MySQL 服务器容器, 使用 `docker exec -it` 命令在容器内启动 bash shell:
 
 ```bash
 shell> docker exec -it mysql1 bash 
 bash-4.2#
 ```
 
-You can then run Linux commands inside the container. For example, to view contents in the server's data directory inside the container, use this command:
+然后可以在容器中运行 Linux 命令. 例如, 查看容器内服务器数据目录的内容, 使用此命令:
 
 ```bash
 bash-4.2# ls /var/lib/mysql
@@ -194,23 +194,22 @@ If you want the [Docker volume for the server's data directory](https://dev.mysq
 
 ##### 升级 MySQL 服务器容器
 
-> **Important**
+> **重要**
 >
-> - Before performing any upgrade to MySQL, follow carefully the instructions in [Section 2.11, “Upgrading MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html). Among other instructions discussed there, it is especially important to back up your database before the upgrade.
-
+> - 在执行任何 MySQL 升级之前, 请仔细阅读 [2.11节, “升级 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html) 中的说明. Among other instructions discussed there, 在升级前备份你的数据至关重要.
 > - The instructions in this section require that the server's data and configuration have been persisted on the host. See [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) for details.
 
-Follow these steps to upgrade a Docker installation of MySQL 5.7 to 8.0:
+按照以下步骤 MySQL Docker 安装从 5.7 升级到 8.0:
 
-- Stop the MySQL 5.7 server (container name is mysql57 in this example):
+- 停止 MySQL 5.7 服务器 (在这个示例中容器名称是 mysql57):
 
 ```bash
 docker stop mysql57
 ```
 
-- Download the MySQL 8.0 Server Docker image. See instructions in [Downloading a MySQL Server Docker Image](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-download-image); make sure you use the right tag for MySQL 8.0.
+- 下载 MySQL 8.0 服务器 Docker 镜像. See instructions in [Downloading a MySQL Server Docker Image](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-download-image); 确保你对 MySQL 8.0 使用了正确的 tag.
 
-- Start a new MySQL 8.0 Docker container (named `mysql80` in this example) with the old server data and configuration (with proper modifications if needed—see [Section 2.11, “Upgrading MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html)) that have been persisted on the host (by [bind-mounting](https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-or-volumes) in this example). For the MySQL Community Server, run this command:
+- 使用在这个主机上持久化的 (在本例中使用 [bind-mounting](https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-or-volumes) in this example) 旧的服务器数据和配置 (如有需要可适当修改—参阅 [2.11节, “升级 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html)) 启动新的 MySQL 8.0 Docker 容器 (在这个示例中命名为 `mysql80`). MySQL 社区服务器, 运行命令:
 
 ```bash
 docker run --name=mysql80 \
@@ -221,17 +220,17 @@ docker run --name=mysql80 \
 
 If needed, adjust `mysql/mysql-server` to the correct repository name—for example, replace it with `store/oracle/mysql-enterprise-server` for MySQL Enterprise Edition images from the Docker Store, or with `container-registry.oracle.com/mysql/enterprise-server` for the MySQL Enterprise Edition images from the Oracle Container Registry.
 
-- Wait for the server to finish startup. You can check the status of the server using the `docker ps` command (see [Starting a MySQL Server Instance](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server) for how to do that).
+- 等待服务器完成启动. 你可以使用 `docker ps` 命令检查服务器的状态 (参阅 [启动 MySQL 服务器实例](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server) 获取如何操作).
 
-- *For MySQL 8.0.15 and ealrier*: Run the [mysql_upgrade](https://dev.mysql.com/doc/refman/8.0/en/mysql-upgrade.html) utility in the MySQL 8.0 Server container (not required for MySQL 8.0.16 and later):
+- *对于 MySQL 8.0.15 和更早的*: 在 MySQL 8.0 服务器容器中运行 [mysql_upgrade](https://dev.mysql.com/doc/refman/8.0/en/mysql-upgrade.html) 工具 (不支持 MySQL 8.0.16 和更高版本):
 
 ```bash
 docker exec -it mysql80 mysql_upgrade -uroot -p
 ```
 
-When prompted, enter the root password for your old MySQL 5.7 Server.
+当提示时, 输入你的旧的 MySQL 5.7 服务器 root 密码.
 
-- Finish the upgrade by restarting the MySQL 8.0 Server container:
+- 通过重启 MySQL 8.0 服务器容器完成升级:
 
 ```bash
 docker restart mysql80
@@ -239,4 +238,4 @@ docker restart mysql80
 
 ##### 使用 Docker 部署 MySQL 服务器的更多主题
 
-For more topics on deploying MySQL Server with Docker like server configuration, persisting data and configuration, server error log, and container environment variables, see [Section 2.5.6.2, “More Topics on Deploying MySQL Server with Docker”](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html).
+有关使用Docker部署MySQL服务器的更多主题, 例如服务器配置, 持久化数据和配置, 服务器错误日志, 和容器环境变量, 参阅 [2.5.6.2节, “使用 Docker 部署 MySQL 服务器的更多主题”](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html).

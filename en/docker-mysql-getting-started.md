@@ -197,7 +197,6 @@ If you want the [Docker volume for the server's data directory](https://dev.mysq
 > **Important**
 >
 > - Before performing any upgrade to MySQL, follow carefully the instructions in [Section 2.11, “Upgrading MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html). Among other instructions discussed there, it is especially important to back up your database before the upgrade.
-
 > - The instructions in this section require that the server's data and configuration have been persisted on the host. See [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) for details.
 
 Follow these steps to upgrade a Docker installation of MySQL 5.7 to 8.0:
