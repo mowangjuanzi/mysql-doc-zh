@@ -16,7 +16,7 @@ For downloading from the Oracle Container Registry:
 
 - If you have not **signed in** to the Oracle Container Registry yet, click the Sign in button on the right of the page, and then enter your Oracle account credentials when prompted to.
 
-- Follow the instructions on the right of the page to accept the license agreement.
+- 按照页面右侧的说明接受许可协议.
 
 - Log in to the Oracle Container Registry with your Docker client (the `docker` command). Use the `docker login` command for the purpose:
 
@@ -27,7 +27,7 @@ Password: password
 Login successful.
 ```
 
-For downloading from the Docker Store:
+从 Docker 商店下载:
 
 - Visit the MySQL Server Enterprise Edition page at https://store.docker.com/images/mysql-enterprise-server.
 
@@ -35,9 +35,9 @@ For downloading from the Docker Store:
 
 - Click the **Proceed to Checkout** button that appears.
 
-- Follow the instructions on the right of the page to accept the license agreement.
+- 按照页面右侧的说明接受许可协议.
 
-- Log in to the Docker Store with your Docker client (the `docker` command). Use the `docker login` command for the purpose:
+- 使用 Docker 客户端 (`docker` 命令) 登录到 Docker 商店. 使用 `docker login` 命令:
 
 ```bash
 # docker login
@@ -48,12 +48,12 @@ Login successful.
 
 ##### 下载 MySQL 服务器 Docker 镜像
 
-Downloading the server image in a separate step is not strictly necessary; 然而, performing this step before you create your Docker container ensures your local image is up to date. 下载 MySQL 社区版镜像, 运行命令:
+Downloading the server image in a separate step is not strictly necessary; 然而, 在创建容器之前执行此步骤可以确保本地镜像是最新的. 下载 MySQL 社区版镜像, 运行命令:
 
 ```bash
 docker pull mysql/mysql-server:tag
 ```
-The `tag` is the label for the image version you want to pull (for example, `5.5`, `5.6`, `5.7`, `8.0`, or `latest`). If `:tag` is omitted, the `latest` label is used, and the image for the latest GA version of MySQL Community Server is downloaded. Refer to the list of tags for available versions on the [mysql/mysql-server page in the Docker Hub](https://hub.docker.com/r/mysql/mysql-server/tags/).
+`tag` 是你想拉取的镜像版本的标签 (例如, `5.5`, `5.6`, `5.7`, `8.0`, 或者 `latest`). 如果 `:tag` 被省略, 将使用 `latest` 标签, 下载 MySQL 社区服务器的最新 GA 版本镜像. Refer to the list of tags for available versions on the [mysql/mysql-server page in the Docker Hub](https://hub.docker.com/r/mysql/mysql-server/tags/).
 
 列出已下载的 Docker 镜像:
 
@@ -75,7 +75,7 @@ docker pull  store/oracle/mysql-enterprise-server:tag
 docker pull  container-registry.oracle.com/mysql/enterprise-server:tag
 ```
 
-There are different choices for `tag`, corresponding to the two versions of MySQL Enterprise Edition Docker images provided by the MySQL team at Oracle:
+`tag` 有不同的选择, corresponding to the two versions of MySQL Enterprise Edition Docker images provided by the MySQL team at Oracle:
 
 `8.0`, `8.0.x` (`x` 是 8.0 系列的最新版本号): MySQL 8.0 企业版，最新的GA
 
@@ -89,19 +89,19 @@ There are different choices for `tag`, corresponding to the two versions of MySQ
 docker run --name=mysql1 -d mysql/mysql-server:tag
 ```
 
-Start a new Docker container for the MySQL Enterprise Server with this command, if the Docker image was downloaded from the Oracle Container Registry:
+使用此命令为 MySQL 企业版服务器启动一个新的 Docker 容器, 如果 Docker 镜像是从 Oracle 容器库中下载的:
 
 ```bash
 docker run --name=mysql1 -d container-registry.oracle.com/mysql/enterprise-server:tag
 ```
 
-Start a new Docker container for the MySQL Enterprise Server with this command, if the Docker image was downloaded from the Docker Store:
+使用此命令为 MySQL 企业版服务器启动一个新的 Docker 容器, 如果 Docker 镜像是从 Docker 商店下载的:
 
 ```bash
 docker run --name=mysql1 -d store/oracle/mysql-enterprise-server:tag
 ```
 
-The `--name` option, for supplying a custom name for your server container (`mysql1` in the example), is optional; if no container name is supplied, a random one is generated. If the Docker image of the specified name and tag has not been downloaded by an earlier `docker pull` or `docker run` command, the image is now downloaded. After download completes, initialization for the container begins, and the container appears in the list of running containers when you run the `docker ps` command; for example:
+`--name` 选项, 用于为服务器容器提供自定义命令 (在本示例中是 `mysql1`), 可选; 如果没有提供容器名称, 会随机生成一个. If the Docker image of the specified name and tag has not been downloaded by an earlier `docker pull` or `docker run` command, the image is now downloaded. 下载完成后, 开始初始化容器, 当你运行 `docker ps` 命令时, 容器会出现在正在运行的容器列表中; 例如:
 
 ```bash
 shell> docker ps
@@ -218,7 +218,7 @@ docker run --name=mysql80 \
    -d mysql/mysql-server:8.0
 ```
 
-If needed, adjust `mysql/mysql-server` to the correct repository name—for example, replace it with `store/oracle/mysql-enterprise-server` for MySQL Enterprise Edition images from the Docker Store, or with `container-registry.oracle.com/mysql/enterprise-server` for the MySQL Enterprise Edition images from the Oracle Container Registry.
+如果需要, 调整 `mysql/mysql-server` 为正确的库名称. 例如, replace it with `store/oracle/mysql-enterprise-server` for MySQL Enterprise Edition images from the Docker Store, or with `container-registry.oracle.com/mysql/enterprise-server` for the MySQL Enterprise Edition images from the Oracle Container Registry.
 
 - 等待服务器完成启动. 你可以使用 `docker ps` 命令检查服务器的状态 (参阅 [启动 MySQL 服务器实例](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server) 获取如何操作).
 
