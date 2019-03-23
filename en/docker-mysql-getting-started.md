@@ -14,7 +14,7 @@ For downloading from the Oracle Container Registry:
 
 - Under the list of MySQL repositories, choose `enterprise-server`.
 
-- If you have not **signed in** to the Oracle Container Registry yet, click the Sign in button on the right of the page, and then enter your Oracle account credentials when prompted to.
+- If you have not signed in to the Oracle Container Registry yet, click the **Sign in** button on the right of the page, and then enter your Oracle account credentials when prompted to.
 
 - Follow the instructions on the right of the page to accept the license agreement.
 
