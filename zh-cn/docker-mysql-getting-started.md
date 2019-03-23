@@ -196,7 +196,7 @@ docker rm mysql1
 
 > **重要**
 >
-> - 在执行任何 MySQL 升级之前, 请仔细阅读 [2.11节, “升级 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html) 中的说明. Among other instructions discussed there, 在升级前备份你的数据至关重要.
+> - 在执行任何 MySQL 升级之前, 请仔细阅读 [2.11节, “升级 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/upgrading.html) 中的说明. 在这里讨论的其他说明中, 在升级前备份你的数据尤为重要.
 > - 本节要求在主机上保留服务器的数据和配置. 参阅 [保留数据和配置更改](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) 获取详情.
 
 按照以下步骤 MySQL Docker 安装从 5.7 升级到 8.0:
