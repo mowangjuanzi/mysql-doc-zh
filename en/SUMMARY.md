@@ -8,3 +8,4 @@
             * [Basic Steps for MySQL Server Deployment with Docker](docker-mysql-getting-started.md)
             * [
 More Topics on Deploying MySQL Server with Docker](docker-mysql-more-topics.md)
+* [Tutorial](tutorial.md)
