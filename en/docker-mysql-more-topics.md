@@ -83,7 +83,7 @@ docker run --name=mysql1 \
 
 The command mounts `path-on-host-machine/my.cnf` at `/etc/my.cnf` (the server configuration file inside the container), and `path-on-host-machine/datadir` at `/var/lib/mysql` (the data directory inside the container). The following conditions must be met for the bind-mounting to work:
 
-- The configuration file path-on-host-machine/my.cnf must already exist, and it must contain the specification for starting the server using the user mysql:
+- The configuration file `path-on-host-machine/my.cnf` must already exist, and it must contain the specification for starting the server using the user mysql:
 
 ```ini
 [mysqld]
@@ -257,7 +257,7 @@ Log on to the server to check that the server is running with the restored data.
 
 When you create a MySQL Server container, you can configure the MySQL instance by using the `--env` option (`-e` in short) and specifying one or more of the following environment variables.
 
-> Notes
+> **Notes**
 >
 >  - None of the variables below has any effect if the data directory you mount is not empty, as no server initialization is going to be attempted then (see [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) for more details). Any pre-existing contents in the folder, including any old server settings, are not modified during the container startup.
 

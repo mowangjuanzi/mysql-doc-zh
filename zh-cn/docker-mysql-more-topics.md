@@ -2,11 +2,11 @@
 
 > **注意**
 >
-> Most of the sample commands below have `mysql/mysql-server` as the Docker image repository when that has to be specified (像是 `docker pull` 和 `docker run` 命令); change that if your image is from another repository—for example, replace it with `store/oracle/mysql-enterprise-server` for MySQL Enterprise Edition images from the Docker Store, or with `container-registry.oracle.com/mysql/enterprise-server` for MySQL Enterprise Edition images from the Oracle Container Registry.
+> Most of the sample commands below have `mysql/mysql-server` as the Docker image repository when that has to be specified (像是 `docker pull` 和 `docker run` 命令); 如果你的镜像来自另一个库， 那就去修改—例如, 替换为 `store/oracle/mysql-enterprise-server` 是 Docker 商店的 MySQL 企业版镜像, 或者 `container-registry.oracle.com/mysql/enterprise-server` 是 Oracle 容器库的 MySQL 企业版镜像.
 
 ##### 优化过的 Docker 版 MySQL 安装
 
-Docker images for MySQL are optimized for code size, which means they only include crucial components that are expected to be relevant for the majority of users who run MySQL instances in Docker containers. A MySQL Docker installation is different from a common, non-Docker installation in the following aspects:
+Docker 版 MySQL 镜像进行了代码优化, which means they only include crucial components that are expected to be relevant for the majority of users who run MySQL instances in Docker containers. MySQL Docker 安装与常见的非 Docker 安装的不同在以下几个方面:
 
 - 包含的二进制文件仅限于:
 
@@ -34,7 +34,7 @@ Docker images for MySQL are optimized for code size, which means they only inclu
 
     - `/usr/sbin/mysqld`
 
-- All binaries are stripped; they contain no debug information.
+- 所有的二进制文件都会被删除; 它们不包含调试信息.
 
 ##### 配置 MySQL 服务器
 
@@ -44,13 +44,13 @@ Docker images for MySQL are optimized for code size, which means they only inclu
 docker run --name mysql1 -d mysql/mysql-server:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_col
 ```
 
-The command starts your MySQL Server with `utf8mb4` as the default character set and `utf8mb4_col` as the default collation for your databases.
+命令使用 `utf8mb4` 作为默认字符集, 使用 `utf8mb4_col` 作为数据库的默认排序规则启动 MySQL 服务器.
 
-Another way to configure the MySQL Server is to prepare a configuration file and mount it at the location of the server configuration file inside the container. See [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) for details.
+配置 MySQL 服务器的另外一种方式是准备一个配置文件, 将其挂载到容器内服务器配置文件的位置. 参阅[持久化数据和配置更改](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration)获取详情.
 
-##### 保留数据和配置更改
+##### 持久化数据和配置更改
 
-Docker containers are in principle ephemeral, and any data or configuration are expected to be lost if the container is deleted or corrupted (see discussions [here](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)). [Docker volumes](https://docs.docker.com/engine/admin/volumes/volumes/), however, provides a mechanism to persist data created inside a Docker container. At its initialization, the MySQL Server container creates a Docker volume for the server data directory. The JSON output for running the `docker inspect` command on the container has a `Mount` key, whose value provides information on the data directory volume:
+Docker 容器原则上是短暂的, 如果容器被删除或者损坏了, 任何数据或者配置都有可能会丢失([这里](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)查看讨论). [Docker volumes](https://docs.docker.com/engine/admin/volumes/volumes/), 然而, 提供了一种机制来保护 Docker 容器内创建的数据. 在初始化时, MySQL 服务器容器为服务器数据目录创建一个 Docker volume. 在容器上运行 `docker inspect` 命令的 JSON 输出中有一个 `Mount` 键, 其值提供了关于数据目录卷(volume) 的相关信息:
 
 ```bash
 shell> docker inspect mysql1 
@@ -81,22 +81,22 @@ docker run --name=mysql1 \
 -d mysql/mysql-server:tag
 ```
 
-The command mounts `path-on-host-machine/my.cnf` at `/etc/my.cnf` (the server configuration file inside the container), and `path-on-host-machine/datadir` at `/var/lib/mysql` (the data directory inside the container). The following conditions must be met for the bind-mounting to work:
+命令挂载 `path-on-host-machine/my.cnf` 到 `/etc/my.cnf` (容器内的服务器配置文件), 并且挂载 `path-on-host-machine/datadir` 到 `/var/lib/mysql` (容器内的数据目录). The following conditions must be met for the bind-mounting to work:
 
-- The configuration file path-on-host-machine/my.cnf must already exist, and it must contain the specification for starting the server using the user mysql:
+- 配置文件 `path-on-host-machine/my.cnf` 必须总是存在, and it must contain the specification for starting the server using the user mysql:
 
 ```ini
 [mysqld]
 user=mysql
 ```
 
-You can also include other server configuration options in the file.
+你也可以在文件中加载其他服务器配置项.
 
-- The data directory `path-on-host-machine/datadir` must already exist. For server initialization to happen, the directory must be empty. You can also mount a directory prepopulated with data and start the server with it; however, you must make sure you start the Docker container with the same configuration as the server that created the data, and any host files or directories required are mounted when starting the container.
+- 数据目录 `path-on-host-machine/datadir` 必须已存在. 要对服务器进行初始化, 目录必须为空. 可以挂载填充了数据的目录, 并使用它启动服务器; 然而, you must make sure you start the Docker container with the same configuration as the server that created the data, and any host files or directories required are mounted when starting the container.
 
 ##### 运行其他初始化脚本
 
-If there are any `.sh` or `.sql` scripts you want to run on the database immediately after it has been created, you can put them into a host directory and then mount the directory at `/docker-entrypoint-initdb.d/` inside the container. For example:
+If there are any `.sh` or `.sql` scripts you want to run on the database immediately after it has been created, you can put them into a host directory and then mount the directory at `/docker-entrypoint-initdb.d/` inside the container. 例如:
 
 ```bash
 docker run --name=mysql1 \
@@ -106,13 +106,13 @@ docker run --name=mysql1 \
 
 ##### 从另外一个 Docker 容器中的应用连接到 MySQL
 
-By setting up a Docker network, you can allow multiple Docker containers to communicate with each other, so that a client application in another Docker container can access the MySQL Server in the server container. First, create a Docker network:
+通过设置 Docker 网络, 你可以允许多个 Docker 容器之间互相通信, 因此另外一个 Docker 容器中的客户端应用可以访问服务器容器中的 MySQL Server. 首先, 创建 Docker 网络:
 
 ```bash
 docker network create my-custom-net
 ```
 
-Then, when you are creating and starting the server and the client containers, use the `--network` option to put them on network you created. For example:
+然后, 当你创建和启动服务器和客户端容器时, use the `--network` option to put them on network you created. 例如:
 
 ```bash
 docker run --name=mysql1 --network=my-custom-net -d mysql/mysql-server
@@ -121,29 +121,29 @@ docker run --name=mysql1 --network=my-custom-net -d mysql/mysql-server
 docker run --name=myapp1 --network=my-custom-net -d myapp
 ```
 
-The `myapp1` container can then connect to the `mysql1` container with the `mysql1` hostname and vice versa, as Docker automatically sets up a DNS for the given container names. In the following example, we run the [`mysql`](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) client from inside the `myapp1` container to connect to host `mysql1` in its own container:
+`myapp1` 容器可以使用 `mysql1` 主机名连接到 `mysql1`容器, 反之亦然, Docker 会自动为给定的容器名称设置 DNS. 在下面的示例中, 我们运行 `myapp1` 容器中的 [`mysql`](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 客户端连接到 `mysql1` 主机所在的容器:
 
 ```bash
 docker exec -it myapp1 mysql --host=mysql1 --user=myuser --password
 ```
 
-For other networking techniques for containers, see the [Docker container networking](https://docs.docker.com/engine/userguide/networking/) section in the Docker Documentation.
+关于容器的其他网络技术, 参阅 Docker 文档中的 [Docker 容器网络](https://docs.docker.com/engine/userguide/networking/).
 
 ##### 服务器错误日志
 
-When the MySQL Server is first started with your server container, a [server error log](https://dev.mysql.com/doc/refman/8.0/en/error-log.html) is NOT generated if either of the following conditions is true:
+当 MySQL Server 首次使用你的服务器容器启动时, 如果满足以下任何一个条件, 则不会生成[服务器错误日志](https://dev.mysql.com/doc/refman/8.0/en/error-log.html):
 
-- A server configuration file from the host has been mounted, but the file does not contain the system variable [`log_error`](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error) (see [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) on bind-mounting a server configuration file).
+- 主机中已挂载服务器配置文件, 但是文件不包含系统变量 [`log_error`](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error) (关于 bind-mounting 服务器配置文件参阅 [持久化数据和配置更改](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration)).
 
-- A server configuration file from the host has not been mounted, but the Docker environment variable [`MYSQL_LOG_CONSOLE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console) is true (which is the variable's default state for MySQL 8.0 server containers). The MySQL Server's error log is then redirected to `stderr`, so that the error log goes into the Docker container's log and is viewable using the `docker logs mysqld-container` command.
+- 主机并没有挂载服务器配置文件, 但是 Docker 环境变量 [`MYSQL_LOG_CONSOLE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console) 为 true (MySQL 8.0 服务器容器的变量默认状态). MySQL Server 的错误日志会重定向到 `stderr`, 因此错误日志进入到 Docker 容器日志并且可以使用 `docker logs mysqld-container` 命令查看.
 
-To make MySQL Server generate an error log when either of the two conditions is true, use the [`--log-error`](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-error) option to [configure the server](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-configuring-server) to generate the error log at a specific location inside the container. To persist the error log, mount a host file at the location of the error log inside the container as explained in [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration). However, you must make sure your MySQL Server inside its container has write access to the mounted host file.
+To make MySQL Server generate an error log when either of the two conditions is true, use the [`--log-error`](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-error) option to [configure the server](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-configuring-server) to generate the error log at a specific location inside the container. To persist the error log, mount a host file at the location of the error log inside the container as explained in [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration). 然而, you must make sure your MySQL Server inside its container has write access to the mounted host file.
 
-##### Using MySQL Enterprise Backup with Docker
+##### 使用 Docker MySQL 企业版备份
 
 [MySQL Enterprise Backup](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/) is a commercially-licensed backup utility for MySQL Server, available with [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/). MySQL Enterprise Backup is included in the Docker installation of MySQL Enterprise Edition.
 
-In the following example, we assume that you already have a MySQL Server running in a Docker container (see [Section 2.5.6.1, “Basic Steps for MySQL Server Deployment with Docker”](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html) on how to start a MySQL Server instance with Docker). For MySQL Enterprise Backup to back up the MySQL Server, it must have access to the server's data directory. This can be achieved by, for example, [bind-mounting a host directory on the data directory of the MySQL Server](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) when you start the server:
+在下面的示例中, 我们假设你已经在 Docker 容器中运行了 MySQL Server (关于如何在 Docker 中启动一个 MySQL Server, 参阅 [2.5.6.1 使用 Docker 部署 MySQL 服务器的基本步骤”](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html)). For MySQL Enterprise Backup to back up the MySQL Server, it must have access to the server's data directory. 可以通过以下方式实现, 例如, [bind-mounting a host directory on the data directory of the MySQL Server](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) when you start the server:
 
 ```bash
 docker run --name=mysqlserver \
@@ -155,7 +155,7 @@ With this command, the MySQL Server is started with a Docker image of the MySQL 
 
 **To backup a MySQL Server instance running in a Docker container using MySQL Enterprise Backup with Docker:**
 
-1. On the same host where the MySQL Server container is running, start another container with an image of MySQL Enterprise Edition to perform a back up with the MySQL Enterprise Backup command [`backup-to-image`](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/backup-commands-backup.html#option_meb_backup-to-image). Provide access to the server's data directory using the bind mount we created in the last step. Also, mount a host directory (`/path-on-host-machine/backups/` in this example) onto the storage folder for backups in the container (`/data/backups` in the example) to persist the backups we are creating. Here is a sample command for this step:
+1. On the same host where the MySQL Server container is running, start another container with an image of MySQL Enterprise Edition to perform a back up with the MySQL Enterprise Backup command [`backup-to-image`](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/backup-commands-backup.html#option_meb_backup-to-image). Provide access to the server's data directory using the bind mount we created in the last step. Also, mount a host directory (`/path-on-host-machine/backups/` in this example) onto the storage folder for backups in the container (`/data/backups` in the example) to persist the backups we are creating. 下面是这个步骤的示例命令:
 
 ```bash
 shell> docker run \
@@ -194,7 +194,7 @@ db.mbi
 
 **To restore a MySQL Server instance in a Docker container using MySQL Enterprise Backup with Docker:**
 
-1. Stop the MySQL Server container, which also stops the MySQL Server running inside:
+1. 停止 MySQL 服务器容器, 这也会停止在内部运行的 MySQL 服务器:
 
 ```bash
 docker stop mysqlserver
@@ -255,42 +255,42 @@ Log on to the server to check that the server is running with the restored data.
 
 ##### Docker 环境变量
 
-When you create a MySQL Server container, you can configure the MySQL instance by using the `--env` option (`-e` in short) and specifying one or more of the following environment variables.
-
-> Notes
->
->  - None of the variables below has any effect if the data directory you mount is not empty, as no server initialization is going to be attempted then (see [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) for more details). Any pre-existing contents in the folder, including any old server settings, are not modified during the container startup.
-
-> - The boolean variables including [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password), [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password), [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password), and [`MYSQL_LOG_CONSOLE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console) are made true by setting them with any strings of nonzero lengths. Therefore, setting them to, for example, “0”, “false”, or “no” does not make them false, but actually makes them true. This is a known issue of the MySQL Server containers.
-
-- [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password): When this variable is true (which is its default state, unless [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) is set or [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) is set to true), a random password for the server's root user is generated when the Docker container is started. The password is printed to stdout of the container and can be found by looking at the container’s log (see [Starting a MySQL Server Instance](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server)).
-
-- [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password): When the variable is true (which is its default state, unless [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) is set or [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) is set to true), the root user's password is set as expired and must be changed before MySQL can be used normally.
-
-- [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database): This variable allows you to specify the name of a database to be created on image startup. If a user name and a password are supplied with [`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password) and [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password), the user is created and granted superuser access to this database (corresponding to `GRANT ALL`). The specified database is created by a [CREATE DATABASE IF NOT EXIST](https://dev.mysql.com/doc/refman/8.0/en/create-database.html) statement, so that the variable has no effect if the database already exists.
-
-[`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password), [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password): These variables are used in conjunction to create a user and set that user's password, and the user is granted superuser permissions for the database specified by the [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database) variable. Both [`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password) and [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password) are required for a user to be created—if any of the two variables is not set, the other is ignored. If both variables are set but [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database) is not, the user is created without any privileges.
+当你创建 MySQL 服务器容器时, 你可以使用 `--env` 选项 (`-e`) 并指定一个或者多个下列的环境变量来配置 MySQL 实例.
 
 > **注意**
 >
-> There is no need to use this mechanism to create the root superuser, which is created by default with the password set by either one of the mechanisms discussed in the descriptions for [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) and [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password), unless [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) is true.
+>  - 如果你挂载的数据目录不是空的, 那么下列的变量都不会有效果, 因为服务器没有尝试初始化它们(参阅[持久化数据和配置更改](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration)获取详情). 在容器启动时, 文件夹中任何预先存在的内容, 包括任何旧的服务器配置, 都不会被修改.
 
-- [`MYSQL_ROOT_HOST`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host): 默认情况下, MySQL 创建 `'root'@'localhost'` 账号. This account can only be connected to from inside the container as described in [Connecting to MySQL Server from within the Container](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-connecting-within-container). To allow root connections from other hosts, set this environment variable. For example, the value `172.17.0.1`, which is the default Docker gateway IP, allows connections from the host machine that runs the container. The option accepts only one entry, but wildcards are allowed (for example, `MYSQL_ROOT_HOST=172.*.*.*` or `MYSQL_ROOT_HOST=%`).
+> - bool 变量包含 [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password), [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password), [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password), 和 [`MYSQL_LOG_CONSOLE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console) 通过设置一些非0长度的字符串来设置为 true. 因此, 设置它们为如 “0”, “false”, 或者 “no” 并不能使它们为 false, 但实际上让他们为 true. 这对于 MySQL 服务器容器来说是一个已知的问题.
+
+- [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password): 为 true 时(这是它的默认状态, 除非 [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) 被设置或者 [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) 设置为 true),  Docker 容器启动的时候, 将为服务器的 root 用户生成一个随机密码. 密码打印到容器的 stdout, 可以通过查看容器的日志找到密码(参阅 [启动 MySQL 服务器实例](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server)).
+
+- [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password): 为 true 时(这是它的默认状态, 除非 [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) 被设置或者 [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) 设置为 true), root 用户的密码设置为过期, 必须先更改密码, MySQL 才能正常使用.
+
+- [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database): 这个变量允许你在镜像启动时指定创建的数据库的名称. 如果使用 [`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password) 和 [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password)指定了用户名和密码, 创建用户并收钱超级用户对其的访问权限 (对应 `GRANT ALL`). 通过 [CREATE DATABASE IF NOT EXIST](https://dev.mysql.com/doc/refman/8.0/en/create-database.html) 语句创建指定的数据库, 如果数据库已存在则该变量无效.
+
+[`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password), [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password): 这些变量用户创建用户并设置密码, 授予通过 [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database) 变量指定数据库的超级用户权限. 在创建用户时同时需要 [`MYSQL_USER`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password) 和 [`MYSQL_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password)—如果未设置两个变量中的任何一个, 则忽略零一个变量. 如果同时设置了这两个变量, 但是没有设置 [`MYSQL_DATABASE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database), 那么创建的用户没有任何权限.
+
+> **注意**
+>
+> 不需要使用这个机制来创建 root 超级用户, which is created by default with the password set by either one of the mechanisms discussed in the descriptions for [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password) and [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password), 除非 [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password) 为 true.
+
+- [`MYSQL_ROOT_HOST`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host): 默认情况下, MySQL 创建 `'root'@'localhost'` 账号. This account can only be connected to from inside the container as described in [Connecting to MySQL Server from within the Container](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-connecting-within-container). 允许其它主机进行 root 连接, 设置此环境变量. 例如, `172.17.0.1`, 这是默认的 Docker 网关 IP, 允许运行容器的主机连接. 该选项只接受一个入口, 但是允许通配符(例如, `MYSQL_ROOT_HOST=172.*.*.*` 或者 `MYSQL_ROOT_HOST=%`).
 
 - [`MYSQL_LOG_CONSOLE`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console): 当变量为 true (这是 MySQL 8.0 服务器容器默认的状态), MySQL 服务器的错误日志被重定向到 `stderr`, 所以错误日志就进入到 Docker 容器的日志并且可以使用 `docker logs mysqld-container` 命令查看.
 
 > **注意**
 >
-> The variable has no effect if a server configuration file from the host has been mounted (see [Persisting Data and Configuration Changes](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) on bind-mounting a configuration file).
+> 如果服务器配置文件是从主机中挂载的, 则该变量不起作用 (参阅 [持久化数据和配置更改](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration) 中的 bind-mounting 配置文件).
 
 - [`MYSQL_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password): 该变量为 MySQL root 账号之指定一个密码.
 
 > **警告**
 >
-> Setting the MySQL root user password on the command line is insecure. As an alternative to specifying the password explicitly, you can set the variable with a container file path for a password file, and then mount a file from your host that contains the password at the container file path. This is still not very secure, as the location of the password file is still exposed. It is preferable to use the default settings of [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password) and [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) both being true.
+> 在命令上设置 root 用户密码是不安全的. 作为显式指定密码的替代方法, you can set the variable with a container file path for a password file, and then mount a file from your host that contains the password at the container file path. 这仍然不是很安全, 密码文件的位置仍然处于公开状态. 最好使用 [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password) 和 [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) 的默认设置都为 true.
 
 - [`MYSQL_ALLOW_EMPTY_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password). 设置它为 true 允许以 root 用户空密码启动容器.
 
 > **警告**
 >
-> 设置此变量为 true 是不安全的, 因为它将使你的 MySQL 实例完全不受保护, 允许任何人获得完整的 root 用户访问权限. It is preferable to use the default settings of [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password) and [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) both being true.
+> 设置此变量为 true 是不安全的, 因为它将使你的 MySQL 实例完全不受保护, 允许任何人获得完整的 root 用户访问权限. 最好使用 [`MYSQL_RANDOM_ROOT_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password) 和 [`MYSQL_ONETIME_PASSWORD`](https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password) 的默认设置都为 true.
