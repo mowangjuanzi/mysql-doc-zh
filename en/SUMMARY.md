@@ -9,3 +9,4 @@
             * [
 More Topics on Deploying MySQL Server with Docker](docker-mysql-more-topics.md)
 * [Tutorial](tutorial.md)
+    * [Examples of Common Queries](examples.md)
