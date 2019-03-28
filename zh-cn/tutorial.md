@@ -1,4 +1,4 @@
-# 第3章 教程
+# 3 教程
 
 本章提供了通过 MySQL 展示如何使用 [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 客户端程序来创建和使用一个简单的数据库教程. [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) (有时称为 “终端监视器” 或者 “监视器”) 是一个交互式程序, 使你能够链接到 MySQL 服务器, 运行查询, 和查看结果. [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 也可以在批处理模式中使用: 你可以预先将查询放到一个文件中, 然后告诉 [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 执行该文件中的内容. 这里介绍了使用 [mysql](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 的两种方法. 
 
