@@ -1,0 +1,3 @@
+## 8.6 优化 MyISAM 表
+
+The [`MyISAM`](https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html) storage engine performs best with read-mostly data or with low-concurrency operations, because table locks limit the ability to perform simultaneous updates. In MySQL, [`InnoDB`](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html) is the default storage engine rather than `MyISAM`. 
