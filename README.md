@@ -7,7 +7,7 @@
 然后执行以下命令安装环境
 
 ```bash
-npm install gitbook -g
+npm install gitbook gh-pages -g
 ```
 
 部署环境：
@@ -17,6 +17,12 @@ git clone https://github.com/mowangjuanzi/mysql-chinese-doc.git
 cd mysql-chinese-doc
 gitbook install
 gitbook serve
+```
+
+## 部署到gh-pages
+
+```bash
+gh-pages -d ./_book/
 ```
 
 ## 贡献
