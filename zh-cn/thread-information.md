@@ -1,4 +1,4 @@
-## 8.14 Examining Thread Information
+## 8.14 检查线程信息
 
 When you are attempting to ascertain what your MySQL server is doing, it can be helpful to examine the process list, which is the set of threads currently executing within the server. Process list information is available from these sources: 
 

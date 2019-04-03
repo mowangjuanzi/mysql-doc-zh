@@ -1,3 +1,3 @@
 ## 8.2 优化 SQL 语句
 
-The core logic of a database application is performed through SQL statements, whether issued directly through an interpreter or submitted behind the scenes through an API. The tuning guidelines in this section help to speed up all kinds of MySQL applications. The guidelines cover SQL operations that read and write data, the behind-the-scenes overhead for SQL operations in general, and operations used in specific scenarios such as database monitoring. 
+数据库应用程序的核心逻辑是通过 SQL 语句执行的, 无论是直接通过解释器发出的, 还是通过 API 在后台提交的. 本章中的调优指南有助于加快各种 MySQL 应用程序的速度. 这些准则涵盖了读取和写入数据的 SQL 操作、一般 SQL 操作的幕后开销以及特定方案 (如数据库监视) 中使用的操作。. 

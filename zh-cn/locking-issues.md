@@ -1,4 +1,4 @@
-## 8.11 Optimizing Locking Operations
+## 8.11 优化锁操作
 
 MySQL manages contention for table contents using [locking](https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_locking): 
 

@@ -1,4 +1,4 @@
-## 8.13 Measuring Performance (Benchmarking)
+## 8.13 测量性能 (Benchmarking)
 
 To measure performance, consider the following factors: 
 
