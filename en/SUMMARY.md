@@ -9,6 +9,7 @@
             * [More Topics on Deploying MySQL Server with Docker](docker-mysql-more-topics.md)
 * [Tutorial](tutorial.md)
     * [Examples of Common Queries](examples.md)
+    * [Using MySQL with Apache](apache.md)
 * [Optimization](optimization.md)
     * [Optimization Overview](optimize-overview.md)
     * [Optimizing SQL Statements](statement-optimization.md)

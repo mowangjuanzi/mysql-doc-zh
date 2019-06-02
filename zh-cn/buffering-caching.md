@@ -1,3 +1,3 @@
 ## 8.10 缓冲和缓存
 
-MySQL uses several strategies that cache information in memory buffers to increase performance. 
+MySQL使用几种策略在内存缓冲区中缓存信息以提高性能. 

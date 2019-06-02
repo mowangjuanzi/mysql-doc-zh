@@ -9,6 +9,7 @@
             * [使用 Docker 部署 MySQL 服务器的更多主题](docker-mysql-more-topics.md)
 * [教程](tutorial.md)
     * [常见查询示例](examples.md)
+    * [在 Apache 中使用 MySQL](apache.md)
 * [优化](optimization.md)
     * [优化概述](optimize-overview.md)
     * [优化 SQL 语句](statement-optimization.md)
