@@ -1,6 +1,7 @@
 # Summary
 
 * [简介](README.md)
+* [前言和法律条款](preface.md)
 * [安装和更新 MySQL](installing.md)
     * [在 Linux 上安装 MySQL](linux-installation.md)
         * [在 Linux 上使用 APT 库安装 MySQL](linux-installation-apt-repo.md)
@@ -8,6 +9,7 @@
             * [使用 Docker 部署 MySQL 服务器的基本步骤](docker-mysql-getting-started.md)
             * [使用 Docker 部署 MySQL 服务器的更多主题](docker-mysql-more-topics.md)
 * [教程](tutorial.md)
+    * [连接到服务器和从服务器断开](connecting-disconnecting.md)
     * [常见查询示例](examples.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [优化](optimization.md)

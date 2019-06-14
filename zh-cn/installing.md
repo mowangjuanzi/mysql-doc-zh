@@ -12,7 +12,7 @@
 
 2. ***选择要安装的发行包.***
 
-    MySQL 有几个版本可用, 大多数都有几种分发格式. You can choose from pre-packaged distributions containing binary (precompiled) programs or source code. 如果有疑问, 请使用二进制发行包. Oracle also provides access to the MySQL source code for those who want to see recent developments and test new code. To determine which version and type of distribution you should use, see [Section 2.1.1, “Which MySQL Version and Distribution to Install”](https://dev.mysql.com/doc/refman/8.0/en/which-version.html).
+    MySQL 有几个版本可用, 大多数都有几种分发格式. You can choose from pre-packaged distributions containing binary (precompiled) programs or source code. 如果有疑问, 请使用二进制发行包. Oracle 还为那些想要查看最新开发和测试新代码的人提供了对 MySQL 源代码的访问. To determine which version and type of distribution you should use, see [Section 2.1.1, “Which MySQL Version and Distribution to Install”](https://dev.mysql.com/doc/refman/8.0/en/which-version.html).
 
 3. ***下载要安装的发行包.***
 
@@ -40,7 +40,7 @@ Instructions for installing MySQL on different platforms and environments is ava
 
     对于指定平台的安装, 配置和从源文件编译的帮助, 请参阅对应平台章节:
 
-    - Linux, including notes on distribution specific methods, 参阅 [2.5, “在 Linux” 上安装 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html).
+    - Linux, 包括发行版特定方法的说明, 参阅 [2.5, “在 Linux” 上安装 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html).
 
     - IBM AIX, 参阅 [2.7, “在 Solaris 上安装 MySQL”](https://dev.mysql.com/doc/refman/8.0/en/solaris-installation.html).
 

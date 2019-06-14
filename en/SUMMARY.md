@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Preface and Legal Notices](preface.md)
 * [Installing and Upgrading MySQL](installing.md)
     * [Installing MySQL on Linux](linux-installation.md)
         * [Installing MySQL on Linux Using the MySQL APT Repository](linux-installation-apt-repo.md)
@@ -8,6 +9,7 @@
             * [Basic Steps for MySQL Server Deployment with Docker](docker-mysql-getting-started.md)
             * [More Topics on Deploying MySQL Server with Docker](docker-mysql-more-topics.md)
 * [Tutorial](tutorial.md)
+    * [Connecting to and Disconnecting from the Server](connecting-disconnecting.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [Optimization](optimization.md)

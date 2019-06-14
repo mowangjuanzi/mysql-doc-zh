@@ -11,7 +11,7 @@
 有关每个版本的详细修改说明, 请参阅 [MySQL 8.0 发布说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
 
 有关法律信息, 包含许可信息, 请参阅 
-[前言和法律公告](https://dev.mysql.com/doc/refman/8.0/en/preface.html).
+[前言和法律条款](https://dev.mysql.com/doc/refman/8.0/en/preface.html).
 
 有关使用 MySQL 的帮助, 请访问 [MySQL 论坛](http://forums.mysql.com/) 或者 [MySQL 邮件列表](http://lists.mysql.com/), 你可以在那里与其他  MySQL用户讨论你的问题.
 
