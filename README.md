@@ -7,7 +7,7 @@
 然后执行以下命令安装环境
 
 ```bash
-npm install gitbook gh-pages -g
+npm install gitbook-cli gh-pages -g
 ```
 
 部署环境：
