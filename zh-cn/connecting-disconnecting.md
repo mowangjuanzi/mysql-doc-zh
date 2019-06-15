@@ -30,7 +30,7 @@ mysql>
 shell> mysql -u user -p
 ```
 
-当你尝试登录时, 如果你收到了错误消息, 例如 `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)`, 它意味着 MySQL 服务器守护程序(Unix) 或者服务 (Windows) 没有运行. 咨询管理员或者参阅 [Chapter 2, *安装和更新 MySQL*](https://dev.mysql.com/doc/refman/8.0/en/installing.html) 适用于你的操作系统的章节.
+当你尝试登录时, 如果你收到了错误消息, 例如 `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)`, 它意味着 MySQL 服务器守护程序(Unix) 或者服务 (Windows) 没有运行. 咨询管理员或者参阅 [Chapter 2, *安装和更新 MySQL*](installing.md) 适用于你的操作系统的章节.
 
 有关尝试登录时经过遇到的其他问题的帮助, 参阅 [Section B.4.2, “使用 MySQL 程序时的常见错误”](https://dev.mysql.com/doc/refman/8.0/en/common-errors.html).
 

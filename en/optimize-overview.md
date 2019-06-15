@@ -22,7 +22,7 @@ The most important factor in making a database application fast is its basic des
 
 - Does each table use an appropriate row format? This choice also depends on the storage engine used for the table. In particular, compressed tables use less disk space and so require less disk I/O to read and write the data. Compression is available for all kinds of workloads with `InnoDB` tables, and for read-only `MyISAM` tables. 
 - Does the application use an appropriate [locking strategy](https://dev.mysql.com/doc/refman/8.0/en/locking-issues.html)? For example, by allowing shared access when possible so that database operations can run concurrently, and requesting exclusive access when appropriate so that critical operations get top priority. Again, the choice of storage engine is significant. The `InnoDB` storage engine handles most locking issues without involvement from you, allowing for better concurrency in the database and reducing the amount of experimentation and tuning for your code. 
-- Are all[ memory areas used for caching](https://dev.mysql.com/doc/refman/8.0/en/buffering-caching.html) sized correctly? That is, large enough to hold frequently accessed data, but not so large that they overload physical memory and cause paging. The main memory areas to configure are the `InnoDB` buffer pool and the MyISAM key cache. 
+- Are all[ memory areas used for caching](https://dev.mysql.com/doc/refman/8.0/en/buffering-caching.html) sized correctly? That is, large enough to hold frequently accessed data, but not so large that they overload physical memory and cause paging. The main memory areas to configure are the `InnoDB` buffer pool and the `MyISAM` key cache. 
 
 ### Optimizing at the Hardware Level
 
