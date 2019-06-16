@@ -1,4 +1,4 @@
-### `mysql` — MySQL 命令行客户端
+### 4.5.1 `mysql` — MySQL 命令行客户端
 
 [**mysql**](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 时带有输入行编辑功能的简单 SQL shell. 它支持交互式和非交互式使用. 当用于交互式时, 查询结果以 ASCII表格式显示. 当非交互式使用时(例如, 作为过滤器), 结果以制表符分隔的格式显示. 可以使用命令选项来更改输出格式.
 

@@ -10,6 +10,7 @@
             * [More Topics on Deploying MySQL Server with Docker](docker-mysql-more-topics.md)
 * [Tutorial](tutorial.md)
     * [Connecting to and Disconnecting from the Server](connecting-disconnecting.md)
+    * [Entering Queries](entering-queries.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)

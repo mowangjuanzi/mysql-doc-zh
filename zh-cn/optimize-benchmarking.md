@@ -1,6 +1,6 @@
 ## 8.13 测量性能 (Benchmarking)
 
-To measure performance, consider the following factors: 
+要衡量性能, 请考虑以下因素: 
 
 - Whether you are measuring the speed of a single operation on a quiet system, or how a set of operations (a “workload”) works over a period of time. With simple tests, you usually test how changing one aspect (a configuration setting, the set of indexes on a table, the SQL clauses in a query) affects performance. Benchmarks are typically long-running and elaborate performance tests, where the results could dictate high-level choices such as hardware and storage configuration, or how soon to upgrade to a new MySQL version. 
 - For benchmarking, sometimes you must simulate a heavy database workload to get an accurate picture. 
