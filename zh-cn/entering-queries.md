@@ -1,8 +1,8 @@
 ## 3.2 输入查询
 
-Make sure that you are connected to the server, as discussed in the previous section. Doing so does not in itself select any database to work with, but that is okay. At this point, it is more important to find out a little about how to issue queries than to jump right in creating tables, loading data into them, and retrieving data from them. This section describes the basic principles of entering queries, using several queries you can try out to familiarize yourself with how [mysql](mysql.md) works.
+如上一节所述, 确认你已连接到服务器. 这样做并没有选择任何要使用的数据库, 但这样是可以的. 此时, 了解一下如何发出查询比直接创建表, 将数据加载到表中并从中检索数据更重要. 本节描述了输入查询的基本规则, 你可以使用几个查询来熟悉 [mysql](mysql.md) 的工作原理.
 
-Here is a simple query that asks the server to tell you its version number and the current date. Type it in as shown here following the `mysql>` prompt and press Enter:
+下面是一个简单的查询, 要求服务器告诉你它的版本号和当前日期. 如下面所示, 在 `mysql>` 提示符下输入, 然后回车:
 
 ```sql
 mysql> SELECT VERSION(), CURRENT_DATE;
@@ -15,17 +15,17 @@ mysql> SELECT VERSION(), CURRENT_DATE;
 mysql>
 ```
 
-This query illustrates several things about [mysql](mysql.md):
+这个查询说明了 [mysql](mysql.md) 的几个特点:
 
-- A query normally consists of an SQL statement followed by a semicolon. (There are some exceptions where a semicolon may be omitted. `QUIT`, mentioned earlier, is one of them. We'll get to others later.)
+- 一个查询通常由 SQL 语句和分号组成. (有一些例外, 分号可以省略. 前面提到的 `QUIT` 就是其中之一. 我们稍后讨论其他问题.)
 
-- When you issue a query, [mysql](mysql.md) sends it to the server for execution and displays the results, then prints another `mysql>` prompt to indicate that it is ready for another query.
+- 当发出一个查询, [mysql](mysql.md) 发送它到服务器执行并显示结果, 然后打印另一个 `mysql>` 提示符, 说明它已经准备好进行另一个查询.
 
-- [mysql](mysql.md) displays query output in tabular form (rows and columns). The first row contains labels for the columns. The rows following are the query results. Normally, column labels are the names of the columns you fetch from database tables. If you're retrieving the value of an expression rather than a table column (as in the example just shown), [mysql](mysql.md) labels the column using the expression itself.
+- [mysql](mysql.md) 以表格(行和列)的形式显示查询输出. 第一行包含列的标签. 下面的行是查询结果. 通常, 列的标签是从数据库的表中获取的列的名称. 如果检索的是表达式的值而不是表的列(如刚才的示例), [mysql](mysql.md) 使用表达式很深来标记列.
 
-- [mysql](mysql.md) shows how many rows were returned and how long the query took to execute, which gives you a rough idea of server performance. These values are imprecise because they represent wall clock time (not CPU or machine time), and because they are affected by factors such as server load and network latency. (For brevity, the “rows in set” line is sometimes not shown in the remaining examples in this chapter.)
+- [mysql](mysql.md) 显示了返回多少行以及查询执行了多长时间, 这能让你大致了解服务器性能. 这些值并不精确, 因为他们显示的是系统时间(不是 CPU 或者机器时间), 而且收到服务器负载和网络延迟等因素的影响. (为简介起见, 本节中的其余示例又是没有显示 “rows in set” 行.)
 
-Keywords may be entered in any lettercase. The following queries are equivalent:
+关键字可以不区分大小写. 下列查询是等价的:
 
 ```sql
 mysql> SELECT VERSION(), CURRENT_DATE;
