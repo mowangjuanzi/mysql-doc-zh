@@ -33,7 +33,7 @@ mysql> select version(), current_date;
 mysql> SeLeCt vErSiOn(), current_DATE;
 ```
 
-Here is another query. It demonstrates that you can use [mysql](mysql.md) as a simple calculator:
+下面是另一个查询. 它演示了可以将 [mysql](mysql.md) 用作简单的计算器:
 
 ```sql
 mysql> SELECT SIN(PI()/4), (4+1)*5;
@@ -45,7 +45,7 @@ mysql> SELECT SIN(PI()/4), (4+1)*5;
 1 row in set (0.02 sec)
 ```
 
-The queries shown thus far have been relatively short, single-line statements. You can even enter multiple statements on a single line. Just end each one with a semicolon:
+到目前位置显示的查询都是相对简短的单行语句. 你甚至可以在一行中输入多个语句, 用分号结尾即可:
 
 ```sql
 mysql> SELECT VERSION(); SELECT NOW();
@@ -64,9 +64,9 @@ mysql> SELECT VERSION(); SELECT NOW();
 1 row in set (0.00 sec)
 ```
 
-A query need not be given all on a single line, so lengthy queries that require several lines are not a problem. [mysql](mysql.md) determines where your statement ends by looking for the terminating semicolon, not by looking for the end of the input line. (In other words, [mysql](mysql.md) accepts free-format input: it collects input lines but does not execute them until it sees the semicolon.)
+查询不需要再一行中给出所有的内容, 因此需要多行内容的长查询不是问题. [mysql](mysql.md) 通过查找结束分号来确定语句的结束位置, 而不是通过查找输入行的末尾. (换句话说, [mysql](mysql.md) 接受自由格式的输入: 它收集输入行, 但直到看到分号才执行它们.)
 
-Here is a simple multiple-line statement:
+下面是一个简单的多行语句:
 
 ```bash
 mysql> SELECT
@@ -80,9 +80,9 @@ mysql> SELECT
 +---------------+--------------+
 ```
 
-In this example, notice how the prompt changes from `mysql>` to `->` after you enter the first line of a multiple-line query. This is how [mysql](mysql.md) indicates that it has not yet seen a complete statement and is waiting for the rest. The prompt is your friend, because it provides valuable feedback. If you use that feedback, you can always be aware of what [mysql](mysql.md) is waiting for.
+在本例中, 注意在你输入多行查询的第一行之后, 提示符从 `mysql>` 更改为 `->` . 这就是 [mysql](mysql.md) 表示它还没看到完整的语句, 正等待其它语句. 提示符是你的朋友, 因为它提供了有价值的反馈. 如果你使用这种反馈, 你总是可以直到 [mysql](mysql.md) 在等待什么.
 
-If you decide you do not want to execute a query that you are in the process of entering, cancel it by typing `\c`:
+如果你决定不执行正在输入的查询, 请输入 `\c`:
 
 ```sql
 mysql> SELECT
@@ -91,27 +91,27 @@ mysql> SELECT
 mysql>
 ```
 
-Here, too, notice the prompt. It switches back to `mysql>` after you type `\c`, providing feedback to indicate that [mysql](mysql.md) is ready for a new query.
+这里也注意提示符. 输入`\c`后, 它会切换回 `mysql>`, 提供反馈提示 [mysql](mysql.md) 已经准备好进行新的查询.
 
-The following table shows each of the prompts you may see and summarizes what they mean about the state that [mysql](mysql.md) is in.
+下表显示了你可能看到的每个提示符, 并总结了它们对于 [mysql](mysql.md) 所处状态的含义.
 
-| Prompt | Meaning |
+| 提示符 | 含义 |
 |:---:|:---:|
-| `mysql>` | Ready for new query |
-| `->` | Waiting for next line of multiple-line query |
+| `mysql>` | 准备好进行新的查询 |
+| `->` | 等待多行查询中的下一行 |
 | `'>` | Waiting for next line, waiting for completion of a string that began with a single quote (`) |
 | `">` | Waiting for next line, waiting for completion of a string that began with a double quote (`) |
 | ``>` | Waiting for next line, waiting for completion of an identifier that began with a backtick (`) |
 | `/*>` | Waiting for next line, waiting for completion of a comment that began with `/*` |
 
-Multiple-line statements commonly occur by accident when you intend to issue a query on a single line, but forget the terminating semicolon. In this case, [mysql](mysql.md) waits for more input:
+当你打算在一行上发出查询, 但忘记终止分号时, 多行语句通常意外的发生. 在这种情况下, [mysql](mysql.md) 等待更多输入:
 
 ```sql
 mysql> SELECT USER()
     ->
 ```
 
-If this happens to you (you think you've entered a statement but the only response is a `->` prompt), most likely [mysql](mysql.md) is waiting for the semicolon. If you don't notice what the prompt is telling you, you might sit there for a while before realizing what you need to do. Enter a semicolon to complete the statement, and [mysql](mysql.md) executes it:
+如果发生在你身上(你认为你已经输入语句, 但唯一的响应是 `->` 提示符), 则可能是 [mysql](mysql.md) 在等待分号. 如果你没有注意到提示告诉你什么, 你可能会坐在那里一段时间, 然后意识到你需要做什么. 输入分号完成语句, 并且 [mysql](mysql.md) 执行它:
 
 ```sql
 mysql> SELECT USER()
@@ -123,16 +123,16 @@ mysql> SELECT USER()
 +---------------+
 ```
 
-The `'>` and `">` prompts occur during string collection (another way of saying that MySQL is waiting for completion of a string). In MySQL, you can write strings surrounded by either `'` or `"` characters (for example, `'hello'` or `"goodbye"`), and [mysql](mysql.md) lets you enter strings that span multiple lines. When you see a `'>` or `">` prompt, it means that you have entered a line containing a string that begins with a `'` or `"` quote character, but have not yet entered the matching quote that terminates the string. This often indicates that you have inadvertently left out a quote character. For example:
+`'>` 和 `">` prompts occur during string collection (另外一种 MySQL 等待字符串完成的方法). 在 MySQL, 你可以编写由 `'` 或者 `"` 字符包围的字符串(例如, `'hello'` 或者 `"goodbye"`), 并且 [mysql](mysql.md) 允许你输入跨多行的字符串. 当你看到 `'>` 或者 `">` 提示符时, 它意味着你输入了包含以 `'` 或者 `"` 引号字符开头的字符串, 但尚未输入终止该字符串的匹配引号使其终止. 这通常表示你无意中漏掉了引号字符. 例如:
 
 ```sql
 mysql> SELECT * FROM my_table WHERE name = 'Smith AND age < 30;
     '>
 ```
 
-If you enter this [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) statement, then press `Enter` and wait for the result, nothing happens. Instead of wondering why this query takes so long, notice the clue provided by the `'>` prompt. It tells you that [mysql](mysql.md) expects to see the rest of an unterminated string. (Do you see the error in the statement? The string `'Smith` is missing the second single quotation mark.)
+如果你输入此 [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) 语句, 然后按 `Enter` 等待结果, 什么都没有发生. 不要想为什么这个查询要花费这么久的时间, 注意 `'>` 提示符提供的线索. 它告诉你 [mysql](mysql.md) 期望看到未结束的字符串的剩余部分. (你看到语句中的错误了吗? 字符串 `'Smith` 缺少第二个单引号.)
 
-At this point, what do you do? The simplest thing is to cancel the query. However, you cannot just type `\c` in this case, because [mysql](mysql.md) interprets it as part of the string that it is collecting. Instead, enter the closing quote character (so [mysql](mysql.md) knows you've finished the string), then type `\c`:
+此时, 你需要做什么? 最简单的方法就是取消查询. 然而, 在本例中你不能只输入 `\c`, 因为 [mysql](mysql.md) 将其解释为正在收集的字符串的一部分. 相反, 输入结束引号字符(这样 [mysql](mysql.md) 就直到你已经完成了字符串输入), 然后输入 `\c`:
 
 ```sql
 mysql> SELECT * FROM my_table WHERE name = 'Smith AND age < 30;
@@ -140,12 +140,12 @@ mysql> SELECT * FROM my_table WHERE name = 'Smith AND age < 30;
 mysql>
 ```
 
-The prompt changes back to `mysql>`, indicating that [mysql](mysql.md) is ready for a new query.
+提示符更改为 `mysql>`, 表示 [mysql](mysql.md) 已经准备好进行新的查询.
 
-The ``>` prompt is similar to the `'>` and `">` prompts, but indicates that you have begun but not completed a backtick-quoted identifier.
+``>` 提示符类似于 `'>` 和 `">` 提示符, 但表示你已经开始但尚未结束反引号的标识符.
 
-It is important to know what the `'>`, `">`, and ``>` prompts signify, because if you mistakenly enter an unterminated string, any further lines you type appear to be ignored by [mysql](mysql.md)—including a line containing `QUIT`. This can be quite confusing, especially if you do not know that you need to supply the terminating quote before you can cancel the current query.
+知道 `'>`, `">`, 和 ``>` 提示符表示什么是非常重要的, 因为如果你错误的输入了一个未停止字符串, 那么你输入的任何其它行都被会 [mysql](mysql.md) 忽略 —— 包括包含 `QUIT` 的行. 这可能非常让人疑惑, 特别是如果你不知道在取消当前查询之前需要提供停止引号.
 
-> **Note**
+> **注意**
 > 
-> Multiline statements from this point on are written without the secondary (`->` or other) prompts, to make it easier to copy and paste the statements to try for yourself.
+> 从现在开始, 多行语句的编写不再需要辅助 (`->` 或者其它)提示符, 以便更容易的复制和粘贴语句, 以便你自己尝试.
