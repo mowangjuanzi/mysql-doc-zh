@@ -28,6 +28,7 @@ gitbook serve
 ## 部署到gh-pages
 
 ```bash
+gitbook build
 gh-pages -d ./_book/
 ```
 
