@@ -11,6 +11,8 @@
 * [Tutorial](tutorial.md)
     * [Connecting to and Disconnecting from the Server](connecting-disconnecting.md)
     * [Entering Queries](entering-queries.md)
+    * [Creating and Using a Database](database-use.md)
+        * [Creating and Selecting a Database](creating-database.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)

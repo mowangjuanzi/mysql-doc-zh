@@ -11,6 +11,8 @@
 * [教程](tutorial.md)
     * [连接到服务器和从服务器断开](connecting-disconnecting.md)
     * [输入查询](entering-queries.md)
+    * [创建和使用数据库](database-use.md)
+        * [创建和选择数据库](creating-database.md)
     * [常见查询示例](examples.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [MySQL 程序](programs.md)
