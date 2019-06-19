@@ -13,6 +13,7 @@
     * [Entering Queries](entering-queries.md)
     * [Creating and Using a Database](database-use.md)
         * [Creating and Selecting a Database](creating-database.md)
+        * [Creating a Table](creating-tables.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)
