@@ -1,38 +1,38 @@
-### 3.3.2 Creating a Table
+### 3.3.2 创建表
 
-Creating the database is the easy part, but at this point it is empty, as [`SHOW TABLES`](https://dev.mysql.com/doc/refman/8.0/en/show-tables.html) tells you:
+创建数据库是比较容易的部分, 但是现在它是空的, 正如 [`SHOW TABLES`](https://dev.mysql.com/doc/refman/8.0/en/show-tables.html) 告诉你的:
 
 ```sql
 mysql> SHOW TABLES;
 Empty set (0.00 sec)
 ```
 
-The harder part is deciding what the structure of your database should be: what tables you need and what columns should be in each of them.
+困难的部分是决定数据库的结构应该是什么: 需要那些表以及每个表应该包含那些列.
 
-You want a table that contains a record for each of your pets. This can be called the `pet` table, and it should contain, as a bare minimum, each animal's name. Because the name by itself is not very interesting, the table should contain other information. For example, if more than one person in your family keeps pets, you might want to list each animal's owner. You might also want to record some basic descriptive information such as species and sex.
+你需要一个包含你的每个宠物信息的表. 可以成为 `pet` 表, 它至少应该包含每个动物的名称. 因为名字本身并不是很有趣, 表中应该包含其它信息. 例如, 如果你家里不止一个人养宠物, 你可能想列出每只动物的主人. 你可能也想记录一些基本的描述信息, 比如物种和性别.
 
-How about age? That might be of interest, but it is not a good thing to store in a database. Age changes as time passes, which means you'd have to update your records often. Instead, it is better to store a fixed value such as date of birth. Then, whenever you need age, you can calculate it as the difference between the current date and the birth date. MySQL provides functions for doing date arithmetic, so this is not difficult. Storing birth date rather than age has other advantages, too:
+年龄呢? 这可能很有趣, 但是将其存储在数据库中并不是一件好事. 年龄随着时间的推移而变化, 这意味着你必须经常更新你的记录. 相反, 最好存储一个固定的值比如出生日期. 然后, 当你需要年龄的时候, 你可以把它计算成当前日期和出生日期之间的差值. MySQL 提供了执行日期计算的函数, 所有这并不困难. 保存出生日期而不是年龄还有其它好处:
 
-- You can use the database for tasks such as generating reminders for upcoming pet birthdays. (If you think this type of query is somewhat silly, note that it is the same question you might ask in the context of a business database to identify clients to whom you need to send out birthday greetings in the current week or month, for that computer-assisted personal touch.)
+- 你可以使用该数据库执行任务, 比如为即将到来的宠物生日生成提醒. (If you think this type of query is somewhat silly, note that it is the same question you might ask in the context of a business database to identify clients to whom you need to send out birthday greetings in the current week or month, for that computer-assisted personal touch.)
 
-- You can calculate age in relation to dates other than the current date. For example, if you store death date in the database, you can easily calculate how old a pet was when it died.
+- 你可以计算年龄与日期的关系, 而不是与当前日期的关系. 例如, 如果你将死亡日期存储到数据库中, 你可以轻松的计算出宠物死亡时的年龄.
 
-You can probably think of other types of information that would be useful in the `pet` table, but the ones identified so far are sufficient: name, owner, species, sex, birth, and death.
+你可能会想到在 `pet` 表中有用的其它类型的信息, 但是到目前为止所识别的信息已经足够了: 名称(name), 所有者(owner), 物种(species), 性别(sex), 出生(birth), 和死亡(death).
 
-Use a [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) statement to specify the layout of your table:
+使用 [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) 语句指定表格的布局:
 
 ```sql
 mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
        species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
 ```
 
-[`VARCHAR`](https://dev.mysql.com/doc/refman/8.0/en/char.html) is a good choice for the `name`, `owner`, and `species` columns because the column values vary in length. The lengths in those column definitions need not all be the same, and need not be **20**. You can normally pick any length from **1** to **65535**, whatever seems most reasonable to you. If you make a poor choice and it turns out later that you need a longer field, MySQL provides an [`ALTER TABLE`](https://dev.mysql.com/doc/refman/8.0/en/alter-table.html) statement.
+[`VARCHAR`](https://dev.mysql.com/doc/refman/8.0/en/char.html) 对于 `name`, `owner`, 和 `species` 列, 是一个很好的选择, 因为列值的长度各不相同. 这些列定义的长度不一定都相同, 也不一定是 **20**. 你通常可以选择 **1** 到 **65535** 之间的任意长度, 只要你觉得最合理. 如果你做了一个糟糕的选择, 后来发现你需要一个更长的字段, MySQL 提供了一个 [`ALTER TABLE`](https://dev.mysql.com/doc/refman/8.0/en/alter-table.html) 语句.
 
-Several types of values can be chosen to represent sex in animal records, such as `'m'` and `'f'`, or perhaps `'male'` and `'female'`. It is simplest to use the single characters `'m'` and `'f'`.
+可以选择几种类型的值来表示动物记录中的性别, 比如 `'m'` 和 `'f'`, 或者 `'male'` and `'female'`. 使用单个字符 `'m'` 和 `'f'` 是最简单的.
 
-The use of the [`DATE`](https://dev.mysql.com/doc/refman/8.0/en/datetime.html) data type for the birth and death columns is a fairly obvious choice.
+对于 birth 和 death 列使用 [`DATE`](https://dev.mysql.com/doc/refman/8.0/en/datetime.html) 数据类型是一个非常显而易见的选择.
 
-Once you have created a table, [`SHOW TABLES`](https://dev.mysql.com/doc/refman/8.0/en/show-tables.html) should produce some output:
+一旦你创建了表, [`SHOW TABLES`](https://dev.mysql.com/doc/refman/8.0/en/show-tables.html) 应该会产生一些输出:
 
 ```sql
 mysql> SHOW TABLES;
@@ -43,7 +43,7 @@ mysql> SHOW TABLES;
 +---------------------+
 ```
 
-To verify that your table was created the way you expected, use a [`DESCRIBE`](https://dev.mysql.com/doc/refman/8.0/en/describe.html) statement:
+要验证你的表是按照你期望的方式创建的, 使用 [`DESCRIBE`](https://dev.mysql.com/doc/refman/8.0/en/describe.html) 语句:
 
 ```sql
 mysql> DESCRIBE pet;
@@ -59,6 +59,6 @@ mysql> DESCRIBE pet;
 +---------+-------------+------+-----+---------+-------+
 ```
 
-You can use [`DESCRIBE`](https://dev.mysql.com/doc/refman/8.0/en/describe.html) any time, for example, if you forget the names of the columns in your table or what types they have.
+你可以随时使用 [`DESCRIBE`](https://dev.mysql.com/doc/refman/8.0/en/describe.html), 例如, 如果忘记了表中列的名称或者它们的类型.
 
-For more information about MySQL data types, see [Chapter 11, ***Data Types***](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).
+有关 MySQL 数据类型的更多信息, 参阅 [Chapter 11, ***数据类型***](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).

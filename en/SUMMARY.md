@@ -14,6 +14,7 @@
     * [Creating and Using a Database](database-use.md)
         * [Creating and Selecting a Database](creating-database.md)
         * [Creating a Table](creating-tables.md)
+        * [Loading Data into a Table](loading-tables.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)
