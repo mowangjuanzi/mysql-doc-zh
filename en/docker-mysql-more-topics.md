@@ -83,7 +83,7 @@ docker run --name=mysql1 \
 
 The command mounts `path-on-host-machine/my.cnf` at `/etc/my.cnf` (the server configuration file inside the container), and `path-on-host-machine/datadir` at `/var/lib/mysql` (the data directory inside the container). The following conditions must be met for the bind-mounting to work:
 
-- The configuration file `path-on-host-machine/my.cnf` must already exist, and it must contain the specification for starting the server using the user mysql:
+- The configuration file `path-on-host-machine/my.cnf` must already exist, and it must contain the specification for starting the server using the user `mysql`:
 
 ```ini
 [mysqld]
