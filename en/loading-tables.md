@@ -13,7 +13,7 @@ Suppose that your pet records can be described as shown here. (Observe that MySQ
 | Bowser | Diane | dog | m | 1979-08-31 | 1995-07-29 |
 | Chirpy | Gwen | bird | f | 1998-09-11 | |
 | Whistler | Gwen | bird | | 1997-12-09 | |
-| Slim | Benny | snake | m | 1996-04-29 | |
+| Slim | Benny | snake | m | 1996-04-29 | &nbsp; |
 
 Because you are beginning with an empty table, an easy way to populate it is to create a text file containing a row for each of your animals, then load the contents of the file into the table with a single statement.
 
@@ -42,14 +42,14 @@ You can specify the column value separator and end of line marker explicitly in 
 
 If the statement fails, it is likely that your MySQL installation does not have local file capability enabled by default. See [Section 6.1.6, “Security Issues with LOAD DATA LOCAL”](https://dev.mysql.com/doc/refman/8.0/en/load-data-local.html), for information on how to change this.
 
-When you want to add new records one at a time, the [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html) statement is useful. In its simplest form, you supply values for each column, in the order in which the columns were listed in the [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) statement. Suppose that Diane gets a new hamster named “Puffball.” You could add a new record using an [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html) statement like this:
+When you want to add new records one at a time, the [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html) statement is useful. In its simplest form, you supply values for each column, in the order in which the columns were listed in the [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) statement. Suppose that Diane gets a new hamster named “Puffball”. You could add a new record using an [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html) statement like this:
 
 ```sql
 mysql> INSERT INTO pet
        VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
 ```
 
-String and date values are specified as quoted strings here. Also, with [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html), you can insert NULL directly to represent a missing value. You do not use `\N` like you do with [`LOAD DATA`](https://dev.mysql.com/doc/refman/8.0/en/load-data.html).
+String and date values are specified as quoted strings here. Also, with [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html), you can insert `NULL` directly to represent a missing value. You do not use `\N` like you do with [`LOAD DATA`](https://dev.mysql.com/doc/refman/8.0/en/load-data.html).
 
 From this example, you should be able to see that there would be a lot more typing involved to load your records initially using several [`INSERT`](https://dev.mysql.com/doc/refman/8.0/en/insert.html) statements rather than a single [`LOAD DATA`](https://dev.mysql.com/doc/refman/8.0/en/load-data.html) statement.
 
