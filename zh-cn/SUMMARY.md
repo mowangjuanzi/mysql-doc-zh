@@ -17,6 +17,8 @@
         * [将数据加载到表中](loading-tables.md)
         * [从表中检索数据](retrieving-data.md)
             * [选择所有数据](selecting-all.md)
+            * [选择特定行](selecting-rows.md)
+            * [选择指定列](selecting-columns.md)
     * [常见查询示例](examples.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [MySQL 程序](programs.md)

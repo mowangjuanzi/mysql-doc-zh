@@ -17,6 +17,8 @@
         * [Loading Data into a Table](loading-tables.md)
         * [Retrieving Information from a Table](retrieving-data.md)
             * [Selecting All Data](selecting-all.md)
+            * [Selecting Particular Rows](selecting-rows.md)
+            * [Selecting Particular Columns](selecting-columns.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)
