@@ -19,6 +19,7 @@
             * [Selecting All Data](selecting-all.md)
             * [Selecting Particular Rows](selecting-rows.md)
             * [Selecting Particular Columns](selecting-columns.md)
+            * [Sorting Rows](sorting-rows.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)
