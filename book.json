@@ -1,3 +1,42 @@
 {
-    "language": "zh-hans"
+    "language": "zh-hans",
+    "plugins": [
+        "-highlight",
+        "-sharing",
+        "prism",
+        "github",
+        "github-buttons",
+        "expandable-chapters-small",
+        "donate",
+        "anchors",
+        "edit-link",
+        "copy-code-button"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/mowangjuanzi/mysql-chinese-doc"
+        },
+        "edit-link": {
+            "base": "https://github.com/mowangjuanzi/mysql-chinese-doc/edit/master",
+            "label": "Edit This Page"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "Blankj",
+                "repo": "glory",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        },
+        "donate": {
+            "wechat": "/assets/wechat.jpg",
+            "alipay": "/assets/alipay.png",
+            "title": "",
+            "button": "赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        }
+    }
 }
