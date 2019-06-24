@@ -22,8 +22,8 @@
         },
         "github-buttons": {
             "buttons": [{
-                "user": "Blankj",
-                "repo": "glory",
+                "user": "mowangjuanzi",
+                "repo": "mysql-chinese-doc",
                 "type": "star",
                 "size": "small",
                 "count": true
