@@ -23,6 +23,8 @@
             * [Date Calculationsa](date-calculations.md)
             * [Working with NULL Values](working-with-null.md)
             * [Pattern Matching](pattern-matching.md)
+            * [Counting Rows](counting-rows.md)
+            * [Using More Than one Table](multiple-tables.md)
     * [Examples of Common Queries](examples.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)

@@ -23,6 +23,8 @@
             * [日期计算](date-calculations.md)
             * [处理 NULL 值](working-with-null.md)
             * [模式匹配](pattern-matching.md)
+            * [计算行数](counting-rows.md)
+            * [使用多个表](multiple-tables.md)
     * [常见查询示例](examples.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [MySQL 程序](programs.md)
