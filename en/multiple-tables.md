@@ -10,7 +10,7 @@ The `pet` table keeps track of which pets you have. If you want to record other 
 
 - An event type field, if you want to be able to categorize events.
 
-Given these considerations, the [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) statement for the event table might look like this:
+Given these considerations, the [`CREATE TABLE`](https://dev.mysql.com/doc/refman/8.0/en/create-table.html) statement for the `event` table might look like this:
 
 ```sql
 mysql> CREATE TABLE event (name VARCHAR(20), date DATE,
