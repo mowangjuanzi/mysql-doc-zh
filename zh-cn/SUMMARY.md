@@ -25,6 +25,7 @@
             * [模式匹配](pattern-matching.md)
             * [计算行数](counting-rows.md)
             * [使用多个表](multiple-tables.md)
+    * [获取数据库和表的信息](getting-information.md)
     * [常见查询示例](examples.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [MySQL 程序](programs.md)
