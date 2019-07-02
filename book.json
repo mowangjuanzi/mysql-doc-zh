@@ -10,7 +10,8 @@
         "donate",
         "anchors",
         "edit-link",
-        "copy-code-button"
+        "copy-code-button",
+        "alerts"
     ],
     "pluginsConfig": {
         "github": {

@@ -28,6 +28,8 @@
     * [获取数据库和表的信息](getting-information.md)
     * [在批处理模式使用 mysql](batch-mode.md)
     * [常见查询示例](examples.md)
+        * [列的最大值](example-maximum-column.md)
+        * [包含某一行最大值的记录](example-maximum-row.md)
     * [在 Apache 中使用 MySQL](apache.md)
 * [MySQL 程序](programs.md)
     * [MySQL 客户端程序](programs-client.md)

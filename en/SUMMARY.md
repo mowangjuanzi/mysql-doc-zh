@@ -28,6 +28,8 @@
     * [Getting Information About Databases and Tables](getting-information.md)
     * [Using mysql in Batch Mode](batch-mode.md)
     * [Examples of Common Queries](examples.md)
+        * [The Maximum Value for a Column](example-maximum-column.md)
+        * [The Row Holding the Maximum of a Certain Column](example-maximum-row.md)
     * [Using MySQL with Apache](apache.md)
 * [MySQL Programs](programs.md)
     * [MySQL Client Programs](programs-client.md)
