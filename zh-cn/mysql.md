@@ -6,7 +6,7 @@
 
 > **注意**
 >
-> 另外, MySQL Shell 提供了对 X DevAPI 的访问. 有关详情, 参阅 MySQL Shell 8.0 (MySQL 8.0 部分).
+> 另外, MySQL Shell 提供了对 X DevAPI 的访问. 有关详情, 参阅 [MySQL Shell 8.0 (MySQL 8.0 部分)](https://dev.mysql.com/doc/mysql-shell/8.0/en/).
 
 使用 [**mysql**](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) 非常容易. 从命令解释器的提示符调用它, 如下所示:
 

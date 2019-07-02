@@ -6,7 +6,7 @@ If you have problems due to insufficient memory for large result sets, use the [
 
 > **Note**
 >
-> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see MySQL Shell 8.0 (part of MySQL 8.0).
+> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see [MySQL Shell 8.0 (part of MySQL 8.0)](https://dev.mysql.com/doc/mysql-shell/8.0/en/).
 
 Using [**mysql**](https://dev.mysql.com/doc/refman/8.0/en/mysql.html) is very easy. Invoke it from the prompt of your command interpreter as follows:
 
