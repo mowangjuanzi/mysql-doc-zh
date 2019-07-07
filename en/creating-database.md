@@ -26,12 +26,12 @@ shell> mysql -h host -u user -p menagerie
 Enter password: ********
 ```
 
-> **Important**
+> **[danger] Important**
 >
 > `menagerie` in the command just shown is ***not*** your password. If you want to supply your password on the command line after the `-p` option, you must do so with no intervening space (for example, as `-ppassword`, not as `-p password`). However, putting your password on the command line is not recommended, because doing so exposes it to snooping by other users logged in on your machine.
 
 &nbsp;
 
-> **Note**
+> **[warning] Note**
 >
 > You can see at any time which database is currently selected using [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) [`DATABASE()`](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_database).

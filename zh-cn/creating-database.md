@@ -26,12 +26,12 @@ shell> mysql -h host -u user -p menagerie
 Enter password: ********
 ```
 
-> **重要**
+> **[danger] 重要**
 >
 > 刚才显示的命令中 `menagerie`  ***不***是你的密码. 如果希望在命令行的 `-p` 选项之后提供密码, 则必须在不使用空格的情况下提供(例如, 是 `-ppassword`, 而不是 `-p password`). 然而, 不建议将密码放在命令行上, 因为这样做会让登录到此机器上的其它用户窥探密码.
 
 &nbsp;
 
-> **注意**
+> **[warning] 注意**
 >
 > 你可以随时使用 [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) [`DATABASE()`](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_database) 查看当前选择了哪个数据库.

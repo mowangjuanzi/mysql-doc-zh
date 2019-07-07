@@ -98,4 +98,3 @@ PRIMARY KEY  (`id`)
 ```
 
 按这种方式使用 `REFERENCES` 作为注释或者 “提示” 创建列适用于 `MyISAM` 表.
-

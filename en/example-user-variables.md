@@ -17,4 +17,4 @@ mysql> SELECT * FROM shop WHERE price=@min_price OR price=@max_price;
 
 > **[warning] Note**
 >
->It is also possible to store the name of a database object such as a table or a column in a user variable and then to use this variable in an SQL statement; however, this requires the use of a prepared statement. See [Section 13.5, “Prepared SQL Statement Syntax”](https://dev.mysql.com/doc/refman/8.0/en/sql-syntax-prepared-statements.html), for more information.
+> It is also possible to store the name of a database object such as a table or a column in a user variable and then to use this variable in an SQL statement; however, this requires the use of a prepared statement. See [Section 13.5, “Prepared SQL Statement Syntax”](https://dev.mysql.com/doc/refman/8.0/en/sql-syntax-prepared-statements.html), for more information.
