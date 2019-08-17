@@ -2,11 +2,11 @@
 
 > **注意**
 >
-> Most of the sample commands below have `mysql/mysql-server` as the Docker image repository when that has to be specified (像是 `docker pull` 和 `docker run` 命令); 如果你的镜像来自另一个库， 那就去修改—例如, 替换为 `store/oracle/mysql-enterprise-server` 是 Docker 商店的 MySQL 企业版镜像, 或者 `container-registry.oracle.com/mysql/enterprise-server` 是 Oracle 容器库的 MySQL 企业版镜像.
+> 当必须指定 `mysql/mysql-server` 作为 Docker 镜像存储时, 下面的大多数命令都会使用它(像是 `docker pull` 和 `docker run` 命令); 如果你的镜像来自另一个库， 那就去修改—例如, 替换为 `store/oracle/mysql-enterprise-server` 是 Docker 商店的 MySQL 企业版镜像, 或者 `container-registry.oracle.com/mysql/enterprise-server` 是 Oracle 容器库的 MySQL 企业版镜像.
 
 ##### 优化过的 Docker 版 MySQL 安装
 
-Docker 版 MySQL 镜像进行了代码优化, which means they only include crucial components that are expected to be relevant for the majority of users who run MySQL instances in Docker containers. MySQL Docker 安装与常见的非 Docker 安装的不同在以下几个方面:
+Docker 版 MySQL 镜像进行了代码优化, 这意味着他们只包含大多数在 Docker 容器中运行 MySQL 实例的与用户相关的关键组件. MySQL Docker 安装与常见的非 Docker 安装的不同在以下几个方面:
 
 - 包含的二进制文件仅限于:
 
@@ -70,9 +70,9 @@ shell> docker inspect mysql1
 ...
 ```
 
-The output shows that the source folder `/var/lib/docker/volumes/4f2d463cfc4bdd4baebcb098c97d7da3337195ed2c6572bc0b89f7e845d27652/_data`, in which data is persisted on the host, has been mounted at `/var/lib/mysql`, the server data directory inside the container.
+输出显示源文件夹 `/var/lib/docker/volumes/4f2d463cfc4bdd4baebcb098c97d7da3337195ed2c6572bc0b89f7e845d27652/_data`, 已经挂载到 `/var/lib/mysql`, 即容器内的服务器数据目录.
 
-Another way to preserve data is to [bind-mount](https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-volumes-or-memory-filesystems) a host directory using the `--mount` option when creating the container. The same technique can be used to persist the configuration of the server. The following command creates a MySQL Server container and bind-mounts both the data directory and the server configuration file:
+保存数据的另一种方式时在创建容器时使用 —— `--mount` 选项 [bind-mount](https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-volumes-or-memory-filesystems) 主机目录. 可以使用相同的技术来保存服务器的配置. 下面的命令创建一个 MySQL Server 容器并绑定挂载数据目录和服务器配置文件:
 
 ```bash
 docker run --name=mysql1 \
@@ -81,9 +81,9 @@ docker run --name=mysql1 \
 -d mysql/mysql-server:tag
 ```
 
-命令挂载 `path-on-host-machine/my.cnf` 到 `/etc/my.cnf` (容器内的服务器配置文件), 并且挂载 `path-on-host-machine/datadir` 到 `/var/lib/mysql` (容器内的数据目录). The following conditions must be met for the bind-mounting to work:
+命令挂载 `path-on-host-machine/my.cnf` 到 `/etc/my.cnf` (容器内的服务器配置文件), 并且挂载 `path-on-host-machine/datadir` 到 `/var/lib/mysql` (容器内的数据目录). 必须满足以下条件, 才能绑定挂载工作:
 
-- 配置文件 `path-on-host-machine/my.cnf` 必须总是存在, and it must contain the specification for starting the server using the user mysql:
+- 配置文件 `path-on-host-machine/my.cnf` 必须总是存在, 它必须包含启动服务器的指定用户 `mysql`:
 
 ```ini
 [mysqld]
@@ -96,7 +96,7 @@ user=mysql
 
 ##### 运行其他初始化脚本
 
-If there are any `.sh` or `.sql` scripts you want to run on the database immediately after it has been created, you can put them into a host directory and then mount the directory at `/docker-entrypoint-initdb.d/` inside the container. 例如:
+如果在数据库创建后, 有任何 `.sh` 或者 `.sql` 脚本希望立即在数据库上运行, 你可以将它们放入到主机目录内, 然后将目录挂载到容器内的 `/docker-entrypoint-initdb.d/` 目录. 例如:
 
 ```bash
 docker run --name=mysql1 \

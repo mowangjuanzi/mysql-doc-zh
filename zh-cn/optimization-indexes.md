@@ -1,5 +1,5 @@
 ## 8.3 优化和索引
 
-The best way to improve the performance of [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) operations is to create indexes on one or more of the columns that are tested in the query. The index entries act like pointers to the table rows, allowing the query to quickly determine which rows match a condition in the `WHERE` clause, and retrieve the other column values for those rows. All MySQL data types can be indexed.
+提升 [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html) 操作的性能的最好方式是测试在一个或多个列上创建索引. 索引的作用类似于表的记录指针, 允许查询快速确认哪些记录匹配 `WHERE` 条件子句, 并检索这些就记录的其他列值. 所有的 MySQL 数据类型都可以被索引.
 
-Although it can be tempting to create an indexes for every possible column used in a query, unnecessary indexes waste space and waste time for MySQL to determine which indexes to use. Indexes also add to the cost of inserts, updates, and deletes because each index must be updated. You must find the right balance to achieve fast queries using the optimal set of indexes. 
+尽管为查询中每个可能会用到的列创建索引非常有诱惑力, 但不必要的索引为 MySQL 确定使用哪些索引浪费空间和时间. 索引会增加插入, 更新和删除的成本, 因为必须更新每个索引. 你必须找到最佳平衡以便使用最佳索引实现快速查询. 

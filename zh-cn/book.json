@@ -1,6 +1,3 @@
 {
-    "language": "zh-hans",
-    "plugins": [
-        "highlight"
-    ]
+    "language": "zh-hans"
 }

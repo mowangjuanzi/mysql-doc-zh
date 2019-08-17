@@ -2,7 +2,7 @@
 
 When you are attempting to ascertain what your MySQL server is doing, it can be helpful to examine the process list, which is the set of threads currently executing within the server. Process list information is available from these sources: 
 
-- The `SHOW [FULL]` PROCESSLIST statement: [Section 13.7.6.29, “SHOW PROCESSLIST Syntax”](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html) 
+- The `SHOW [FULL] PROCESSLIST` statement: [Section 13.7.6.29, “SHOW PROCESSLIST Syntax”](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html) 
 - The [`SHOW PROFILE`](https://dev.mysql.com/doc/refman/8.0/en/show-profile.html) statement: [Section 13.7.6.31, “SHOW PROFILES Syntax”](https://dev.mysql.com/doc/refman/8.0/en/show-profiles.html) 
 - The `INFORMATION_SCHEMA` [`PROCESSLIST`](https://dev.mysql.com/doc/refman/8.0/en/processlist-table.html) table: [Section 25.19, “The INFORMATION_SCHEMA PROCESSLIST Table”](https://dev.mysql.com/doc/refman/8.0/en/processlist-table.html) 
 - The [**mysqladmin processlist**](https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html) command: [Section 4.5.2, “**mysqladmin** — Client for Administering a MySQL Server”](https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html) 

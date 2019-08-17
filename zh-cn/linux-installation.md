@@ -13,8 +13,8 @@ Linux 支持多种不同的 Linux 安装解决方案. We recommend that you use 
 | DEB | [下载](https://dev.mysql.com/downloads/mysql/)通用包 | [文档](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-debian.html) |
 | Generic | [下载](https://dev.mysql.com/downloads/mysql/)通用包 | [文档](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html) |
 | Source | 从[源码](https://dev.mysql.com/downloads/mysql/)编译 | [文档](https://dev.mysql.com/doc/refman/8.0/en/source-installation.html) |
-| Docker | 使用 Docker Hub, Docker Store, 或者 Oracle Container Registry | [文档](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-docker.html) |
-| Oracle Unbreakable Linux Network | Use ULN channels | [文档](https://dev.mysql.com/doc/refman/8.0/en/uln-installation.html) |
+| Docker | 使用 Docker Hub, Docker Store, 或者 Oracle 镜像托管 | [文档](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-docker.html) |
+| Oracle Unbreakable Linux Network (Orace 坚不可摧的 Linux 网络) | 使用 ULN 通道 | [文档](https://dev.mysql.com/doc/refman/8.0/en/uln-installation.html) |
 
 As an alternative, you can use the package manager on your system to automatically download and install MySQL with packages from the native software repositories of your Linux distribution. These native packages are often several versions behind the currently available release. You will also normally be unable to install development milestone releases (DMRs), as these are not usually made available in the native repositories. For more information on using the native package installers, see [Section 2.5.7, “Installing MySQL on Linux from the Native Software Repositories”](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-native.html).
 
