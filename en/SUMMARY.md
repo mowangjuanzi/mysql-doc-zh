@@ -12,6 +12,7 @@
 * [Optimization](optimization.md)
     * [Optimization Overview](optimize-overview.md)
     * [Optimizing SQL Statements](statement-optimization.md)
+        * [Optimizing SELECT Statements](select-optimization.md)
     * [Optimization and Indexes](optimization-indexes.md)
     * [Optimizing Database Structure](optimizing-database-structure.md)
     * [Optimizing for InnoDB Tables](optimizing-innodb.md)
