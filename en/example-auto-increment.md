@@ -71,7 +71,7 @@ You can retrieve the most recent automatically generated `AUTO_INCREMENT` value 
 
 Use the smallest integer data type for the `AUTO_INCREMENT` column that is large enough to hold the maximum sequence value you will need. When the column reaches the upper limit of the data type, the next attempt to generate a sequence number fails. Use the `UNSIGNED` attribute if possible to allow a greater range. For example, if you use [`TINYINT`](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html), the maximum permissible sequence number is 127. For [`TINYINT UNSIGNED`](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html), the maximum is 255. See [Section 11.2.1, “Integer Types (Exact Value) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT”](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html) for the ranges of all the integer types.
 
-> **[warning] Note**
+> **Note**
 >
 > For a multiple-row insert, [`LAST_INSERT_ID()`](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_last-insert-id) and [`mysql_insert_id()`](https://dev.mysql.com/doc/refman/8.0/en/mysql-insert-id.html) actually return the `AUTO_INCREMENT` key from the *first* of the inserted rows. This enables multiple-row inserts to be reproduced correctly on other servers in a replication setup.
 

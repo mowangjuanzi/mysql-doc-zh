@@ -71,7 +71,7 @@ SELECT * FROM animals;
 
 对 `AUTO_INCREMENT` 列使用最小的整数数据类型, 该列要足够大, 可以容纳所需的最大序列值. 当列达到数据类型的上限时, 尝试生成下一个序列号将会失败. 使用 `UNSIGNED` 属性允许更大的范围. 例如, 如果你使用 [`TINYINT`](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html), 最大允许的序列号时 127. 对于 [`TINYINT UNSIGNED`](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html), 最大值为 255. 参阅 [Section 11.2.1, “整数类型(精确值) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT”](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html) 获取所有整数类型的范围.
 
-> **[warning] 注意**
+> **注意**
 >
 > 对于多行插入, [`LAST_INSERT_ID()`](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_last-insert-id) 和 [`mysql_insert_id()`](https://dev.mysql.com/doc/refman/8.0/en/mysql-insert-id.html) 实际上从插入的*第一行*返回 `AUTO_INCREMENT` 键. 这允许在复制设置中其他服务器上正确的复制多行插入.
 

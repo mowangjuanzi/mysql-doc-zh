@@ -1,11 +1,5 @@
 # mysql 中文翻译文档
 
-## 预览
-
-GitHub Page: http://mysql-doc.baoguoxiao.com/zh-cn/
-
-看云：https://www.kancloud.cn/baoguoxiao0538/mysql-8-0-chinese-doc
-
 ## 创建过程
 
 首先你要确认你的系统中存在`nodejs`和`npm`.
@@ -13,23 +7,19 @@ GitHub Page: http://mysql-doc.baoguoxiao.com/zh-cn/
 然后执行以下命令安装环境
 
 ```bash
-npm install gitbook-cli gh-pages -g
+npm install
 ```
 
 部署环境：
 
 ```bash
-git clone https://github.com/mowangjuanzi/mysql-chinese-doc.git
-cd mysql-chinese-doc
-gitbook install
-gitbook serve
+npm serve
 ```
 
-## 部署到gh-pages
+## 编译
 
 ```bash
-gitbook build
-gh-pages -d ./_book/
+npm build
 ```
 
 ## 贡献

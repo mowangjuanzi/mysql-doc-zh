@@ -30,7 +30,7 @@ ORDER BY price DESC
 LIMIT 1;
 ```
 
-> **[warning] Note**
+> **Note**
 >
 > If there were several most expensive articles, each with a price of 19.95, the `LIMIT` solution would show only one of them.
 

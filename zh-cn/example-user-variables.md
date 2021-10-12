@@ -15,6 +15,6 @@ mysql> SELECT * FROM shop WHERE price=@min_price OR price=@max_price;
 +---------+--------+-------+
 ```
 
-> **[warning] Note**
+> **Note**
 >
 > 还可以将数据库对象(例如表和列)的名称存储在用户变量中, 然后在 SQL 语句中使用该变量; 然而, 这需要使用预置语句. 参阅 [Section 13.5, “预置 SQL 语句语法”](https://dev.mysql.com/doc/refman/8.0/en/sql-syntax-prepared-statements.html)获取更多信息.
