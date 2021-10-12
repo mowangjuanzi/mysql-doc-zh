@@ -57,3 +57,4 @@
     * [Optimizing the MySQL Server](optimizing-server.md)
     * [Measuring Performance (Benchmarking)](optimize-benchmarking.md)
     * [Examining Thread Information](thread-information.md)
+* [Data Types](data-types.md)

@@ -56,3 +56,4 @@
     * [优化 MySQL 服务器](optimizing-server.md)
     * [测量性能 (Benchmarking)](optimize-benchmarking.md)
     * [检查线程信息](thread-information.md)
+* [数据类型](data-types.md)

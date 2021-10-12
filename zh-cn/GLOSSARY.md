@@ -1,0 +1,4 @@
+## SQL
+The Structured Query Language that is standard for performing database operations. Often divided into the categories ***DDL***, ***DML***, and ***queries***. MySQL includes some additional statement categories such as ***replication***. See [Chapter 9, *Language Structure*](language-structure.md) for the building blocks of SQL syntax, [Chapter 11, *Data Types*](data-types.md) for the data types to use for MySQL table columns, [Chapter 13, *SQL Statements*](sql-statements.md) for details about SQL statements and their associated categories, and [Chapter 12, *Functions and Operators*](functions.html) for standard and MySQL-specific functions to use in queries.
+
+See Also DDL, DML, query, replication.
