@@ -131,15 +131,15 @@ A property of a table column (specified by the `AUTO_INCREMENT` keyword) that au
 
 It saves work for the developer, not to have to produce new unique values when inserting new rows. It provides useful information for the query optimizer, because the column is known to be not null and with unique values. The values from such a column can be used as lookup keys in various contexts, and because they are auto-generated there is no reason to ever change them; for this reason, primary key columns are often specified as auto-incrementing.
 
-Auto-increment columns can be problematic with statement-based replication, because replaying the statements on a replica might not produce the same set of column values as on the source, due to timing issues. When you have an auto-incrementing primary key, you can use statement-based replication only with the setting [`innodb_autoinc_lock_mode=1`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode). If you have [`innodb_autoinc_lock_mode=2`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode), which allows higher concurrency for insert operations, use ***row-based replication*** rather than ***statement-based replication***. The setting [`innodb_autoinc_lock_mode=0`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode) should not be used except for compatibility purposes.
+Auto-increment columns can be problematic with statement-based replication, because replaying the statements on a replica might not produce the same set of column values as on the source, due to timing issues. When you have an auto-incrementing primary key, you can use statement-based replication only with the setting [`innodb_autoinc_lock_mode=1`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode). If you have [`innodb_autoinc_lock_mode=2`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode), which allows higher concurrency for insert operations, use ***row-based replication*** rather than ***statement-based replication***. The setting [`innodb_autoinc_lock_mode=0`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode) should not be used except for compatibility purposes.
 
-Consecutive lock mode ([`innodb_autoinc_lock_mode=1`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode)) is the default setting prior to MySQL 8.0.3. As of MySQL 8.0.3, interleaved lock mode ([`innodb_autoinc_lock_mode=2`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode)) is the default, which reflects the change from statement-based to row-based replication as the default replication type.
+Consecutive lock mode ([`innodb_autoinc_lock_mode=1`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode)) is the default setting prior to MySQL 8.0.3. As of MySQL 8.0.3, interleaved lock mode ([`innodb_autoinc_lock_mode=2`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode)) is the default, which reflects the change from statement-based to row-based replication as the default replication type.
 
 See Also auto-increment locking, innodb_autoinc_lock_mode, primary key, row-based replication, statement-based replication.
 
 ## auto-increment locking
 
-The convenience of an ***auto-increment*** primary key involves some tradeoff with concurrency. In the simplest case, if one transaction is inserting values into the table, any other transactions must wait to do their own inserts into that table, so that rows inserted by the first transaction receive consecutive primary key values. `InnoDB` includes optimizations and the [`innodb_autoinc_lock_mode`](innodb-parameters.html#sysvar_innodb_autoinc_lock_mode) option so that you can configure and optimal balance between predictable sequences of auto-increment values and maximum ***concurrency*** for insert operations.
+The convenience of an ***auto-increment*** primary key involves some tradeoff with concurrency. In the simplest case, if one transaction is inserting values into the table, any other transactions must wait to do their own inserts into that table, so that rows inserted by the first transaction receive consecutive primary key values. `InnoDB` includes optimizations and the [`innodb_autoinc_lock_mode`](innodb-parameters.md#sysvar_innodb_autoinc_lock_mode) option so that you can configure and optimal balance between predictable sequences of auto-increment values and maximum ***concurrency*** for insert operations.
 
 See Also auto-increment, concurrency, innodb_autoinc_lock_mode.
 
@@ -219,7 +219,7 @@ A special mode of ***full-text search*** enabled by the `WITH QUERY EXPANSION` c
 
 ## BLOB
 
-An SQL data type ([`TINYBLOB`](blob.html), [`BLOB`](blob.html), [`MEDIUMBLOB`](blob.html), and [`LONGBLOB`](blob.html)) for objects containing any kind of binary data, of arbitrary size. Used for storing documents, images, sound files, and other kinds of information that cannot easily be decomposed to rows and columns within a MySQL table. The techniques for handling BLOBs within a MySQL application vary with each ***Connector*** and ***API***. MySQL `Connector/ODBC` defines `BLOB` values as `LONGVARBINARY`. For large, free-form collections of character data, the industry term is ***CLOB***, represented by the MySQL `TEXT` data types.
+An SQL data type ([`TINYBLOB`](blob.md), [`BLOB`](blob.md), [`MEDIUMBLOB`](blob.md), and [`LONGBLOB`](blob.md)) for objects containing any kind of binary data, of arbitrary size. Used for storing documents, images, sound files, and other kinds of information that cannot easily be decomposed to rows and columns within a MySQL table. The techniques for handling BLOBs within a MySQL application vary with each ***Connector*** and ***API***. MySQL `Connector/ODBC` defines `BLOB` values as `LONGVARBINARY`. For large, free-form collections of character data, the industry term is ***CLOB***, represented by the MySQL `TEXT` data types.
 
 See Also API, CLOB, connector, Connector/ODBC.
 
@@ -277,6 +277,264 @@ For example, an employee leaving a company might trigger a sequence of actions f
 
 See Also relational.
 
+## .cfg file
+
+A metadata file used with the `InnoDB` ***transportable tablespace*** feature. It is produced by the command `FLUSH TABLES ... FOR EXPORT`, puts one or more tables in a consistent state that can be copied to another server. The `.cfg` file is copied along with the corresponding ***.ibd*** file, and used to adjust the internal values of the `.ibd` file, such as the ***space ID***, during the `ALTER TABLE ... IMPORT TABLESPACE` step.
+
+See Also .ibd file, space ID, transportable tablespace.
+
+## C
+
+A programming language that combines portability with performance and access to low-level hardware features, making it a popular choice for writing operating systems, drivers, and other kinds of system software. Many complex applications, languages, and reusable modules feature pieces written in C, tied together with high-level components written in other languages. Its core syntax is familiar to ***C++***, ***Java***, and ***C#*** developers.
+
+See Also C API, C++, C#, Java.
+
+## C API
+
+The C ***API*** code is distributed with MySQL. It is included in the ***libmysqlclient*** library and enables ***C*** programs to access a database.
+
+See Also API, C, libmysqlclient.
+
+## C#
+
+A programming language combining strong typing and object-oriented features, running within the Microsoft ***.NET*** framework or its open-source counterpart ***Mono***. Often used for creating applications with the ***ASP.net*** framework. Its syntax is familiar to C, C++ and Java developers.
+
+See Also .NET, ASP.net, C, Connector/NET, C++, Java, Mono.
+
+## C++
+
+A programming language with core syntax familiar to ***C*** developers. Provides access to low-level operations for performance, combined with higher-level data types, object-oriented features, and garbage collection. To write C++ applications for MySQL, you use the ***Connector/C++*** component.
+
+See Also C, Connector/C++.
+
+## cache
+
+The general term for any memory area that stores copies of data for frequent or high-speed retrieval. In `InnoDB`, the primary kind of cache structure is the ***buffer pool***.
+
+See Also buffer, buffer pool.
+
+## cardinality
+
+The number of different values in a table ***column***. When queries refer to columns that have an associated ***index***, the cardinality of each column influences which access method is most efficient. For example, for a column with a ***unique constraint***, the number of different values is equal to the number of rows in the table. If a table has a million rows but only 10 different values for a particular column, each value occurs (on average) 100,000 times. A query such as `SELECT c1 FROM t1 WHERE c1 = 50;` thus might return 1 row or a huge number of rows, and the database server might process the query differently depending on the cardinality of `c1`.
+
+If the values in a column have a very uneven distribution, the cardinality might not be a good way to determine the best query plan. For example, `SELECT c1 FROM t1 WHERE c1 = x;` might return 1 row when `x=50` and a million rows when `x=30`. In such a case, you might need to use ***index hints*** to pass along advice about which lookup method is more efficient for a particular query.
+
+Cardinality can also apply to the number of distinct values present in multiple columns, as in a ***composite index***.
+
+See Also column, composite index, index, index hint, persistent statistics, random dive, selectivity, unique constraint.
+
+## change buffer
+
+A special data structure that records changes to ***pages*** in ***secondary indexes***. These values could result from SQL [`INSERT`](insert.md), [`UPDATE`](update.md), or [`DELETE`](delete.md) statements (***DML***). The set of features involving the change buffer is known collectively as ***change buffering***, consisting of ***insert buffering***, ***delete buffering***, and ***purge buffering***.
+
+Changes are only recorded in the change buffer when the relevant page from the secondary index is not in the ***buffer pool***. When the relevant index page is brought into the buffer pool while associated changes are still in the change buffer, the changes for that page are applied in the buffer pool (***merged***) using the data from the change buffer. Periodically, the ***purge*** operation that runs during times when the system is mostly idle, or during a slow shutdown, writes the new index pages to disk. The purge operation can write the disk blocks for a series of index values more efficiently than if each value were written to disk immediately.
+
+Physically, the change buffer is part of the ***system tablespace***, so that the index changes remain buffered across database restarts. The changes are only applied (***merged***) when the pages are brought into the buffer pool due to some other read operation.
+
+The kinds and amount of data stored in the change buffer are governed by the [`innodb_change_buffering`](innodb-parameters.md#sysvar_innodb_change_buffering) and [`innodb_change_buffer_max_size`](innodb-parameters.md#sysvar_innodb_change_buffer_max_size) configuration options. To see information about the current data in the change buffer, issue the [`SHOW ENGINE INNODB STATUS`](show-engine.md) command.
+
+Formerly known as the ***insert buffer***.
+
+See Also buffer pool, change buffering, delete buffering, DML, insert buffer, insert buffering, merge, page, purge, purge buffering, secondary index, system tablespace.
+
+## change buffering
+
+The general term for the features involving the ***change buffer***, consisting of ***insert buffering***, ***delete buffering***, and ***purge buffering***. Index changes resulting from SQL statements, which could normally involve random I/O operations, are held back and performed periodically by a background ***thread***. This sequence of operations can write the disk blocks for a series of index values more efficiently than if each value were written to disk immediately. Controlled by the [`innodb_change_buffering`](innodb-parameters.md#sysvar_innodb_change_buffering) and [`innodb_change_buffer_max_size`](innodb-parameters.md#sysvar_innodb_change_buffer_max_size) configuration options.
+
+See Also change buffer, delete buffering, insert buffering, purge buffering.
+
+## checkpoint
+
+As changes are made to data pages that are cached in the ***buffer pool***, those changes are written to the ***data files*** sometime later, a process known as ***flushing***. The checkpoint is a record of the latest changes (represented by an ***LSN*** value) that have been successfully written to the data files.
+
+See Also buffer pool, data files, flush, fuzzy checkpointing, LSN.
+
+## checksum
+
+In InnoDB, a validation mechanism to detect corruption when a ***page*** in a ***tablespace*** is read from disk into the `InnoDB` ***buffer pool***. This feature is controlled by the [`innodb_checksums`](innodb-parameters.md#sysvar_innodb_checksums) configuration option in MySQL 5.5. [`innodb_checksums`](innodb-parameters.md#sysvar_innodb_checksums) is deprecated in MySQL 5.6.3, replaced by [`innodb_checksum_algorithm`](innodb-parameters.md#sysvar_innodb_checksum_algorithm).
+
+The [innochecksum](innochecksum.md) command helps diagnose corruption problems by testing the checksum values for a specified ***tablespace*** file while the MySQL server is shut down.
+
+MySQL also uses checksums for replication purposes. For details, see the configuration options [`binlog_checksum`](replication-options-binary-log.md#sysvar_binlog_checksum), [`source_verify_checksum`](replication-options-binary-log.md#sysvar_source_verify_checksum) or [`master_verify_checksum`](replication-options-binary-log.md#sysvar_master_verify_checksum), and [`replica_sql_verify_checksum`](replication-options-replica.md#sysvar_replica_sql_verify_checksum) or [`slave_sql_verify_checksum`](replication-options-replica.md#sysvar_slave_sql_verify_checksum).
+
+See Also buffer pool, page, tablespace.
+
+## child table
+
+In a ***foreign key*** relationship, a child table is one whose rows refer (or point) to rows in another table with an identical value for a specific column. This is the table that contains the `FOREIGN KEY ... REFERENCES` clause and optionally `ON UPDATE` and `ON DELETE` clauses. The corresponding row in the ***parent table*** must exist before the row can be created in the child table. The values in the child table can prevent delete or update operations on the parent table, or can cause automatic deletion or updates in the child table, based on the ON `CASCADE` option used when creating the foreign key.
+
+See Also foreign key, parent table.
+
+## clean page
+
+A ***page*** in the `InnoDB` ***buffer pool*** where all changes made in memory have also been written (***flushed***) to the [data files](glossary.md#glos_data_files). The opposite of a ***dirty page***.
+
+See Also buffer pool, data files, dirty page, flush, page.
+
+## clean shutdown
+
+A ***shutdown*** that completes without errors and applies all changes to `InnoDB` tables before finishing, as opposed to a ***crash*** or a ***fast shutdown***. Synonym for ***slow shutdown***.
+
+See Also crash, fast shutdown, shutdown, slow shutdown.
+
+## client
+
+A program that runs outside the database server, communicating with the database by sending requests through a ***Connector***, or an ***API*** made available through ***client libraries***. It can run on the same physical machine as the database server, or on a remote machine connected over a network. It can be a special-purpose database application, or a general-purpose program like the [mysql](mysql.md) command-line processor.
+
+See Also API, client libraries, connector, mysql, server.
+
+## client libraries
+
+Files containing collections of functions for working with databases. By compiling your program with these libraries, or installing them on the same system as your application, you can run a database application (known as a ***client***) on a machine that does not have the MySQL server installed; the application accesses the database over a network. With MySQL, you can use the ***libmysqlclient*** library from the MySQL server itself.
+
+See Also client, libmysqlclient.
+
+## client-side prepared statement
+
+A type of ***prepared statement*** where the caching and reuse are managed locally, emulating the functionality of ***server-side prepared statements***. Historically, used by some ***Connector/J***, ***Connector/ODBC***, and ***Connector/PHP*** developers to work around issues with server-side stored procedures. With modern MySQL server versions, server-side prepared statements are recommended for performance, scalability, and memory efficiency.
+
+See Also Connector/J, Connector/ODBC, Connector/PHP, prepared statement.
+
+## CLOB
+
+An SQL data type ([`TINYTEXT`](/blob.md), ([`TEXT`](/blob.md), ([`MEDIUMTEXT`](/blob.md), or ([`LONGTEXT`](/blob.md)) for objects containing any kind of character data, of arbitrary size. Used for storing text-based documents, with associated character set and collation order. The techniques for handling CLOBs within a MySQL application vary with each ***Connector*** and ***API***. MySQL Connector/ODBC defines TEXT values as `LONGVARCHAR`. For storing binary data, the equivalent is the ***BLOB*** type.
+
+See Also API, BLOB, connector, Connector/ODBC.
+
+## clustered index
+
+The `InnoDB` term for a ***primary key*** index. `InnoDB` table storage is organized based on the values of the primary key columns, to speed up queries and sorts involving the primary key columns. For best performance, choose the primary key columns carefully based on the most performance-critical queries. Because modifying the columns of the clustered index is an expensive operation, choose primary columns that are rarely or never updated.
+
+In the Oracle Database product, this type of table is known as an ***index-organized table***.
+
+See Also index, primary key, secondary index.
+
+## cold backup
+
+A ***backup*** taken while the database is shut down. For busy applications and websites, this might not be practical, and you might prefer a ***warm backup*** or a ***hot backup***.
+
+See Also backup, hot backup, warm backup.
+
+## column
+
+A data item within a ***row***, whose storage and semantics are defined by a data type. Each ***table*** and ***index*** is largely defined by the set of columns it contains.
+
+Each column has a ***cardinality*** value. A column can be the ***primary key*** for its table, or part of the primary key. A column can be subject to a ***unique constraint***, a ***NOT NULL constraint***, or both. Values in different columns, even across different tables, can be linked by a ***foreign key*** relationship.
+
+In discussions of MySQL internal operations, sometimes ***field*** is used as a synonym.
+
+See Also cardinality, foreign key, index, NOT NULL constraint, primary key, row, table, unique constraint.
+
+## column index
+
+An ***index*** on a single column.
+
+See Also composite index, index.
+
+## column prefix
+
+When an ***index*** is created with a length specification, such as `CREATE INDEX idx ON t1 (c1(N))`, only the first N characters of the column value are stored in the index. Keeping the index prefix small makes the index compact, and the memory and disk I/O savings help performance. (Although making the index prefix too small can hinder query optimization by making rows with different values appear to the query optimizer to be duplicates.)
+
+For columns containing binary values or long text strings, where sorting is not a major consideration and storing the entire value in the index would waste space, the index automatically uses the first N (typically 768) characters of the value to do lookups and sorts.
+
+See Also index.
+
+## command interceptor
+
+Synonym for ***statement interceptor***. One aspect of the ***interceptor*** design pattern available for both ***Connector/NET*** and ***Connector/J***. What Connector/NET calls a command, Connector/J refers to as a statement. Contrast with ***exception interceptor***.
+
+See Also Connector/J, Connector/NET, exception interceptor, interceptor, statement interceptor.
+
+## commit
+
+A ***SQL*** statement that ends a ***transaction***, making permanent any changes made by the transaction. It is the opposite of ***rollback***, which undoes any changes made in the transaction.
+
+InnoDB uses an ***optimistic*** mechanism for commits, so that changes can be written to the data files before the commit actually occurs. This technique makes the commit itself faster, with the tradeoff that more work is required in case of a rollback.
+
+By default, MySQL uses the ***autocommit*** setting, which automatically issues a commit following each SQL statement.
+
+See Also autocommit, optimistic, rollback, SQL, transaction.
+
+## compact row format
+
+A ***row format*** for InnoDB tables. It was the default row format from MySQL 5.0.3 to MySQL 5.7.8. In MySQL 8.0, the default row format is defined by the [`innodb_default_row_format`](innodb-parameters.md#sysvar_innodb_default_row_format) configuration option, which has a default setting of ***DYNAMIC***. The ***COMPACT*** row format provides a more compact representation for nulls and variable-length columns than the ***REDUNDANT*** row format.
+
+For additional information about `InnoDB COMPACT` row format, see [Section 15.10, “InnoDB Row Formats”](innodb-row-format.md).
+
+See Also dynamic row format, file format, redundant row format, row format.
+
+## composite index
+
+An ***index*** that includes multiple columns.
+
+See Also index.
+
+## compressed backup
+
+The compression feature of the ***MySQL Enterprise Backup*** product makes a compressed copy of each tablespace, changing the extension from `.ibd` to `.ibz`. Compressing backup data allows you to keep more backups on hand, and reduces the time to transfer backups to a different server. The data is uncompressed during the restore operation. When a compressed backup operation processes a table that is already compressed, it skips the compression step for that table, because compressing again would result in little or no space savings.
+
+A set of files produced by the ***MySQL Enterprise Backup*** product, where each ***tablespace*** is compressed. The compressed files are renamed with a `.ibz` file extension.
+
+Applying ***compression*** at the start of the backup process helps to avoid storage overhead during the compression process, and to avoid network overhead when transferring the backup files to another server. The process of ***applying*** the ***binary log*** takes longer, and requires uncompressing the backup files.
+
+See Also apply, binary log, compression, hot backup, MySQL Enterprise Backup, tablespace.
+
+## compressed row format
+
+A ***row format*** that enables data and index ***compression*** for `InnoDB` tables. Large fields are stored away from the page that holds the rest of the row data, as in ***dynamic row format***. Both index pages and the large fields are compressed, yielding memory and disk savings. Depending on the structure of the data, the decrease in memory and disk usage might or might not outweigh the performance overhead of uncompressing the data as it is used. See [Section 15.9, “InnoDB Table and Page Compression” for usage details](innodb-compression.md).
+
+For additional information about `InnoDB COMPRESSED` row format, see [DYNAMIC Row Format](innodb-row-format.md#innodb-row-format-dynamic).
+
+See Also compression, dynamic row format, row format.
+
+## compressed table
+
+A table for which the data is stored in compressed form. For `InnoDB`, it is a table created with `ROW_FORMAT=COMPRESSED`. See [Section 15.9, “InnoDB Table and Page Compression” for more information](innodb-compression.md).
+
+See Also compressed row format, compression.
+
+## compression
+
+A feature with wide-ranging benefits from using less disk space, performing less I/O, and using less memory for caching.
+
+InnoDB supports both table-level and page-level compression. `InnoDB` page compression is also referred to as ***transparent page compression***. For more information about `InnoDB` compression, see [Section 15.9, “InnoDB Table and Page Compression”](innodb-compression.md).
+
+Another type of compression is the ***compressed backup*** feature of the ***MySQL Enterprise Backup*** product.
+
+See Also buffer pool, compressed backup, compressed row format, DML, transparent page compression.
+
+## compression failure
+
+Not actually an error, rather an expensive operation that can occur when using ***compression*** in combination with ***DML*** operations. It occurs when: updates to a compressed ***page*** overflow the area on the page reserved for recording modifications; the page is compressed again, with all changes applied to the table data; the re-compressed data does not fit on the original page, requiring MySQL to split the data into two new pages and compress each one separately. To check the frequency of this condition, query the [`INFORMATION_SCHEMA.INNODB_CMP`](information-schema-innodb-cmp-table.md) table and check how much the value of the `COMPRESS_OPS` column exceeds the value of the `COMPRESS_OPS_OK` column. Ideally, compression failures do not occur often; when they do, you can adjust the [`innodb_compression_level`](innodb-parameters.md#sysvar_innodb_compression_level), [`innodb_compression_failure_threshold_pct`](innodb-parameters.md#sysvar_innodb_compression_failure_threshold_pct), and [`innodb_compression_pad_pct_max`](innodb-parameters.md#sysvar_innodb_compression_pad_pct_max) configuration options.
+
+See Also compression, DML, page.
+
+## concatenated index
+
+See composite index.
+
+## concurrency
+
+The ability of multiple operations (in database terminology, ***transactions***) to run simultaneously, without interfering with each other. Concurrency is also involved with performance, because ideally the protection for multiple simultaneous transactions works with a minimum of performance overhead, using efficient mechanisms for ***locking***.
+
+See Also ACID, locking, transaction.
+
+## configuration file
+
+The file that holds the ***option*** values used by MySQL at startup. Traditionally, on Linux and Unix this file is named `my.cnf`, and on Windows it is named `my.ini`. You can set a number of options related to InnoDB under the `[mysqld]` section of the file.
+
+See [Section 4.2.2.2, “Using Option Files”](option-files.md) for information about where MySQL searches for configuration files.
+
+When you use the ***MySQL Enterprise Backup*** product, you typically use two configuration files: one that specifies where the data comes from and how it is structured (which could be the original configuration file for your server), and a stripped-down one containing only a small set of options that specify where the backup data goes and how it is structured. The configuration files used with the ***MySQL Enterprise Backup*** product must contain certain options that are typically left out of regular configuration files, so you might need to add options to your existing configuration file for use with ***MySQL Enterprise Backup***.
+
+See Also my.cnf, MySQL Enterprise Backup, option, option file.
+
+## connection
+
+The communication channel between an application and a MySQL server. The performance and scalability of a database applications is influenced by on how quickly a database connection can be established, how many can be made simultaneously, and how long they persist. The parameters such as ***host***, ***port***, and so on are represented as a ***connection string*** in ***Connector/NET***, and as a ***DSN*** in ***Connector/ODBC***. High-traffic systems make use of an optimization known as the ***connection pool***.
+
+See Also connection pool, connection string, Connector/NET, Connector/ODBC, DSN, host, port.
+
 ## DDL
 
 Data definition language, a set of `SQL` statements for manipulating the database itself rather than individual table rows. Includes all forms of the CREATE, ALTER, and DROP statements. Also includes the TRUNCATE statement, because it works differently than a DELETE FROM table_name statement, even though the ultimate effect is similar.
@@ -306,7 +564,7 @@ For historical reasons, sometimes discussions of internal processing for stateme
 See Also DDL, DML, index, join, SQL, table.
 
 ## SQL
-The Structured Query Language that is standard for performing database operations. Often divided into the categories ***DDL***, ***DML***, and ***queries***. MySQL includes some additional statement categories such as ***replication***. See [Chapter 9, *Language Structure*](language-structure.md) for the building blocks of SQL syntax, [Chapter 11, *Data Types*](data-types.md) for the data types to use for MySQL table columns, [Chapter 13, *SQL Statements*](sql-statements.md) for details about SQL statements and their associated categories, and [Chapter 12, *Functions and Operators*](functions.html) for standard and MySQL-specific functions to use in queries.
+The Structured Query Language that is standard for performing database operations. Often divided into the categories ***DDL***, ***DML***, and ***queries***. MySQL includes some additional statement categories such as ***replication***. See [Chapter 9, *Language Structure*](language-structure.md) for the building blocks of SQL syntax, [Chapter 11, *Data Types*](data-types.md) for the data types to use for MySQL table columns, [Chapter 13, *SQL Statements*](sql-statements.md) for details about SQL statements and their associated categories, and [Chapter 12, *Functions and Operators*](functions.md) for standard and MySQL-specific functions to use in queries.
 
 See Also DDL, DML, query, replication.
 
