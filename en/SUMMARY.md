@@ -58,3 +58,4 @@
     * [Measuring Performance (Benchmarking)](optimize-benchmarking.md)
     * [Examining Thread Information](thread-information.md)
 * [Data Types](data-types.md)
+    * [Numeric Data Types](numeric-types.md)
