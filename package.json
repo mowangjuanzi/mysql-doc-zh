@@ -1,6 +1,6 @@
 {
   "name": "mysql-chinese-doc",
-  "version": "8.0",
+  "version": "8.0.0",
   "description": "MySQL 8.0 中文文档",
   "main": "index.js",
   "scripts": {
