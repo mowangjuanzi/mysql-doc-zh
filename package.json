@@ -18,7 +18,7 @@
     "url": "https://github.com/mowangjuanzi/mysql-chinese-doc/issues"
   },
   "homepage": "https://github.com/mowangjuanzi/mysql-chinese-doc#readme",
-  "devDependencies": {
-    "honkit": "^3.6.22"
+  "dependencies": {
+    "honkit": "^4.0.7"
   }
 }
