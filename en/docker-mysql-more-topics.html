@@ -1,0 +1,1345 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>More Topics on Deploying MySQL Server with Docker · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tutorial.html" />
+    
+    
+    <link rel="prev" href="docker-mysql-getting-started.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    Preface and Legal Notices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="installing.html">
+            
+                <a href="installing.html">
+            
+                    
+                    Installing and Upgrading MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux-installation.html">
+            
+                <a href="linux-installation.html">
+            
+                    
+                    Installing MySQL on Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="linux-installation-apt-repo.html">
+            
+                <a href="linux-installation-apt-repo.html">
+            
+                    
+                    Installing MySQL on Linux Using the MySQL APT Repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="linux-installation-docker.html">
+            
+                <a href="linux-installation-docker.html">
+            
+                    
+                    Deploying MySQL on Linux with Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="docker-mysql-getting-started.html">
+            
+                <a href="docker-mysql-getting-started.html">
+            
+                    
+                    Basic Steps for MySQL Server Deployment with Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.2.2" data-path="docker-mysql-more-topics.html">
+            
+                <a href="docker-mysql-more-topics.html">
+            
+                    
+                    More Topics on Deploying MySQL Server with Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tutorial.html">
+            
+                <a href="tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="connecting-disconnecting.html">
+            
+                <a href="connecting-disconnecting.html">
+            
+                    
+                    Connecting to and Disconnecting from the Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="entering-queries.html">
+            
+                <a href="entering-queries.html">
+            
+                    
+                    Entering Queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="database-use.html">
+            
+                <a href="database-use.html">
+            
+                    
+                    Creating and Using a Database
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="creating-database.html">
+            
+                <a href="creating-database.html">
+            
+                    
+                    Creating and Selecting a Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="creating-tables.html">
+            
+                <a href="creating-tables.html">
+            
+                    
+                    Creating a Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="loading-tables.html">
+            
+                <a href="loading-tables.html">
+            
+                    
+                    Loading Data into a Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="retrieving-data.html">
+            
+                <a href="retrieving-data.html">
+            
+                    
+                    Retrieving Information from a Table
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.4.1" data-path="selecting-all.html">
+            
+                <a href="selecting-all.html">
+            
+                    
+                    Selecting All Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.2" data-path="selecting-rows.html">
+            
+                <a href="selecting-rows.html">
+            
+                    
+                    Selecting Particular Rows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.3" data-path="selecting-columns.html">
+            
+                <a href="selecting-columns.html">
+            
+                    
+                    Selecting Particular Columns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.4" data-path="sorting-rows.html">
+            
+                <a href="sorting-rows.html">
+            
+                    
+                    Sorting Rows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.5" data-path="date-calculations.html">
+            
+                <a href="date-calculations.html">
+            
+                    
+                    Date Calculationsa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.6" data-path="working-with-null.html">
+            
+                <a href="working-with-null.html">
+            
+                    
+                    Working with NULL Values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.7" data-path="pattern-matching.html">
+            
+                <a href="pattern-matching.html">
+            
+                    
+                    Pattern Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.8" data-path="counting-rows.html">
+            
+                <a href="counting-rows.html">
+            
+                    
+                    Counting Rows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.9" data-path="multiple-tables.html">
+            
+                <a href="multiple-tables.html">
+            
+                    
+                    Using More Than one Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="getting-information.html">
+            
+                <a href="getting-information.html">
+            
+                    
+                    Getting Information About Databases and Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="batch-mode.html">
+            
+                <a href="batch-mode.html">
+            
+                    
+                    Using mysql in Batch Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    Examples of Common Queries
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="example-maximum-column.html">
+            
+                <a href="example-maximum-column.html">
+            
+                    
+                    The Maximum Value for a Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="example-maximum-row.html">
+            
+                <a href="example-maximum-row.html">
+            
+                    
+                    The Row Holding the Maximum of a Certain Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="example-maximum-column-group.html">
+            
+                <a href="example-maximum-column-group.html">
+            
+                    
+                    Maximum of Column per Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="example-maximum-column-group-row.html">
+            
+                <a href="example-maximum-column-group-row.html">
+            
+                    
+                    The Rows Holding the Group-wise Maximum of a Certain Column
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="example-user-variables.html">
+            
+                <a href="example-user-variables.html">
+            
+                    
+                    Using User-Defined Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="example-foreign-keys.html">
+            
+                <a href="example-foreign-keys.html">
+            
+                    
+                    Using Foreign Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="searching-on-two-keys.html">
+            
+                <a href="searching-on-two-keys.html">
+            
+                    
+                    Searching on Two Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="calculating-days.html">
+            
+                <a href="calculating-days.html">
+            
+                    
+                    Calculating Visits Per Day
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="example-auto-increment.html">
+            
+                <a href="example-auto-increment.html">
+            
+                    
+                    Using AUTO_INCREMENT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    Using MySQL with Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="programs.html">
+            
+                <a href="programs.html">
+            
+                    
+                    MySQL Programs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="programs-client.html">
+            
+                <a href="programs-client.html">
+            
+                    
+                    MySQL Client Programs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql — The MySQL Command-Line Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="optimize-overview.html">
+            
+                <a href="optimize-overview.html">
+            
+                    
+                    Optimization Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="statement-optimization.html">
+            
+                <a href="statement-optimization.html">
+            
+                    
+                    Optimizing SQL Statements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="select-optimization.html">
+            
+                <a href="select-optimization.html">
+            
+                    
+                    Optimizing SELECT Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="optimization-indexes.html">
+            
+                <a href="optimization-indexes.html">
+            
+                    
+                    Optimization and Indexes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="optimizing-database-structure.html">
+            
+                <a href="optimizing-database-structure.html">
+            
+                    
+                    Optimizing Database Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="optimizing-innodb.html">
+            
+                <a href="optimizing-innodb.html">
+            
+                    
+                    Optimizing for InnoDB Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="optimizing-myisam.html">
+            
+                <a href="optimizing-myisam.html">
+            
+                    
+                    Optimizing for MyISAM Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="optimizing-memory-tables.html">
+            
+                <a href="optimizing-memory-tables.html">
+            
+                    
+                    Optimizing for MEMORY Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="execution-plan-information.html">
+            
+                <a href="execution-plan-information.html">
+            
+                    
+                    Understanding the Query Execution Plan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="controlling-optimizer.html">
+            
+                <a href="controlling-optimizer.html">
+            
+                    
+                    Controlling the Query Optimizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="buffering-caching.html">
+            
+                <a href="buffering-caching.html">
+            
+                    
+                    Buffering and Caching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="locking-issues.html">
+            
+                <a href="locking-issues.html">
+            
+                    
+                    Optimizing Locking Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="optimizing-server.html">
+            
+                <a href="optimizing-server.html">
+            
+                    
+                    Optimizing the MySQL Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="optimize-benchmarking.html">
+            
+                <a href="optimize-benchmarking.html">
+            
+                    
+                    Measuring Performance (Benchmarking)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="thread-information.html">
+            
+                <a href="thread-information.html">
+            
+                    
+                    Examining Thread Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    Data Types
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="numeric-types.html">
+            
+                <a href="numeric-types.html">
+            
+                    
+                    Numeric Data Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >More Topics on Deploying MySQL Server with Docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="2562-more-topics-on-deploying-mysql-server-with-docker">2.5.6.2 More Topics on Deploying MySQL Server with Docker</h4>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Most of the sample commands below have <code>mysql/mysql-server</code> <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> the Docker image repository when that has to be specified (like with the <code>docker pull</code> and <code>docker run</code> commands); change that if your image is from another repository—for example, replace it with <code>store/oracle/mysql-enterprise-server</code> for MySQL Enterprise Edition images from the Docker Store, or with <code>container-registry.oracle.com/mysql/enterprise-server</code> for MySQL Enterprise Edition images from the Oracle Container Registry.</p>
+</blockquote>
+<h5 id="the-optimized-mysql-installation-for-docker">The Optimized MySQL Installation for Docker</h5>
+<p>Docker images for MySQL are optimized for code size, which means they only include crucial components that are expected to be relevant for the majority of users who run MySQL instances in Docker containers. A MySQL Docker installation is different from a common, non-Docker installation in the following aspects:</p>
+<ul>
+<li><p>Included binaries are limited to:</p>
+<ul>
+<li><p><code>/usr/bin/my_print_defaults</code></p>
+</li>
+<li><p><code>/usr/bin/mysql</code></p>
+</li>
+<li><p><code>/usr/bin/mysql_config</code></p>
+</li>
+<li><p><code>/usr/bin/mysql_install_db</code></p>
+</li>
+<li><p><code>/usr/bin/mysql_tzinfo_to_sql</code></p>
+</li>
+<li><p><code>/usr/bin/mysql_upgrade</code></p>
+</li>
+<li><p><code>/usr/bin/mysqladmin</code></p>
+</li>
+<li><p><code>/usr/bin/mysqlcheck</code></p>
+</li>
+<li><p><code>/usr/bin/mysqldump</code></p>
+</li>
+<li><p><code>/usr/bin/mysqlpump</code></p>
+</li>
+<li><p><code>/usr/bin/mysqlbackup</code> (for MySQL Enterprise Edition 8.0 only)</p>
+</li>
+<li><p><code>/usr/sbin/mysqld</code></p>
+</li>
+</ul>
+</li>
+<li><p>All binaries are stripped; they contain no debug information.</p>
+</li>
+</ul>
+<h5 id="configuring-the-mysql-server">Configuring the MySQL Server</h5>
+<p>When you start the MySQL Docker container, you can pass configuration options to the server through the <code>docker run</code> command; for example:</p>
+<pre><code class="lang-bash">docker run --name mysql1 -d mysql/mysql-server:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_col
+</code></pre>
+<p>The command starts your MySQL Server with <code>utf8mb4</code> <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> the default character set and <code>utf8mb4_col</code> <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> the default collation for your databases.</p>
+<p>Another way to configure the MySQL Server is to prepare a <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> and mount it at the location of the server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> inside the container. See <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">Persisting Data and Configuration Changes</a> for details.</p>
+<h5 id="persisting-data-and-configuration-changes">Persisting Data and Configuration Changes</h5>
+<p>Docker containers are in principle ephemeral, and any data or configuration are expected to be lost if the container is deleted or corrupted (see discussions <a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" target="_blank">here</a>). <a href="https://docs.docker.com/engine/admin/volumes/volumes/" target="_blank">Docker volumes</a>, however, provides a mechanism to persist data created inside a Docker container. At its initialization, the MySQL Server container creates a Docker volume for the server data directory. The JSON output for running the <code>docker inspect</code> command on the container has a <code>Mount</code> key, whose value provides information on the data directory volume:</p>
+<pre><code class="lang-bash">shell&gt; docker inspect mysql1 
+...
+ <span class="hljs-string">&quot;Mounts&quot;</span>: [
+            {
+                <span class="hljs-string">&quot;Type&quot;</span>: <span class="hljs-string">&quot;volume&quot;</span>,
+                <span class="hljs-string">&quot;Name&quot;</span>: <span class="hljs-string">&quot;4f2d463cfc4bdd4baebcb098c97d7da3337195ed2c6572bc0b89f7e845d27652&quot;</span>,
+                <span class="hljs-string">&quot;Source&quot;</span>: <span class="hljs-string">&quot;/var/lib/docker/volumes/4f2d463cfc4bdd4baebcb098c97d7da3337195ed2c6572bc0b89f7e845d27652/_data&quot;</span>,
+                <span class="hljs-string">&quot;Destination&quot;</span>: <span class="hljs-string">&quot;/var/lib/mysql&quot;</span>,
+                <span class="hljs-string">&quot;Driver&quot;</span>: <span class="hljs-string">&quot;local&quot;</span>,
+                <span class="hljs-string">&quot;Mode&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+                <span class="hljs-string">&quot;RW&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-string">&quot;Propagation&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+            }
+        ],
+...
+</code></pre>
+<p>The output shows that the source folder <code>/var/lib/docker/volumes/4f2d463cfc4bdd4baebcb098c97d7da3337195ed2c6572bc0b89f7e845d27652/_data</code>, in which data is persisted on the host, has been mounted at <code>/var/lib/mysql</code>, the server data directory inside the container.</p>
+<p>Another way to preserve data is to <a href="https://docs.docker.com/engine/reference/commandline/service_create/#add-bind-mounts-volumes-or-memory-filesystems" target="_blank">bind-mount</a> a host directory using the <code>--mount</code> option when creating the container. The same technique can be used to persist the configuration of the server. The following command creates a MySQL Server container and bind-mounts both the data directory and the server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a>:</p>
+<pre><code class="lang-bash">docker run --name=mysql1 \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/my.cnf,dst=/etc/my.cnf \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/datadir,dst=/var/lib/mysql \
+-d mysql/mysql-server:tag
+</code></pre>
+<p>The command mounts <code>path-on-host-machine/my.cnf</code> at <code>/etc/my.cnf</code> (the server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> inside the container), and <code>path-on-host-machine/datadir</code> at <code>/var/lib/mysql</code> (the data directory inside the container). The following conditions must be met for the bind-mounting to work:</p>
+<ul>
+<li>The <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> <code>path-on-host-machine/my.cnf</code> must already exist, and it must contain the specification for starting the server using the user <code>mysql</code>:</li>
+</ul>
+<pre><code class="lang-ini"><span class="hljs-section">[mysqld]</span>
+<span class="hljs-attr">user</span>=mysql
+</code></pre>
+<p>You can also include other server configuration options in the file.</p>
+<ul>
+<li>The data directory <code>path-on-host-machine/datadir</code> must already exist. For server initialization to happen, the directory must be empty. You can also mount a directory prepopulated with data and start the server with it; however, you must make sure you start the Docker container with the same configuration <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> the server that created the data, and any host files or directories required are mounted when starting the container.</li>
+</ul>
+<h5 id="running-additional-initialization-scripts">Running Additional Initialization Scripts</h5>
+<p>If there are any <code>.sh</code> or <code>.sql</code> scripts you want to run on the database immediately after it has been created, you can put them into a host directory and then mount the directory at <code>/docker-entrypoint-initdb.d/</code> inside the container. For example:</p>
+<pre><code class="lang-bash">docker run --name=mysql1 \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/scripts/,dst=/docker-entrypoint-initdb.d/ \
+-d mysql/mysql-server:tag
+</code></pre>
+<h5 id="connect-to-mysql-from-an-application-in-another-docker-container">Connect to MySQL from an Application in Another Docker Container</h5>
+<p>By setting up a Docker network, you can allow multiple Docker containers to communicate with each other, so that a <a href="GLOSSARY.html#client" class="glossary-term" title="A program that runs outside the database server, communicating with the database by sending requests through a Connector, or an API made available through client libraries. It can run on the same physical machine as the database server, or on a remote machine connected over a network. It can be a special-purpose database application, or a general-purpose program like the mysql command-line processor.">client</a> application in another Docker container can access the MySQL Server in the server container. First, create a Docker network:</p>
+<pre><code class="lang-bash">docker network create my-custom-net
+</code></pre>
+<p>Then, when you are creating and starting the server and the <a href="GLOSSARY.html#client" class="glossary-term" title="A program that runs outside the database server, communicating with the database by sending requests through a Connector, or an API made available through client libraries. It can run on the same physical machine as the database server, or on a remote machine connected over a network. It can be a special-purpose database application, or a general-purpose program like the mysql command-line processor.">client</a> containers, use the <code>--network</code> option to put them on network you created. For example:</p>
+<pre><code class="lang-bash">docker run --name=mysql1 --network=my-custom-net -d mysql/mysql-server
+</code></pre>
+<pre><code class="lang-bash">docker run --name=myapp1 --network=my-custom-net -d myapp
+</code></pre>
+<p>The <code>myapp1</code> container can then connect to the <code>mysql1</code> container with the <code>mysql1</code> hostname and vice versa, <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> Docker automatically sets up a DNS for the given container names. In the following example, we run the <a href="https://dev.mysql.com/doc/refman/8.0/en/mysql.html" target="_blank"><code>mysql</code></a> <a href="GLOSSARY.html#client" class="glossary-term" title="A program that runs outside the database server, communicating with the database by sending requests through a Connector, or an API made available through client libraries. It can run on the same physical machine as the database server, or on a remote machine connected over a network. It can be a special-purpose database application, or a general-purpose program like the mysql command-line processor.">client</a> from inside the <code>myapp1</code> container to connect to host <code>mysql1</code> in its own container:</p>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> -it myapp1 mysql --host=mysql1 --user=myuser --password
+</code></pre>
+<p>For other networking techniques for containers, see the <a href="https://docs.docker.com/engine/userguide/networking/" target="_blank">Docker container networking</a> section in the Docker Documentation.</p>
+<h5 id="server-error-log">Server Error Log</h5>
+<p>When the MySQL Server is first started with your server container, a <a href="https://dev.mysql.com/doc/refman/8.0/en/error-log.html" target="_blank">server error log</a> is NOT generated if either of the following conditions is true:</p>
+<ul>
+<li><p>A server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> from the host has been mounted, but the file does not contain the system variable <a href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_log_error" target="_blank"><code>log_error</code></a> (see <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">Persisting Data and Configuration Changes</a> on bind-mounting a server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a>).</p>
+</li>
+<li><p>A server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> from the host has not been mounted, but the Docker environment variable <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console" target="_blank"><code>MYSQL_LOG_CONSOLE</code></a> is true (which is the variable&apos;s default state for MySQL 8.0 server containers). The MySQL Server&apos;s error log is then redirected to <code>stderr</code>, so that the error log goes into the Docker container&apos;s log and is viewable using the <code>docker logs mysqld-container</code> command.</p>
+</li>
+</ul>
+<p>To make MySQL Server generate an error log when either of the two conditions is true, use the <a href="https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_log-error" target="_blank"><code>--log-error</code></a> option to <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-configuring-server" target="_blank">configure the server</a> to generate the error log at a specific location inside the container. To persist the error log, mount a host file at the location of the error log inside the container <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> explained in <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">Persisting Data and Configuration Changes</a>. However, you must make sure your MySQL Server inside its container has write access to the mounted host file.</p>
+<h5 id="using-mysql-enterprise-backup-with-docker">Using MySQL Enterprise Backup with Docker</h5>
+<p><a href="https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/" target="_blank">MySQL Enterprise Backup</a> is a commercially-licensed <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> utility for MySQL Server, available with <a href="https://www.mysql.com/products/enterprise/" target="_blank">MySQL Enterprise Edition</a>. MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> is included in the Docker installation of MySQL Enterprise Edition.</p>
+<p>In the following example, we assume that you already have a MySQL Server running in a Docker container (see <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html" target="_blank">Section 2.5.6.1, “Basic Steps for MySQL Server Deployment with Docker”</a> on how to start a MySQL Server instance with Docker). For MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> to back up the MySQL Server, it must have access to the server&apos;s data directory. This can be achieved by, for example, <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">bind-mounting a host directory on the data directory of the MySQL Server</a> when you start the server:</p>
+<pre><code class="lang-bash">docker run --name=mysqlserver \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/datadir/,dst=/var/lib/mysql \
+-d store/oracle/mysql-enterprise-server:8.0
+</code></pre>
+<p>With this command, the MySQL Server is started with a Docker image of the MySQL Enterprise Edition, and the host directory <code>/path-on-host-machine/datadir/</code> has been mounted onto the server&apos;s data directory (<code>/var/lib/mysql</code>) inside the server container. We also assume that, after the server has been started, the required privileges have also been set up for MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> to access the server (see <a href="https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/mysqlbackup.privileges.html" target="_blank">Grant MySQL Privileges to Backup Administrator</a> for details). Use the following steps then to <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> and restore a MySQL Server instance.</p>
+<p><strong>To <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> a MySQL Server instance running in a Docker container using MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> with Docker:</strong></p>
+<ol>
+<li>On the same host where the MySQL Server container is running, start another container with an image of MySQL Enterprise Edition to perform a back up with the MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> command <a href="https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/backup-commands-backup.html#option_meb_backup-to-image" target="_blank"><code>backup-to-image</code></a>. Provide access to the server&apos;s data directory using the bind mount we created in the last step. Also, mount a host directory (<code>/path-on-host-machine/backups/</code> in this example) onto the storage folder for backups in the container (<code>/data/backups</code> in the example) to persist the backups we are creating. Here is a sample command for this step:</li>
+</ol>
+<pre><code class="lang-bash">shell&gt; docker run \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/datadir/,dst=/var/lib/mysql \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/backups/,dst=/data/backups \ 
+--rm store/oracle/mysql-enterprise-server:8.0 \
+mysqlbackup -umysqlbackup -ppassword --backup-dir=/tmp/backup-tmp --with-timestamp \
+--backup-image=/data/backups/db.mbi backup-to-image
+
+[Entrypoint] MySQL Docker Image 8.0.11-1.1.5
+MySQL Enterprise Backup version 8.0.11 Linux-4.1.12-61.1.16.el7uek.x86_64-x86_64 [2018-04-08  07:06:45] 
+Copyright (c) 2003, 2018, Oracle and/or its affiliates. All Rights Reserved.
+
+180921 17:27:25 MAIN    INFO: A thread created with Id <span class="hljs-string">&apos;140594390935680&apos;</span> 
+180921 17:27:25 MAIN    INFO: Starting with following <span class="hljs-built_in">command</span> line ...
+...
+
+-------------------------------------------------------------
+   Parameters Summary         
+-------------------------------------------------------------
+   Start LSN                  : 29615616
+   End LSN                    : 29651854
+-------------------------------------------------------------
+
+mysqlbackup completed OK!
+</code></pre>
+<p>It is important to check the end of the output by <strong>mysqlbackup</strong> to make sure the <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> has been completed successfully.</p>
+<ol>
+<li>The container exits once the <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> job is finished and, with the <code>--rm</code> option used to start it, it is removed after it exits. An image <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> has been created, and can be found in the host directory mounted in the last step for storing backups:</li>
+</ol>
+<pre><code class="lang-bash">shell&gt; ls /tmp/backups
+db.mbi
+</code></pre>
+<p><strong>To restore a MySQL Server instance in a Docker container using MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> with Docker:</strong></p>
+<ol>
+<li>Stop the MySQL Server container, which also stops the MySQL Server running inside:</li>
+</ol>
+<pre><code class="lang-bash">docker stop mysqlserver
+</code></pre>
+<ol>
+<li>On the host, delete all contents in the bind mount for the MySQL Server data directory:</li>
+</ol>
+<pre><code class="lang-bash">rm -rf /path-on-host-machine/datadir/*
+</code></pre>
+<ol>
+<li>Start a container with an image of MySQL Enterprise Edition to perform the restore with the MySQL Enterprise <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">Backup</a> command <a href="https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/backup-commands-restore.html#option_meb_copy-back-and-apply-log" target="_blank"><code>copy-back-and-apply-log</code></a>. Bind-mount the server&apos;s data directory and the storage folder for the backups, like what we did when we backed up the server:</li>
+</ol>
+<pre><code class="lang-bash">shell&gt; docker run \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/datadir/,dst=/var/lib/mysql \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/backups/,dst=/data/backups \ 
+--rm store/oracle/mysql-enterprise-server:8.0 \
+mysqlbackup --backup-dir=/tmp/backup-tmp --with-timestamp \
+--datadir=/var/lib/mysql --backup-image=/data/backups/db.mbi copy-back-and-apply-log
+
+[Entrypoint] MySQL Docker Image 8.0.11-1.1.5
+MySQL Enterprise Backup version 8.0.11 Linux-4.1.12-61.1.16.el7uek.x86_64-x86_64 [2018-04-08  07:06:45] 
+Copyright (c) 2003, 2018, Oracle and/or its affiliates. All Rights Reserved.
+
+180921 22:06:52 MAIN    INFO: A thread created with Id <span class="hljs-string">&apos;139768047519872&apos;</span> 
+180921 22:06:52 MAIN    INFO: Starting with following <span class="hljs-built_in">command</span> line ...
+...
+180921 22:06:52 PCR1    INFO: We were able to parse ibbackup_logfile up to
+          lsn 29680612.
+180921 22:06:52 PCR1    INFO: Last MySQL binlog file position 0 155, file name binlog.000003
+180921 22:06:52 PCR1    INFO: The first data file is <span class="hljs-string">&apos;/var/lib/mysql/ibdata1&apos;</span>
+                              and the new created <span class="hljs-built_in">log</span> files are at <span class="hljs-string">&apos;/var/lib/mysql&apos;</span>
+180921 22:06:52 MAIN    INFO: No Keyring file to process.
+180921 22:06:52 MAIN    INFO: Apply-log operation completed successfully.
+180921 22:06:52 MAIN    INFO: Full Backup has been restored successfully.
+
+mysqlbackup completed OK! with 3 warnings
+</code></pre>
+<p>The container exits once the <a href="GLOSSARY.html#backup" class="glossary-term" title="The process of copying some or all table data and metadata from a MySQL instance, for safekeeping. Can also refer to the set of copied files. This is a crucial task for DBAs. The reverse of this process is the restore operation.">backup</a> job is finished and, with the <code>--rm</code> option used when starting it, it is removed after it exits.</p>
+<ol>
+<li>Restart the server container, which also restarts the restored server:</li>
+</ol>
+<pre><code class="lang-bash">docker restart mysqlserver
+</code></pre>
+<p>Or, start a new MySQL Server on the restored data directory:</p>
+<pre><code class="lang-bash">docker run --name=mysqlserver2 \
+--mount <span class="hljs-built_in">type</span>=<span class="hljs-built_in">bind</span>,src=/path-on-host-machine/datadir/,dst=/var/lib/mysql \
+-d store/oracle/mysql-enterprise-server:8.0
+</code></pre>
+<p>Log on to the server to check that the server is running with the restored data.</p>
+<h5 id="docker-environment-variables">Docker Environment Variables</h5>
+<p>When you create a MySQL Server container, you can configure the MySQL instance by using the <code>--env</code> option (<code>-e</code> in short) and specifying one or more of the following environment variables.</p>
+<blockquote>
+<p><strong>Notes</strong></p>
+<ul>
+<li>None of the variables below has any effect if the data directory you mount is not empty, <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> no server initialization is going to be attempted then (see <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">Persisting Data and Configuration Changes</a> for more details). Any pre-existing contents in the folder, including any old server settings, are not modified during the container startup.</li>
+</ul>
+<ul>
+<li>The boolean variables including <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password" target="_blank"><code>MYSQL_RANDOM_ROOT_PASSWORD</code></a>, <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password" target="_blank"><code>MYSQL_ONETIME_PASSWORD</code></a>, <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password" target="_blank"><code>MYSQL_ALLOW_EMPTY_PASSWORD</code></a>, and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console" target="_blank"><code>MYSQL_LOG_CONSOLE</code></a> are made true by setting them with any strings of nonzero lengths. Therefore, setting them to, for example, “0”, “false”, or “no” does not make them false, but actually makes them true. This is a known issue of the MySQL Server containers.</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password" target="_blank"><code>MYSQL_RANDOM_ROOT_PASSWORD</code></a>: When this variable is true (which is its default state, unless <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password" target="_blank"><code>MYSQL_ROOT_PASSWORD</code></a> is set or <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password" target="_blank"><code>MYSQL_ALLOW_EMPTY_PASSWORD</code></a> is set to true), a random password for the server&apos;s root user is generated when the Docker container is started. The password is printed to stdout of the container and can be found by looking at the container’s log (see <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-starting-mysql-server" target="_blank">Starting a MySQL Server Instance</a>).</p>
+</li>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password" target="_blank"><code>MYSQL_ONETIME_PASSWORD</code></a>: When the variable is true (which is its default state, unless <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password" target="_blank"><code>MYSQL_ROOT_PASSWORD</code></a> is set or <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password" target="_blank"><code>MYSQL_ALLOW_EMPTY_PASSWORD</code></a> is set to true), the root user&apos;s password is set <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> expired and must be changed before MySQL can be used normally.</p>
+</li>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database" target="_blank"><code>MYSQL_DATABASE</code></a>: This variable allows you to specify the name of a database to be created on image startup. If a user name and a password are supplied with <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_USER</code></a> and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_PASSWORD</code></a>, the user is created and granted superuser access to this database (corresponding to <code>GRANT ALL</code>). The specified database is created by a <a href="https://dev.mysql.com/doc/refman/8.0/en/create-database.html" target="_blank">CREATE DATABASE IF NOT EXIST</a> statement, so that the variable has no effect if the database already exists.</p>
+</li>
+</ul>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_USER</code></a>, <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_PASSWORD</code></a>: These variables are used in conjunction to create a user and set that user&apos;s password, and the user is granted superuser permissions for the database specified by the <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database" target="_blank"><code>MYSQL_DATABASE</code></a> variable. Both <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_USER</code></a> and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_user_password" target="_blank"><code>MYSQL_PASSWORD</code></a> are required for a user to be created—if any of the two variables is not set, the other is ignored. If both variables are set but <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_database" target="_blank"><code>MYSQL_DATABASE</code></a> is not, the user is created without any privileges.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>There is no need to use this mechanism to create the root superuser, which is created by default with the password set by either one of the mechanisms discussed in the descriptions for <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password" target="_blank"><code>MYSQL_ROOT_PASSWORD</code></a> and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password" target="_blank"><code>MYSQL_RANDOM_ROOT_PASSWORD</code></a>, unless <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password" target="_blank"><code>MYSQL_ALLOW_EMPTY_PASSWORD</code></a> is true.</p>
+</blockquote>
+<ul>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-host" target="_blank"><code>MYSQL_ROOT_HOST</code></a>: By default, MySQL creates the <code>&apos;root&apos;@&apos;localhost&apos;</code> account. This account can only be connected to from inside the container <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> described in <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-getting-started.html#docker-connecting-within-container" target="_blank">Connecting to MySQL Server from within the Container</a>. To allow root connections from other hosts, set this environment variable. For example, the value <code>172.17.0.1</code>, which is the default Docker gateway IP, allows connections from the host machine that runs the container. The option accepts only one entry, but wildcards are allowed (for example, <code>MYSQL_ROOT_HOST=172.*.*.*</code> or <code>MYSQL_ROOT_HOST=%</code>).</p>
+</li>
+<li><p><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-log-console" target="_blank"><code>MYSQL_LOG_CONSOLE</code></a>: When the variable is true (which is its default state for MySQL 8.0 server containers), the MySQL Server&apos;s error log is redirected to <code>stderr</code>, so that the error log goes into the Docker container&apos;s log and is viewable using the <code>docker logs mysqld-container</code> command.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The variable has no effect if a server <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a> from the host has been mounted (see <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker-persisting-data-configuration" target="_blank">Persisting Data and Configuration Changes</a> on bind-mounting a <a href="GLOSSARY.html#configuration-file" class="glossary-term" title="The file that holds the option values used by MySQL at startup. Traditionally, on Linux and Unix this file is named my.cnf, and on Windows it is named my.ini. You can set a number of options related to InnoDB under the [mysqld] section of the file.">configuration file</a>).</p>
+</blockquote>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-root-password" target="_blank"><code>MYSQL_ROOT_PASSWORD</code></a>: This variable specifies a password that is set for the MySQL root account.</li>
+</ul>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Setting the MySQL root user password on the command line is insecure. <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">As</a> an alternative to specifying the password explicitly, you can set the variable with a container file path for a password file, and then mount a file from your host that contains the password at the container file path. This is still not very secure, <a href="GLOSSARY.html#as" class="glossary-term" title="A Kerberos authentication server. AS can also refer to the authentication service provided by an authentication server.">as</a> the location of the password file is still exposed. It is preferable to use the default settings of <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password" target="_blank"><code>MYSQL_RANDOM_ROOT_PASSWORD</code></a> and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password" target="_blank"><code>MYSQL_ONETIME_PASSWORD</code></a> both being true.</p>
+</blockquote>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql-allow-empty-password" target="_blank"><code>MYSQL_ALLOW_EMPTY_PASSWORD</code></a>. Set it to true to allow the container to be started with a blank password for the root user.</li>
+</ul>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Setting this variable to true is insecure, because it is going to leave your MySQL instance completely unprotected, allowing anyone to gain complete superuser access. It is preferable to use the default settings of <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_random_root_password" target="_blank"><code>MYSQL_RANDOM_ROOT_PASSWORD</code></a> and <a href="https://dev.mysql.com/doc/refman/8.0/en/docker-mysql-more-topics.html#docker_var_mysql_onetime_password" target="_blank"><code>MYSQL_ONETIME_PASSWORD</code></a> both being true.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="docker-mysql-getting-started.html" class="navigation navigation-prev " aria-label="Previous page: Basic Steps for MySQL Server Deployment with Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tutorial.html" class="navigation navigation-next " aria-label="Next page: Tutorial">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"More Topics on Deploying MySQL Server with Docker","level":"1.3.1.2.2","depth":4,"next":{"title":"Tutorial","level":"1.4","depth":1,"path":"tutorial.md","ref":"tutorial.md","articles":[{"title":"Connecting to and Disconnecting from the Server","level":"1.4.1","depth":2,"path":"connecting-disconnecting.md","ref":"connecting-disconnecting.md","articles":[]},{"title":"Entering Queries","level":"1.4.2","depth":2,"path":"entering-queries.md","ref":"entering-queries.md","articles":[]},{"title":"Creating and Using a Database","level":"1.4.3","depth":2,"path":"database-use.md","ref":"database-use.md","articles":[{"title":"Creating and Selecting a Database","level":"1.4.3.1","depth":3,"path":"creating-database.md","ref":"creating-database.md","articles":[]},{"title":"Creating a Table","level":"1.4.3.2","depth":3,"path":"creating-tables.md","ref":"creating-tables.md","articles":[]},{"title":"Loading Data into a Table","level":"1.4.3.3","depth":3,"path":"loading-tables.md","ref":"loading-tables.md","articles":[]},{"title":"Retrieving Information from a Table","level":"1.4.3.4","depth":3,"path":"retrieving-data.md","ref":"retrieving-data.md","articles":[{"title":"Selecting All Data","level":"1.4.3.4.1","depth":4,"path":"selecting-all.md","ref":"selecting-all.md","articles":[]},{"title":"Selecting Particular Rows","level":"1.4.3.4.2","depth":4,"path":"selecting-rows.md","ref":"selecting-rows.md","articles":[]},{"title":"Selecting Particular Columns","level":"1.4.3.4.3","depth":4,"path":"selecting-columns.md","ref":"selecting-columns.md","articles":[]},{"title":"Sorting Rows","level":"1.4.3.4.4","depth":4,"path":"sorting-rows.md","ref":"sorting-rows.md","articles":[]},{"title":"Date Calculationsa","level":"1.4.3.4.5","depth":4,"path":"date-calculations.md","ref":"date-calculations.md","articles":[]},{"title":"Working with NULL Values","level":"1.4.3.4.6","depth":4,"path":"working-with-null.md","ref":"working-with-null.md","articles":[]},{"title":"Pattern Matching","level":"1.4.3.4.7","depth":4,"path":"pattern-matching.md","ref":"pattern-matching.md","articles":[]},{"title":"Counting Rows","level":"1.4.3.4.8","depth":4,"path":"counting-rows.md","ref":"counting-rows.md","articles":[]},{"title":"Using More Than one Table","level":"1.4.3.4.9","depth":4,"path":"multiple-tables.md","ref":"multiple-tables.md","articles":[]}]}]},{"title":"Getting Information About Databases and Tables","level":"1.4.4","depth":2,"path":"getting-information.md","ref":"getting-information.md","articles":[]},{"title":"Using mysql in Batch Mode","level":"1.4.5","depth":2,"path":"batch-mode.md","ref":"batch-mode.md","articles":[]},{"title":"Examples of Common Queries","level":"1.4.6","depth":2,"path":"examples.md","ref":"examples.md","articles":[{"title":"The Maximum Value for a Column","level":"1.4.6.1","depth":3,"path":"example-maximum-column.md","ref":"example-maximum-column.md","articles":[]},{"title":"The Row Holding the Maximum of a Certain Column","level":"1.4.6.2","depth":3,"path":"example-maximum-row.md","ref":"example-maximum-row.md","articles":[]},{"title":"Maximum of Column per Group","level":"1.4.6.3","depth":3,"path":"example-maximum-column-group.md","ref":"example-maximum-column-group.md","articles":[]},{"title":"The Rows Holding the Group-wise Maximum of a Certain Column","level":"1.4.6.4","depth":3,"path":"example-maximum-column-group-row.md","ref":"example-maximum-column-group-row.md","articles":[]},{"title":"Using User-Defined Variables","level":"1.4.6.5","depth":3,"path":"example-user-variables.md","ref":"example-user-variables.md","articles":[]},{"title":"Using Foreign Keys","level":"1.4.6.6","depth":3,"path":"example-foreign-keys.md","ref":"example-foreign-keys.md","articles":[]},{"title":"Searching on Two Keys","level":"1.4.6.7","depth":3,"path":"searching-on-two-keys.md","ref":"searching-on-two-keys.md","articles":[]},{"title":"Calculating Visits Per Day","level":"1.4.6.8","depth":3,"path":"calculating-days.md","ref":"calculating-days.md","articles":[]},{"title":"Using AUTO_INCREMENT","level":"1.4.6.9","depth":3,"path":"example-auto-increment.md","ref":"example-auto-increment.md","articles":[]}]},{"title":"Using MySQL with Apache","level":"1.4.7","depth":2,"path":"apache.md","ref":"apache.md","articles":[]}]},"previous":{"title":"Basic Steps for MySQL Server Deployment with Docker","level":"1.3.1.2.1","depth":4,"path":"docker-mysql-getting-started.md","ref":"docker-mysql-getting-started.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"docker-mysql-more-topics.md","mtime":"2023-05-26T23:32:20.371Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-26T23:32:30.995Z"},"basePath":".","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

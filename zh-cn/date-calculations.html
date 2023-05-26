@@ -1,0 +1,1177 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>日期计算 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="working-with-null.html" />
+    
+    
+    <link rel="prev" href="sorting-rows.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    前言和法律条款
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="installing.html">
+            
+                <a href="installing.html">
+            
+                    
+                    安装和更新 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux-installation.html">
+            
+                <a href="linux-installation.html">
+            
+                    
+                    在 Linux 上安装 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="linux-installation-apt-repo.html">
+            
+                <a href="linux-installation-apt-repo.html">
+            
+                    
+                    在 Linux 上使用 APT 库安装 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="linux-installation-docker.html">
+            
+                <a href="linux-installation-docker.html">
+            
+                    
+                    在 Linux 上使用 Docker 部署 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="docker-mysql-getting-started.html">
+            
+                <a href="docker-mysql-getting-started.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的基本步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="docker-mysql-more-topics.html">
+            
+                <a href="docker-mysql-more-topics.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的更多主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tutorial.html">
+            
+                <a href="tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="connecting-disconnecting.html">
+            
+                <a href="connecting-disconnecting.html">
+            
+                    
+                    连接到服务器和从服务器断开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="entering-queries.html">
+            
+                <a href="entering-queries.html">
+            
+                    
+                    输入查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="database-use.html">
+            
+                <a href="database-use.html">
+            
+                    
+                    创建和使用数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="creating-database.html">
+            
+                <a href="creating-database.html">
+            
+                    
+                    创建和选择数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="creating-tables.html">
+            
+                <a href="creating-tables.html">
+            
+                    
+                    创建表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="loading-tables.html">
+            
+                <a href="loading-tables.html">
+            
+                    
+                    将数据加载到表中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="retrieving-data.html">
+            
+                <a href="retrieving-data.html">
+            
+                    
+                    从表中检索数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.4.1" data-path="selecting-all.html">
+            
+                <a href="selecting-all.html">
+            
+                    
+                    选择所有数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.2" data-path="selecting-rows.html">
+            
+                <a href="selecting-rows.html">
+            
+                    
+                    选择特定行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.3" data-path="selecting-columns.html">
+            
+                <a href="selecting-columns.html">
+            
+                    
+                    选择指定列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.4" data-path="sorting-rows.html">
+            
+                <a href="sorting-rows.html">
+            
+                    
+                    行排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3.4.5" data-path="date-calculations.html">
+            
+                <a href="date-calculations.html">
+            
+                    
+                    日期计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.6" data-path="working-with-null.html">
+            
+                <a href="working-with-null.html">
+            
+                    
+                    处理 NULL 值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.7" data-path="pattern-matching.html">
+            
+                <a href="pattern-matching.html">
+            
+                    
+                    模式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.8" data-path="counting-rows.html">
+            
+                <a href="counting-rows.html">
+            
+                    
+                    计算行数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.9" data-path="multiple-tables.html">
+            
+                <a href="multiple-tables.html">
+            
+                    
+                    使用多个表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="getting-information.html">
+            
+                <a href="getting-information.html">
+            
+                    
+                    获取数据库和表的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="batch-mode.html">
+            
+                <a href="batch-mode.html">
+            
+                    
+                    在批处理模式使用 mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    常见查询示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="example-maximum-column.html">
+            
+                <a href="example-maximum-column.html">
+            
+                    
+                    列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="example-maximum-row.html">
+            
+                <a href="example-maximum-row.html">
+            
+                    
+                    包含某一行最大值的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="example-maximum-column-group.html">
+            
+                <a href="example-maximum-column-group.html">
+            
+                    
+                    每组中列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="example-maximum-column-group-row.html">
+            
+                <a href="example-maximum-column-group-row.html">
+            
+                    
+                    拥有某个字段的组间最大值的行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="example-user-variables.html">
+            
+                <a href="example-user-variables.html">
+            
+                    
+                    使用用户自定义变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="example-foreign-keys.html">
+            
+                <a href="example-foreign-keys.html">
+            
+                    
+                    使用外键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="searching-on-two-keys.html">
+            
+                <a href="searching-on-two-keys.html">
+            
+                    
+                    两个键上搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="calculating-days.html">
+            
+                <a href="calculating-days.html">
+            
+                    
+                    计算每日访问量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="example-auto-increment.html">
+            
+                <a href="example-auto-increment.html">
+            
+                    
+                    使用 AUTO_INCREMENT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    在 Apache 中使用 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="programs.html">
+            
+                <a href="programs.html">
+            
+                    
+                    MySQL 程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="programs-client.html">
+            
+                <a href="programs-client.html">
+            
+                    
+                    MySQL 客户端程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql — MySQL 命令行客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="optimize-overview.html">
+            
+                <a href="optimize-overview.html">
+            
+                    
+                    优化概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="statement-optimization.html">
+            
+                <a href="statement-optimization.html">
+            
+                    
+                    优化 SQL 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="optimization-indexes.html">
+            
+                <a href="optimization-indexes.html">
+            
+                    
+                    优化和索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="optimizing-database-structure.html">
+            
+                <a href="optimizing-database-structure.html">
+            
+                    
+                    优化数据库结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="optimizing-innodb.html">
+            
+                <a href="optimizing-innodb.html">
+            
+                    
+                    优化 InnoDB 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="optimizing-myisam.html">
+            
+                <a href="optimizing-myisam.html">
+            
+                    
+                    优化 MyISAM 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="optimizing-memory-tables.html">
+            
+                <a href="optimizing-memory-tables.html">
+            
+                    
+                    优化 MEMORY 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="execution-plan-information.html">
+            
+                <a href="execution-plan-information.html">
+            
+                    
+                    理解查询执行计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="controlling-optimizer.html">
+            
+                <a href="controlling-optimizer.html">
+            
+                    
+                    控制查询优化器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="buffering-caching.html">
+            
+                <a href="buffering-caching.html">
+            
+                    
+                    缓冲和缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="locking-issues.html">
+            
+                <a href="locking-issues.html">
+            
+                    
+                    优化锁操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="optimizing-server.html">
+            
+                <a href="optimizing-server.html">
+            
+                    
+                    优化 MySQL 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="optimize-benchmarking.html">
+            
+                <a href="optimize-benchmarking.html">
+            
+                    
+                    测量性能 (Benchmarking)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="thread-information.html">
+            
+                <a href="thread-information.html">
+            
+                    
+                    检查线程信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >日期计算</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="3345-日期计算">3.3.4.5 日期计算</h4>
+<p>MySQL 提供了几个函数可以用来完成日期计算, 例如, 计算年龄或者提取部分日期.</p>
+<p>要确定每个宠物的年龄, 可以使用 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_timestampdiff" target="_blank"><code>TIMESTAMPDIFF()</code></a> 函数. 它的参数是你想要表达结果的单位, 以及取差的两个日期. 下面的查询显示了每只宠物的出生日期, 当前日期和年龄. <strong><em><code>alias</code></em></strong> (<code>age</code>) 用于让最终的输出列名更有意义.</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth, CURDATE(),
+       TIMESTAMPDIFF(<span class="hljs-keyword">YEAR</span>,birth,CURDATE()) <span class="hljs-keyword">AS</span> age
+       <span class="hljs-keyword">FROM</span> pet;
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> name     <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span> CURDATE()  <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> Fluffy   <span class="hljs-operator">|</span> <span class="hljs-number">1993</span><span class="hljs-number">-02</span><span class="hljs-number">-04</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">10</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Claws    <span class="hljs-operator">|</span> <span class="hljs-number">1994</span><span class="hljs-number">-03</span><span class="hljs-number">-17</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">9</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Buffy    <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-05</span><span class="hljs-number">-13</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">14</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fang     <span class="hljs-operator">|</span> <span class="hljs-number">1990</span><span class="hljs-number">-08</span><span class="hljs-number">-27</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">12</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Bowser   <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-08</span><span class="hljs-number">-31</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">13</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Chirpy   <span class="hljs-operator">|</span> <span class="hljs-number">1998</span><span class="hljs-number">-09</span><span class="hljs-number">-11</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Whistler <span class="hljs-operator">|</span> <span class="hljs-number">1997</span><span class="hljs-number">-12</span><span class="hljs-number">-09</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Slim     <span class="hljs-operator">|</span> <span class="hljs-number">1996</span><span class="hljs-number">-04</span><span class="hljs-number">-29</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">7</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Puffball <span class="hljs-operator">|</span> <span class="hljs-number">1999</span><span class="hljs-number">-03</span><span class="hljs-number">-30</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+</code></pre>
+<p>查询可以正常工作, 但是如果按照某种顺序显示行, 则可以更容易的扫描结果. 可以通过添加 <code>ORDER BY name</code> 子句按照名称排序来输出:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth, CURDATE(),
+       TIMESTAMPDIFF(<span class="hljs-keyword">YEAR</span>,birth,CURDATE()) <span class="hljs-keyword">AS</span> age
+       <span class="hljs-keyword">FROM</span> pet <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> name;
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> name     <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span> CURDATE()  <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> Bowser   <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-08</span><span class="hljs-number">-31</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">13</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Buffy    <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-05</span><span class="hljs-number">-13</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">14</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Chirpy   <span class="hljs-operator">|</span> <span class="hljs-number">1998</span><span class="hljs-number">-09</span><span class="hljs-number">-11</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Claws    <span class="hljs-operator">|</span> <span class="hljs-number">1994</span><span class="hljs-number">-03</span><span class="hljs-number">-17</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">9</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fang     <span class="hljs-operator">|</span> <span class="hljs-number">1990</span><span class="hljs-number">-08</span><span class="hljs-number">-27</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">12</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fluffy   <span class="hljs-operator">|</span> <span class="hljs-number">1993</span><span class="hljs-number">-02</span><span class="hljs-number">-04</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">10</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Puffball <span class="hljs-operator">|</span> <span class="hljs-number">1999</span><span class="hljs-number">-03</span><span class="hljs-number">-30</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Slim     <span class="hljs-operator">|</span> <span class="hljs-number">1996</span><span class="hljs-number">-04</span><span class="hljs-number">-29</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">7</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Whistler <span class="hljs-operator">|</span> <span class="hljs-number">1997</span><span class="hljs-number">-12</span><span class="hljs-number">-09</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+</code></pre>
+<p>按照 <code>age</code> 而不是 <code>name</code> 进行排序输出, 只需要使用不同的 <code>ORDER BY</code> 子句:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth, CURDATE(),
+       TIMESTAMPDIFF(<span class="hljs-keyword">YEAR</span>,birth,CURDATE()) <span class="hljs-keyword">AS</span> age
+       <span class="hljs-keyword">FROM</span> pet <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> age;
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> name     <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span> CURDATE()  <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> Chirpy   <span class="hljs-operator">|</span> <span class="hljs-number">1998</span><span class="hljs-number">-09</span><span class="hljs-number">-11</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Puffball <span class="hljs-operator">|</span> <span class="hljs-number">1999</span><span class="hljs-number">-03</span><span class="hljs-number">-30</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Whistler <span class="hljs-operator">|</span> <span class="hljs-number">1997</span><span class="hljs-number">-12</span><span class="hljs-number">-09</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Slim     <span class="hljs-operator">|</span> <span class="hljs-number">1996</span><span class="hljs-number">-04</span><span class="hljs-number">-29</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">7</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Claws    <span class="hljs-operator">|</span> <span class="hljs-number">1994</span><span class="hljs-number">-03</span><span class="hljs-number">-17</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>    <span class="hljs-number">9</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fluffy   <span class="hljs-operator">|</span> <span class="hljs-number">1993</span><span class="hljs-number">-02</span><span class="hljs-number">-04</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">10</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fang     <span class="hljs-operator">|</span> <span class="hljs-number">1990</span><span class="hljs-number">-08</span><span class="hljs-number">-27</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">12</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Bowser   <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-08</span><span class="hljs-number">-31</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">13</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Buffy    <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-05</span><span class="hljs-number">-13</span> <span class="hljs-operator">|</span> <span class="hljs-number">2003</span><span class="hljs-number">-08</span><span class="hljs-number">-19</span> <span class="hljs-operator">|</span>   <span class="hljs-number">14</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+------------+------+</span>
+</code></pre>
+<p>相似的查询可以用来确定已死亡动物的死亡年龄. 你可以通过那些 <code>death</code> 的值为 <code>NULL</code> 来确定动物是那些. 然后, 对那些非 <code>NULL</code> 值, 计算出 <code>death</code> 和 <code>birth</code> 的差值:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth, death,
+       TIMESTAMPDIFF(<span class="hljs-keyword">YEAR</span>,birth,death) <span class="hljs-keyword">AS</span> age
+       <span class="hljs-keyword">FROM</span> pet <span class="hljs-keyword">WHERE</span> death <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> age;
+<span class="hljs-operator">+</span><span class="hljs-comment">--------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> name   <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span> death      <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">--------+------------+------------+------+</span>
+<span class="hljs-operator">|</span> Bowser <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-08</span><span class="hljs-number">-31</span> <span class="hljs-operator">|</span> <span class="hljs-number">1995</span><span class="hljs-number">-07</span><span class="hljs-number">-29</span> <span class="hljs-operator">|</span>    <span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">--------+------------+------------+------+</span>
+</code></pre>
+<p>查询使用 <code>death IS NOT NULL</code> 而不是 <code>death &lt;&gt; NULL</code> 是因为 <code>NULL</code> 是一个特殊值, 不能使用常规的比较操作符来操作. 稍后将进行讨论. 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/working-with-null.html" target="_blank">Section 3.3.4.6, “处理 NULL 值”</a>.</p>
+<p>如果你想知道下个月那些动物过生日呢? 对于这类运算, 年月日无关紧要; 你只需取出 <code>birth</code> 列的月份部分. MySQL 提供了几个提取日期部分的函数, 比如 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_year" target="_blank"><code>YEAR()</code></a>, <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" target="_blank"><code>MONTH()</code></a>, 和 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_dayofmonth" target="_blank"><code>DAYOFMONTH()</code></a>. <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" target="_blank"><code>MONTH()</code></a> 函数适合这里. 要查看它是如何工作的, 运行一个显示出 <code>birth</code> 和 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" target="_blank"><code>MONTH(birth)</code></a> 的简单查询:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth, <span class="hljs-keyword">MONTH</span>(birth) <span class="hljs-keyword">FROM</span> pet;
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+--------------+</span>
+<span class="hljs-operator">|</span> name     <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span> <span class="hljs-keyword">MONTH</span>(birth) <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+--------------+</span>
+<span class="hljs-operator">|</span> Fluffy   <span class="hljs-operator">|</span> <span class="hljs-number">1993</span><span class="hljs-number">-02</span><span class="hljs-number">-04</span> <span class="hljs-operator">|</span>            <span class="hljs-number">2</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Claws    <span class="hljs-operator">|</span> <span class="hljs-number">1994</span><span class="hljs-number">-03</span><span class="hljs-number">-17</span> <span class="hljs-operator">|</span>            <span class="hljs-number">3</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Buffy    <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-05</span><span class="hljs-number">-13</span> <span class="hljs-operator">|</span>            <span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Fang     <span class="hljs-operator">|</span> <span class="hljs-number">1990</span><span class="hljs-number">-08</span><span class="hljs-number">-27</span> <span class="hljs-operator">|</span>            <span class="hljs-number">8</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Bowser   <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-08</span><span class="hljs-number">-31</span> <span class="hljs-operator">|</span>            <span class="hljs-number">8</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Chirpy   <span class="hljs-operator">|</span> <span class="hljs-number">1998</span><span class="hljs-number">-09</span><span class="hljs-number">-11</span> <span class="hljs-operator">|</span>            <span class="hljs-number">9</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Whistler <span class="hljs-operator">|</span> <span class="hljs-number">1997</span><span class="hljs-number">-12</span><span class="hljs-number">-09</span> <span class="hljs-operator">|</span>           <span class="hljs-number">12</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Slim     <span class="hljs-operator">|</span> <span class="hljs-number">1996</span><span class="hljs-number">-04</span><span class="hljs-number">-29</span> <span class="hljs-operator">|</span>            <span class="hljs-number">4</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">|</span> Puffball <span class="hljs-operator">|</span> <span class="hljs-number">1999</span><span class="hljs-number">-03</span><span class="hljs-number">-30</span> <span class="hljs-operator">|</span>            <span class="hljs-number">3</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">----------+------------+--------------+</span>
+</code></pre>
+<p>找出下个月有生日的动物非常简单. 假设当前月份是四月. 然后这个月份的值就是 <code>4</code>, 你可以这样查找 <code>5</code> 月份出生的动物:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth <span class="hljs-keyword">FROM</span> pet <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">MONTH</span>(birth) <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
+<span class="hljs-operator">+</span><span class="hljs-comment">-------+------------+</span>
+<span class="hljs-operator">|</span> name  <span class="hljs-operator">|</span> birth      <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------+------------+</span>
+<span class="hljs-operator">|</span> Buffy <span class="hljs-operator">|</span> <span class="hljs-number">1989</span><span class="hljs-number">-05</span><span class="hljs-number">-13</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------+------------+</span>
+</code></pre>
+<p>如果当前月份是 12 月, 就会出现一个小问题. 你不能仅仅在 (<code>12</code>) 上面加 1, 然后寻找第 <code>13</code> 个月出生的动物, 因为没有这个月份. 相反, 你要寻找 <code>1</code> 月的动物.</p>
+<p>你可以写个查询无论在哪个月份都可以正常工作, 这样你就不必为特定的月份使用数字. <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-add" target="_blank"><code>DATE_ADD()</code></a> 允许向指定日期添加间隔. 如果添加一个月到 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_curdate" target="_blank"><code>CURDATE()</code></a> 的值中, 然后使用 <a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" target="_blank"><code>MONTH()</code></a> 提取月份部分, 然后产生了寻找生日的月份:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth <span class="hljs-keyword">FROM</span> pet
+       <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">MONTH</span>(birth) <span class="hljs-operator">=</span> <span class="hljs-keyword">MONTH</span>(DATE_ADD(CURDATE(),<span class="hljs-type">INTERVAL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">MONTH</span>));
+</code></pre>
+<p>另一种完成任务的方法是使用 <code>MOD</code> 方法对其取模, 如果当前月份是 <code>12</code>, 那么取值为 <code>0</code>, 加 <code>1</code> 来获得当前月份的下一个月的值:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> name, birth <span class="hljs-keyword">FROM</span> pet
+       <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">MONTH</span>(birth) <span class="hljs-operator">=</span> <span class="hljs-built_in">MOD</span>(<span class="hljs-keyword">MONTH</span>(CURDATE()), <span class="hljs-number">12</span>) <span class="hljs-operator">+</span> <span class="hljs-number">1</span>;
+</code></pre>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month" target="_blank"><code>MONTH()</code></a> 返回 <code>1</code> 到 <code>12</code> 之间的数字. <a href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_mod" target="_blank"><code>MOD(something,12)</code></a> 返回 <code>0</code> 和 <code>11</code> 之间的数字. 因此, 必须在 <a href="https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_mod" target="_blank"><code>MOD()</code></a> 之后添加, 否则将从 <code>11</code> 月份直接到 <code>1</code> 月份.</p>
+<p>如果使用无效日期, 则会计算失败并产生警告:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-string">&apos;2018-10-31&apos;</span> <span class="hljs-operator">+</span> <span class="hljs-type">INTERVAL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">DAY</span>;
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-string">&apos;2018-10-31&apos;</span> <span class="hljs-operator">+</span> <span class="hljs-type">INTERVAL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">DAY</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-number">2018</span><span class="hljs-number">-11</span><span class="hljs-number">-01</span>                    <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-string">&apos;2018-10-32&apos;</span> <span class="hljs-operator">+</span> <span class="hljs-type">INTERVAL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">DAY</span>;
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-string">&apos;2018-10-32&apos;</span> <span class="hljs-operator">+</span> <span class="hljs-type">INTERVAL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">DAY</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-keyword">NULL</span>                          <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-------------------------------+</span>
+mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SHOW</span> WARNINGS;
+<span class="hljs-operator">+</span><span class="hljs-comment">---------+------+----------------------------------------+</span>
+<span class="hljs-operator">|</span> Level   <span class="hljs-operator">|</span> Code <span class="hljs-operator">|</span> Message                                <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------+------+----------------------------------------+</span>
+<span class="hljs-operator">|</span> Warning <span class="hljs-operator">|</span> <span class="hljs-number">1292</span> <span class="hljs-operator">|</span> Incorrect datetime <span class="hljs-keyword">value</span>: <span class="hljs-string">&apos;2018-10-32&apos;</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------+------+----------------------------------------+</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sorting-rows.html" class="navigation navigation-prev " aria-label="Previous page: 行排序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="working-with-null.html" class="navigation navigation-next " aria-label="Next page: 处理 NULL 值">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"日期计算","level":"1.4.3.4.5","depth":4,"next":{"title":"处理 NULL 值","level":"1.4.3.4.6","depth":4,"path":"working-with-null.md","ref":"working-with-null.md","articles":[]},"previous":{"title":"行排序","level":"1.4.3.4.4","depth":4,"path":"sorting-rows.md","ref":"sorting-rows.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"date-calculations.md","mtime":"2023-05-26T23:32:20.371Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-26T23:32:30.995Z"},"basePath":".","book":{"language":"zh-cn"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

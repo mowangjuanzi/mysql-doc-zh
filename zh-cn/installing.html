@@ -1,0 +1,1106 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>安装和更新 MySQL · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="linux-installation.html" />
+    
+    
+    <link rel="prev" href="preface.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    前言和法律条款
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="installing.html">
+            
+                <a href="installing.html">
+            
+                    
+                    安装和更新 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux-installation.html">
+            
+                <a href="linux-installation.html">
+            
+                    
+                    在 Linux 上安装 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="linux-installation-apt-repo.html">
+            
+                <a href="linux-installation-apt-repo.html">
+            
+                    
+                    在 Linux 上使用 APT 库安装 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="linux-installation-docker.html">
+            
+                <a href="linux-installation-docker.html">
+            
+                    
+                    在 Linux 上使用 Docker 部署 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="docker-mysql-getting-started.html">
+            
+                <a href="docker-mysql-getting-started.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的基本步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="docker-mysql-more-topics.html">
+            
+                <a href="docker-mysql-more-topics.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的更多主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tutorial.html">
+            
+                <a href="tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="connecting-disconnecting.html">
+            
+                <a href="connecting-disconnecting.html">
+            
+                    
+                    连接到服务器和从服务器断开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="entering-queries.html">
+            
+                <a href="entering-queries.html">
+            
+                    
+                    输入查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="database-use.html">
+            
+                <a href="database-use.html">
+            
+                    
+                    创建和使用数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="creating-database.html">
+            
+                <a href="creating-database.html">
+            
+                    
+                    创建和选择数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="creating-tables.html">
+            
+                <a href="creating-tables.html">
+            
+                    
+                    创建表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="loading-tables.html">
+            
+                <a href="loading-tables.html">
+            
+                    
+                    将数据加载到表中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="retrieving-data.html">
+            
+                <a href="retrieving-data.html">
+            
+                    
+                    从表中检索数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.4.1" data-path="selecting-all.html">
+            
+                <a href="selecting-all.html">
+            
+                    
+                    选择所有数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.2" data-path="selecting-rows.html">
+            
+                <a href="selecting-rows.html">
+            
+                    
+                    选择特定行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.3" data-path="selecting-columns.html">
+            
+                <a href="selecting-columns.html">
+            
+                    
+                    选择指定列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.4" data-path="sorting-rows.html">
+            
+                <a href="sorting-rows.html">
+            
+                    
+                    行排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.5" data-path="date-calculations.html">
+            
+                <a href="date-calculations.html">
+            
+                    
+                    日期计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.6" data-path="working-with-null.html">
+            
+                <a href="working-with-null.html">
+            
+                    
+                    处理 NULL 值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.7" data-path="pattern-matching.html">
+            
+                <a href="pattern-matching.html">
+            
+                    
+                    模式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.8" data-path="counting-rows.html">
+            
+                <a href="counting-rows.html">
+            
+                    
+                    计算行数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.9" data-path="multiple-tables.html">
+            
+                <a href="multiple-tables.html">
+            
+                    
+                    使用多个表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="getting-information.html">
+            
+                <a href="getting-information.html">
+            
+                    
+                    获取数据库和表的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="batch-mode.html">
+            
+                <a href="batch-mode.html">
+            
+                    
+                    在批处理模式使用 mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    常见查询示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="example-maximum-column.html">
+            
+                <a href="example-maximum-column.html">
+            
+                    
+                    列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="example-maximum-row.html">
+            
+                <a href="example-maximum-row.html">
+            
+                    
+                    包含某一行最大值的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="example-maximum-column-group.html">
+            
+                <a href="example-maximum-column-group.html">
+            
+                    
+                    每组中列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="example-maximum-column-group-row.html">
+            
+                <a href="example-maximum-column-group-row.html">
+            
+                    
+                    拥有某个字段的组间最大值的行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="example-user-variables.html">
+            
+                <a href="example-user-variables.html">
+            
+                    
+                    使用用户自定义变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="example-foreign-keys.html">
+            
+                <a href="example-foreign-keys.html">
+            
+                    
+                    使用外键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="searching-on-two-keys.html">
+            
+                <a href="searching-on-two-keys.html">
+            
+                    
+                    两个键上搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="calculating-days.html">
+            
+                <a href="calculating-days.html">
+            
+                    
+                    计算每日访问量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="example-auto-increment.html">
+            
+                <a href="example-auto-increment.html">
+            
+                    
+                    使用 AUTO_INCREMENT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    在 Apache 中使用 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="programs.html">
+            
+                <a href="programs.html">
+            
+                    
+                    MySQL 程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="programs-client.html">
+            
+                <a href="programs-client.html">
+            
+                    
+                    MySQL 客户端程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql — MySQL 命令行客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="optimize-overview.html">
+            
+                <a href="optimize-overview.html">
+            
+                    
+                    优化概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="statement-optimization.html">
+            
+                <a href="statement-optimization.html">
+            
+                    
+                    优化 SQL 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="optimization-indexes.html">
+            
+                <a href="optimization-indexes.html">
+            
+                    
+                    优化和索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="optimizing-database-structure.html">
+            
+                <a href="optimizing-database-structure.html">
+            
+                    
+                    优化数据库结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="optimizing-innodb.html">
+            
+                <a href="optimizing-innodb.html">
+            
+                    
+                    优化 InnoDB 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="optimizing-myisam.html">
+            
+                <a href="optimizing-myisam.html">
+            
+                    
+                    优化 MyISAM 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="optimizing-memory-tables.html">
+            
+                <a href="optimizing-memory-tables.html">
+            
+                    
+                    优化 MEMORY 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="execution-plan-information.html">
+            
+                <a href="execution-plan-information.html">
+            
+                    
+                    理解查询执行计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="controlling-optimizer.html">
+            
+                <a href="controlling-optimizer.html">
+            
+                    
+                    控制查询优化器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="buffering-caching.html">
+            
+                <a href="buffering-caching.html">
+            
+                    
+                    缓冲和缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="locking-issues.html">
+            
+                <a href="locking-issues.html">
+            
+                    
+                    优化锁操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="optimizing-server.html">
+            
+                <a href="optimizing-server.html">
+            
+                    
+                    优化 MySQL 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="optimize-benchmarking.html">
+            
+                <a href="optimize-benchmarking.html">
+            
+                    
+                    测量性能 (Benchmarking)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="thread-information.html">
+            
+                <a href="thread-information.html">
+            
+                    
+                    检查线程信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >安装和更新 MySQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2-安装和更新-mysql">2 安装和更新 MySQL</h1>
+<p>本章描述了如何获得和安装 MySQL. 以下是过程的摘要, 后面的章节提供了详细信息. 如果你计划升级现有版本的 MySQL 为较新版本, 而不是第一次安装, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/upgrading.html" target="_blank">Section 2.11, “升级 MySQL”</a>, 获取有关升级过程以及升级前应考虑的问题的相关信息.</p>
+<p>如果你有兴趣从另外的数据库系统中迁移到 MySQL, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/faqs-migration.html" target="_blank">A.8, “MySQL 8.0 常见问题解答: 迁移</a>, 那里包含了一些常见迁移问题的答案.</p>
+<p>安装 MySQL 通常遵循以下步骤:</p>
+<ol>
+<li><p><strong><em>确定 MySQL 是否在你的平台上运行并支持.</em></strong></p>
+<p> 请注意, 并不是所有的平台都适合运行 MySQL, 并且并非所有运行 MySQL 的平台都得到 Oracle Corporation 的官方支持. 有关官方支持平台的信息, 请访问 MySQL 站点的 <a href="https://www.mysql.com/support/supportedplatforms/database.html" target="_blank">https://www.mysql.com/support/supportedplatforms/database.html</a>.</p>
+</li>
+<li><p><strong><em>选择要安装的发行包.</em></strong></p>
+<p> MySQL 有几个版本可用, 大多数都有几种分发格式. You can choose from pre-packaged distributions containing binary (precompiled) programs or source code. 如果有疑问, 请使用二进制发行包. Oracle 还为那些想要查看最新开发和测试新代码的人提供了对 MySQL 源代码的访问. To determine which version and type of distribution you should use, see <a href="https://dev.mysql.com/doc/refman/8.0/en/which-version.html" target="_blank">Section 2.1.1, “Which MySQL Version and Distribution to Install”</a>.</p>
+</li>
+<li><p><strong><em>下载要安装的发行包.</em></strong></p>
+<p> 有关说明, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/getting-mysql.html" target="_blank">2.1.2, “如何获得 MySQL”</a>. 验证发行包的完整性, use the instructions in <a href="https://dev.mysql.com/doc/refman/8.0/en/verifying-package-integrity.html" target="_blank">Section 2.1.3, “Verifying Package Integrity Using MD5 Checksums or GnuPG”</a>.</p>
+</li>
+<li><p><strong><em>安装发行包.</em></strong></p>
+<p> 从二进制发行包中安装 MySQL, use the instructions in <a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" target="_blank">Section 2.2, “Installing MySQL on Unix/Linux Using Generic Binaries”</a>.</p>
+<p> To install MySQL from a source distribution or from the current development source tree, use the instructions in <a href="https://dev.mysql.com/doc/refman/8.0/en/source-installation.html" target="_blank">Section 2.9, “Installing MySQL from Source”</a>.</p>
+</li>
+<li><p><strong><em>执行任何安装后的设置.</em></strong></p>
+<p> 安装 MySQL 之后, 确定 MySQL 服务器正常运行的信息, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/postinstallation.html" target="_blank">2.10, “安装后设置和测试”</a>. 另请参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/default-privileges.html" target="_blank">Section 2.10.4, “安全的初始化 MySQL 账户”</a>提供的信息. 本章介绍了如何安全的初始化 MySQL <code>root</code> 用户账户, 在你指派一个前, <em>没有密码</em>. The section applies whether you install MySQL using a binary or source distribution.</p>
+</li>
+<li><p>如果你想运行 MySQL benchmark 脚本, 必须提供对 MySQL 的 Perl 支持. 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/perl-support.html" target="_blank">2.13, “Perl 安装说明”</a>.</p>
+</li>
+</ol>
+<p>Instructions for installing MySQL on different platforms and environments is available on a platform by platform basis:</p>
+<ul>
+<li><p><strong><em>Unix, Linux, FreeBSD</em></strong></p>
+<p>  For instructions on installing MySQL on most Linux and Unix platforms using a generic binary (for example, a .tar.gz package), see <a href="https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html" target="_blank">Section 2.2, “Installing MySQL on Unix/Linux Using Generic Binaries”</a>.</p>
+<p>  有关从源代码发行版或者源代码存储库构建 MySQL 的信息, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/source-installation.html" target="_blank">Section 2.9, “从源代码安装 MySQL”</a></p>
+<p>  对于指定平台的安装, 配置和从源文件编译的帮助, 请参阅对应平台章节:</p>
+<ul>
+<li><p>Linux, 包括发行版特定方法的说明, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html" target="_blank">2.5, “在 Linux” 上安装 MySQL”</a>.</p>
+</li>
+<li><p>IBM AIX, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/solaris-installation.html" target="_blank">2.7, “在 Solaris 上安装 MySQL”</a>.</p>
+</li>
+<li><p>FreeBSD, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/freebsd-installation.html" target="_blank">2.8, “在 FreeBSD 上安装 MySQL”</a>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong><em>Microsoft Windows</em></strong></p>
+<p>  有关在 Microsoft Windows 安装 MySQL 的说明, 使用 MySQL 安装程序或者二进制压缩包, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html" target="_blank">2.3, “在 Microsoft Windows 上安装 MySQL”</a>.</p>
+<p>  有关管理 MySQL 实例的说明, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/windows-notifier.html" target="_blank">2.3.4, “MySQL Notifier”</a>.</p>
+<p>  有关使用 Microsoft Visual Studio 从源代码构建 MySQL 的详细信息和说明, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/source-installation.html" target="_blank">Section 2.9, “从源码安装 MySQL”</a>.</p>
+</li>
+<li><p><strong><em>OS X</em></strong></p>
+<p>  对于 OS X 上安装, 包含使用二进制包和原生 PKG 格式两种, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/osx-installation.html" target="_blank">Section 2.4, “在 macOS 上安装 MySQL”</a>.</p>
+<p>  对于使用 OS X Launch Daemon 自动启动和停止的信息, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/osx-installation-launchd.html" target="_blank">Section 2.4.3, “安装和使用 MySQL Launch Daemon”</a>.</p>
+<p>  有关 MySQL 偏好面板的信息, 参阅 <a href="https://dev.mysql.com/doc/refman/8.0/en/osx-installation-prefpane.html" target="_blank">Section 2.4.4, “安装和使用 MySQL 偏好面板”</a>.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="preface.html" class="navigation navigation-prev " aria-label="Previous page: 前言和法律条款">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="linux-installation.html" class="navigation navigation-next " aria-label="Next page: 在 Linux 上安装 MySQL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装和更新 MySQL","level":"1.3","depth":1,"next":{"title":"在 Linux 上安装 MySQL","level":"1.3.1","depth":2,"path":"linux-installation.md","ref":"linux-installation.md","articles":[{"title":"在 Linux 上使用 APT 库安装 MySQL","level":"1.3.1.1","depth":3,"path":"linux-installation-apt-repo.md","ref":"linux-installation-apt-repo.md","articles":[]},{"title":"在 Linux 上使用 Docker 部署 MySQL","level":"1.3.1.2","depth":3,"path":"linux-installation-docker.md","ref":"linux-installation-docker.md","articles":[{"title":"使用 Docker 部署 MySQL 服务器的基本步骤","level":"1.3.1.2.1","depth":4,"path":"docker-mysql-getting-started.md","ref":"docker-mysql-getting-started.md","articles":[]},{"title":"使用 Docker 部署 MySQL 服务器的更多主题","level":"1.3.1.2.2","depth":4,"path":"docker-mysql-more-topics.md","ref":"docker-mysql-more-topics.md","articles":[]}]}]},"previous":{"title":"前言和法律条款","level":"1.2","depth":1,"path":"preface.md","ref":"preface.md","articles":[]},"articles":[{"title":"在 Linux 上安装 MySQL","level":"1.3.1","depth":2,"path":"linux-installation.md","ref":"linux-installation.md","articles":[{"title":"在 Linux 上使用 APT 库安装 MySQL","level":"1.3.1.1","depth":3,"path":"linux-installation-apt-repo.md","ref":"linux-installation-apt-repo.md","articles":[]},{"title":"在 Linux 上使用 Docker 部署 MySQL","level":"1.3.1.2","depth":3,"path":"linux-installation-docker.md","ref":"linux-installation-docker.md","articles":[{"title":"使用 Docker 部署 MySQL 服务器的基本步骤","level":"1.3.1.2.1","depth":4,"path":"docker-mysql-getting-started.md","ref":"docker-mysql-getting-started.md","articles":[]},{"title":"使用 Docker 部署 MySQL 服务器的更多主题","level":"1.3.1.2.2","depth":4,"path":"docker-mysql-more-topics.md","ref":"docker-mysql-more-topics.md","articles":[]}]}]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"installing.md","mtime":"2023-05-26T23:32:20.375Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-26T23:32:30.995Z"},"basePath":".","book":{"language":"zh-cn"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

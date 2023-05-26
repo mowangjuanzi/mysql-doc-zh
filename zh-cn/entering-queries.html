@@ -1,0 +1,1194 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>输入查询 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="database-use.html" />
+    
+    
+    <link rel="prev" href="connecting-disconnecting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    前言和法律条款
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="installing.html">
+            
+                <a href="installing.html">
+            
+                    
+                    安装和更新 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux-installation.html">
+            
+                <a href="linux-installation.html">
+            
+                    
+                    在 Linux 上安装 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="linux-installation-apt-repo.html">
+            
+                <a href="linux-installation-apt-repo.html">
+            
+                    
+                    在 Linux 上使用 APT 库安装 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="linux-installation-docker.html">
+            
+                <a href="linux-installation-docker.html">
+            
+                    
+                    在 Linux 上使用 Docker 部署 MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="docker-mysql-getting-started.html">
+            
+                <a href="docker-mysql-getting-started.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的基本步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="docker-mysql-more-topics.html">
+            
+                <a href="docker-mysql-more-topics.html">
+            
+                    
+                    使用 Docker 部署 MySQL 服务器的更多主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="tutorial.html">
+            
+                <a href="tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="connecting-disconnecting.html">
+            
+                <a href="connecting-disconnecting.html">
+            
+                    
+                    连接到服务器和从服务器断开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="entering-queries.html">
+            
+                <a href="entering-queries.html">
+            
+                    
+                    输入查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="database-use.html">
+            
+                <a href="database-use.html">
+            
+                    
+                    创建和使用数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="creating-database.html">
+            
+                <a href="creating-database.html">
+            
+                    
+                    创建和选择数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="creating-tables.html">
+            
+                <a href="creating-tables.html">
+            
+                    
+                    创建表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="loading-tables.html">
+            
+                <a href="loading-tables.html">
+            
+                    
+                    将数据加载到表中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="retrieving-data.html">
+            
+                <a href="retrieving-data.html">
+            
+                    
+                    从表中检索数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.4.1" data-path="selecting-all.html">
+            
+                <a href="selecting-all.html">
+            
+                    
+                    选择所有数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.2" data-path="selecting-rows.html">
+            
+                <a href="selecting-rows.html">
+            
+                    
+                    选择特定行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.3" data-path="selecting-columns.html">
+            
+                <a href="selecting-columns.html">
+            
+                    
+                    选择指定列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.4" data-path="sorting-rows.html">
+            
+                <a href="sorting-rows.html">
+            
+                    
+                    行排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.5" data-path="date-calculations.html">
+            
+                <a href="date-calculations.html">
+            
+                    
+                    日期计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.6" data-path="working-with-null.html">
+            
+                <a href="working-with-null.html">
+            
+                    
+                    处理 NULL 值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.7" data-path="pattern-matching.html">
+            
+                <a href="pattern-matching.html">
+            
+                    
+                    模式匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.8" data-path="counting-rows.html">
+            
+                <a href="counting-rows.html">
+            
+                    
+                    计算行数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4.9" data-path="multiple-tables.html">
+            
+                <a href="multiple-tables.html">
+            
+                    
+                    使用多个表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="getting-information.html">
+            
+                <a href="getting-information.html">
+            
+                    
+                    获取数据库和表的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="batch-mode.html">
+            
+                <a href="batch-mode.html">
+            
+                    
+                    在批处理模式使用 mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    常见查询示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="example-maximum-column.html">
+            
+                <a href="example-maximum-column.html">
+            
+                    
+                    列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="example-maximum-row.html">
+            
+                <a href="example-maximum-row.html">
+            
+                    
+                    包含某一行最大值的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="example-maximum-column-group.html">
+            
+                <a href="example-maximum-column-group.html">
+            
+                    
+                    每组中列的最大值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="example-maximum-column-group-row.html">
+            
+                <a href="example-maximum-column-group-row.html">
+            
+                    
+                    拥有某个字段的组间最大值的行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="example-user-variables.html">
+            
+                <a href="example-user-variables.html">
+            
+                    
+                    使用用户自定义变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="example-foreign-keys.html">
+            
+                <a href="example-foreign-keys.html">
+            
+                    
+                    使用外键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="searching-on-two-keys.html">
+            
+                <a href="searching-on-two-keys.html">
+            
+                    
+                    两个键上搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="calculating-days.html">
+            
+                <a href="calculating-days.html">
+            
+                    
+                    计算每日访问量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="example-auto-increment.html">
+            
+                <a href="example-auto-increment.html">
+            
+                    
+                    使用 AUTO_INCREMENT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="apache.html">
+            
+                <a href="apache.html">
+            
+                    
+                    在 Apache 中使用 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="programs.html">
+            
+                <a href="programs.html">
+            
+                    
+                    MySQL 程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="programs-client.html">
+            
+                <a href="programs-client.html">
+            
+                    
+                    MySQL 客户端程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql — MySQL 命令行客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="optimize-overview.html">
+            
+                <a href="optimize-overview.html">
+            
+                    
+                    优化概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="statement-optimization.html">
+            
+                <a href="statement-optimization.html">
+            
+                    
+                    优化 SQL 语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="optimization-indexes.html">
+            
+                <a href="optimization-indexes.html">
+            
+                    
+                    优化和索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="optimizing-database-structure.html">
+            
+                <a href="optimizing-database-structure.html">
+            
+                    
+                    优化数据库结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="optimizing-innodb.html">
+            
+                <a href="optimizing-innodb.html">
+            
+                    
+                    优化 InnoDB 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="optimizing-myisam.html">
+            
+                <a href="optimizing-myisam.html">
+            
+                    
+                    优化 MyISAM 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="optimizing-memory-tables.html">
+            
+                <a href="optimizing-memory-tables.html">
+            
+                    
+                    优化 MEMORY 表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="execution-plan-information.html">
+            
+                <a href="execution-plan-information.html">
+            
+                    
+                    理解查询执行计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="controlling-optimizer.html">
+            
+                <a href="controlling-optimizer.html">
+            
+                    
+                    控制查询优化器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="buffering-caching.html">
+            
+                <a href="buffering-caching.html">
+            
+                    
+                    缓冲和缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="locking-issues.html">
+            
+                <a href="locking-issues.html">
+            
+                    
+                    优化锁操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="optimizing-server.html">
+            
+                <a href="optimizing-server.html">
+            
+                    
+                    优化 MySQL 服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="optimize-benchmarking.html">
+            
+                <a href="optimize-benchmarking.html">
+            
+                    
+                    测量性能 (Benchmarking)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="thread-information.html">
+            
+                <a href="thread-information.html">
+            
+                    
+                    检查线程信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >输入查询</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="32-输入查询">3.2 输入查询</h2>
+<p>如上一节所述, 确认你已连接到服务器. 这样做并没有选择任何要使用的数据库, 但这样是可以的. 此时, 了解一下如何发出查询比直接创建表, 将数据加载到表中并从中检索数据更重要. 本节描述了输入查询的基本规则, 你可以使用几个查询来熟悉 <a href="mysql.html">mysql</a> 的工作原理.</p>
+<p>下面是一个简单的查询, 要求服务器告诉你它的版本号和当前日期. 如下面所示, 在 <code>mysql&gt;</code> 提示符下输入, 然后回车:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> VERSION(), <span class="hljs-built_in">CURRENT_DATE</span>;
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+--------------+</span>
+<span class="hljs-operator">|</span> VERSION() <span class="hljs-operator">|</span> <span class="hljs-built_in">CURRENT_DATE</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+--------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-number">5.8</span><span class="hljs-number">.0</span><span class="hljs-operator">-</span>m17 <span class="hljs-operator">|</span> <span class="hljs-number">2015</span><span class="hljs-number">-12</span><span class="hljs-number">-21</span>   <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+--------------+</span>
+<span class="hljs-number">1</span> <span class="hljs-type">row</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span> (<span class="hljs-number">0.02</span> sec)
+mysql<span class="hljs-operator">&gt;</span>
+</code></pre>
+<p>这个查询说明了 <a href="mysql.html">mysql</a> 的几个特点:</p>
+<ul>
+<li><p>一个查询通常由 <a href="GLOSSARY.html#sql" class="glossary-term" title="The Structured Query Language that is standard for performing database operations. Often divided into the categories DDL, DML, and queries. MySQL includes some additional statement categories such as replication. See Chapter 9, Language Structure for the building blocks of SQL syntax, Chapter 11, Data Types for the data types to use for MySQL table columns, Chapter 13, SQL Statements for details about SQL statements and their associated categories, and Chapter 12, Functions and Operators for standard and MySQL-specific functions to use in queries.">SQL</a> 语句和分号组成. (有一些例外, 分号可以省略. 前面提到的 <code>QUIT</code> 就是其中之一. 我们稍后讨论其他问题.)</p>
+</li>
+<li><p>当发出一个查询, <a href="mysql.html">mysql</a> 发送它到服务器执行并显示结果, 然后打印另一个 <code>mysql&gt;</code> 提示符, 说明它已经准备好进行另一个查询.</p>
+</li>
+<li><p><a href="mysql.html">mysql</a> 以表格(行和列)的形式显示查询输出. 第一行包含列的标签. 下面的行是查询结果. 通常, 列的标签是从数据库的表中获取的列的名称. 如果检索的是表达式的值而不是表的列(如刚才的示例), <a href="mysql.html">mysql</a> 使用表达式很深来标记列.</p>
+</li>
+<li><p><a href="mysql.html">mysql</a> 显示了返回多少行以及查询执行了多长时间, 这能让你大致了解服务器性能. 这些值并不精确, 因为他们显示的是系统时间(不是 CPU 或者机器时间), 而且收到服务器负载和网络延迟等因素的影响. (为简介起见, 本节中的其余示例又是没有显示 “rows in set” 行.)</p>
+</li>
+</ul>
+<p>关键字可以不区分大小写. 下列查询是等价的:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> VERSION(), <span class="hljs-built_in">CURRENT_DATE</span>;
+mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">select</span> version(), <span class="hljs-built_in">current_date</span>;
+mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SeLeCt</span> vErSiOn(), <span class="hljs-built_in">current_DATE</span>;
+</code></pre>
+<p>下面是另一个查询. 它演示了可以将 <a href="mysql.html">mysql</a> 用作简单的计算器:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">SIN</span>(PI()<span class="hljs-operator">/</span><span class="hljs-number">4</span>), (<span class="hljs-number">4</span><span class="hljs-operator">+</span><span class="hljs-number">1</span>)<span class="hljs-operator">*</span><span class="hljs-number">5</span>;
+<span class="hljs-operator">+</span><span class="hljs-comment">------------------+---------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-built_in">SIN</span>(PI()<span class="hljs-operator">/</span><span class="hljs-number">4</span>)      <span class="hljs-operator">|</span> (<span class="hljs-number">4</span><span class="hljs-operator">+</span><span class="hljs-number">1</span>)<span class="hljs-operator">*</span><span class="hljs-number">5</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">------------------+---------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-number">0.70710678118655</span> <span class="hljs-operator">|</span>      <span class="hljs-number">25</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">------------------+---------+</span>
+<span class="hljs-number">1</span> <span class="hljs-type">row</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span> (<span class="hljs-number">0.02</span> sec)
+</code></pre>
+<p>到目前位置显示的查询都是相对简短的单行语句. 你甚至可以在一行中输入多个语句, 用分号结尾即可:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> VERSION(); <span class="hljs-keyword">SELECT</span> NOW();
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+</span>
+<span class="hljs-operator">|</span> VERSION() <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-number">8.0</span><span class="hljs-number">.13</span>    <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">-----------+</span>
+<span class="hljs-number">1</span> <span class="hljs-type">row</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span> (<span class="hljs-number">0.00</span> sec)
+
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------------+</span>
+<span class="hljs-operator">|</span> NOW()               <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-number">2018</span><span class="hljs-number">-08</span><span class="hljs-number">-24</span> <span class="hljs-number">00</span>:<span class="hljs-number">56</span>:<span class="hljs-number">40</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------------+</span>
+<span class="hljs-number">1</span> <span class="hljs-type">row</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span> (<span class="hljs-number">0.00</span> sec)
+</code></pre>
+<p>查询不需要再一行中给出所有的内容, 因此需要多行内容的长查询不是问题. <a href="mysql.html">mysql</a> 通过查找结束分号来确定语句的结束位置, 而不是通过查找输入行的末尾. (换句话说, <a href="mysql.html">mysql</a> 接受自由格式的输入: 它收集输入行, 但直到看到分号才执行它们.)</p>
+<p>下面是一个简单的多行语句:</p>
+<pre><code class="lang-bash">mysql&gt; SELECT
+    -&gt; USER()
+    -&gt; ,
+    -&gt; CURRENT_DATE;
++---------------+--------------+
+| USER()        | CURRENT_DATE |
++---------------+--------------+
+| jon@localhost | 2018-08-24   |
++---------------+--------------+
+</code></pre>
+<p>在本例中, 注意在你输入多行查询的第一行之后, 提示符从 <code>mysql&gt;</code> 更改为 <code>-&gt;</code> . 这就是 <a href="mysql.html">mysql</a> 表示它还没看到完整的语句, 正等待其它语句. 提示符是你的朋友, 因为它提供了有价值的反馈. 如果你使用这种反馈, 你总是可以直到 <a href="mysql.html">mysql</a> 在等待什么.</p>
+<p>如果你决定不执行正在输入的查询, 请输入 <code>\c</code>:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span>
+    <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> <span class="hljs-keyword">USER</span>()
+    <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> \c
+mysql<span class="hljs-operator">&gt;</span>
+</code></pre>
+<p>这里也注意提示符. 输入<code>\c</code>后, 它会切换回 <code>mysql&gt;</code>, 提供反馈提示 <a href="mysql.html">mysql</a> 已经准备好进行新的查询.</p>
+<p>下表显示了你可能看到的每个提示符, 并总结了它们对于 <a href="mysql.html">mysql</a> 所处状态的含义.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">提示符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>mysql&gt;</code></td>
+<td style="text-align:center">准备好进行新的查询</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>-&gt;</code></td>
+<td style="text-align:center">等待多行查询中的下一行</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&apos;&gt;</code></td>
+<td style="text-align:center">Waiting for next line, waiting for completion of a string that began with a single quote (`)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&quot;&gt;</code></td>
+<td style="text-align:center">Waiting for next line, waiting for completion of a string that began with a double quote (`)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>`&gt;</code></td>
+<td style="text-align:center">Waiting for next line, waiting for completion of an identifier that began with a backtick (`)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>/*&gt;</code></td>
+<td style="text-align:center">Waiting for next line, waiting for completion of a comment that began with <code>/*</code></td>
+</tr>
+</tbody>
+</table>
+<p>当你打算在一行上发出查询, 但忘记终止分号时, 多行语句通常意外的发生. 在这种情况下, <a href="mysql.html">mysql</a> 等待更多输入:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">USER</span>()
+    <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span>
+</code></pre>
+<p>如果发生在你身上(你认为你已经输入语句, 但唯一的响应是 <code>-&gt;</code> 提示符), 则可能是 <a href="mysql.html">mysql</a> 在等待分号. 如果你没有注意到提示告诉你什么, 你可能会坐在那里一段时间, 然后意识到你需要做什么. 输入分号完成语句, 并且 <a href="mysql.html">mysql</a> 执行它:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">USER</span>()
+    <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> ;
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------+</span>
+<span class="hljs-operator">|</span> <span class="hljs-keyword">USER</span>()        <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------+</span>
+<span class="hljs-operator">|</span> jon<span class="hljs-variable">@localhost</span> <span class="hljs-operator">|</span>
+<span class="hljs-operator">+</span><span class="hljs-comment">---------------+</span>
+</code></pre>
+<p><code>&apos;&gt;</code> 和 <code>&quot;&gt;</code> prompts occur during string collection (另外一种 MySQL 等待字符串完成的方法). 在 MySQL, 你可以编写由 <code>&apos;</code> 或者 <code>&quot;</code> 字符包围的字符串(例如, <code>&apos;hello&apos;</code> 或者 <code>&quot;goodbye&quot;</code>), 并且 <a href="mysql.html">mysql</a> 允许你输入跨多行的字符串. 当你看到 <code>&apos;&gt;</code> 或者 <code>&quot;&gt;</code> 提示符时, 它意味着你输入了包含以 <code>&apos;</code> 或者 <code>&quot;</code> 引号字符开头的字符串, 但尚未输入终止该字符串的匹配引号使其终止. 这通常表示你无意中漏掉了引号字符. 例如:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> my_table <span class="hljs-keyword">WHERE</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&apos;Smith AND age &lt; 30;
+    &apos;</span><span class="hljs-operator">&gt;</span>
+</code></pre>
+<p>如果你输入此 <a href="https://dev.mysql.com/doc/refman/8.0/en/select.html" target="_blank"><code>SELECT</code></a> 语句, 然后按 <code>Enter</code> 等待结果, 什么都没有发生. 不要想为什么这个查询要花费这么久的时间, 注意 <code>&apos;&gt;</code> 提示符提供的线索. 它告诉你 <a href="mysql.html">mysql</a> 期望看到未结束的字符串的剩余部分. (你看到语句中的错误了吗? 字符串 <code>&apos;Smith</code> 缺少第二个单引号.)</p>
+<p>此时, 你需要做什么? 最简单的方法就是取消查询. 然而, 在本例中你不能只输入 <code>\c</code>, 因为 <a href="mysql.html">mysql</a> 将其解释为正在收集的字符串的一部分. 相反, 输入结束引号字符(这样 <a href="mysql.html">mysql</a> 就直到你已经完成了字符串输入), 然后输入 <code>\c</code>:</p>
+<pre><code class="lang-sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> my_table <span class="hljs-keyword">WHERE</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&apos;Smith AND age &lt; 30;
+    &apos;</span><span class="hljs-operator">&gt;</span> <span class="hljs-string">&apos;\c
+mysql&gt;
+</span></code></pre>
+<p>提示符更改为 <code>mysql&gt;</code>, 表示 <a href="mysql.html">mysql</a> 已经准备好进行新的查询.</p>
+<p><code>`&gt;</code> 提示符类似于 <code>&apos;&gt;</code> 和 <code>&quot;&gt;</code> 提示符, 但表示你已经开始但尚未结束反引号的标识符.</p>
+<p>知道 <code>&apos;&gt;</code>, <code>&quot;&gt;</code>, 和 <code>`&gt;</code> 提示符表示什么是非常重要的, 因为如果你错误的输入了一个未停止字符串, 那么你输入的任何其它行都被会 <a href="mysql.html">mysql</a> 忽略 —— 包括包含 <code>QUIT</code> 的行. 这可能非常让人疑惑, 特别是如果你不知道在取消当前查询之前需要提供停止引号.</p>
+<blockquote>
+<p><strong>注意</strong></p>
+<p>从现在开始, 多行语句的编写不再需要辅助 (<code>-&gt;</code> 或者其它)提示符, 以便更容易的复制和粘贴语句, 以便你自己尝试.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="connecting-disconnecting.html" class="navigation navigation-prev " aria-label="Previous page: 连接到服务器和从服务器断开">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="database-use.html" class="navigation navigation-next " aria-label="Next page: 创建和使用数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"输入查询","level":"1.4.2","depth":2,"next":{"title":"创建和使用数据库","level":"1.4.3","depth":2,"path":"database-use.md","ref":"database-use.md","articles":[{"title":"创建和选择数据库","level":"1.4.3.1","depth":3,"path":"creating-database.md","ref":"creating-database.md","articles":[]},{"title":"创建表","level":"1.4.3.2","depth":3,"path":"creating-tables.md","ref":"creating-tables.md","articles":[]},{"title":"将数据加载到表中","level":"1.4.3.3","depth":3,"path":"loading-tables.md","ref":"loading-tables.md","articles":[]},{"title":"从表中检索数据","level":"1.4.3.4","depth":3,"path":"retrieving-data.md","ref":"retrieving-data.md","articles":[{"title":"选择所有数据","level":"1.4.3.4.1","depth":4,"path":"selecting-all.md","ref":"selecting-all.md","articles":[]},{"title":"选择特定行","level":"1.4.3.4.2","depth":4,"path":"selecting-rows.md","ref":"selecting-rows.md","articles":[]},{"title":"选择指定列","level":"1.4.3.4.3","depth":4,"path":"selecting-columns.md","ref":"selecting-columns.md","articles":[]},{"title":"行排序","level":"1.4.3.4.4","depth":4,"path":"sorting-rows.md","ref":"sorting-rows.md","articles":[]},{"title":"日期计算","level":"1.4.3.4.5","depth":4,"path":"date-calculations.md","ref":"date-calculations.md","articles":[]},{"title":"处理 NULL 值","level":"1.4.3.4.6","depth":4,"path":"working-with-null.md","ref":"working-with-null.md","articles":[]},{"title":"模式匹配","level":"1.4.3.4.7","depth":4,"path":"pattern-matching.md","ref":"pattern-matching.md","articles":[]},{"title":"计算行数","level":"1.4.3.4.8","depth":4,"path":"counting-rows.md","ref":"counting-rows.md","articles":[]},{"title":"使用多个表","level":"1.4.3.4.9","depth":4,"path":"multiple-tables.md","ref":"multiple-tables.md","articles":[]}]}]},"previous":{"title":"连接到服务器和从服务器断开","level":"1.4.1","depth":2,"path":"connecting-disconnecting.md","ref":"connecting-disconnecting.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"entering-queries.md","mtime":"2023-05-26T23:32:20.371Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-05-26T23:32:30.995Z"},"basePath":".","book":{"language":"zh-cn"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
