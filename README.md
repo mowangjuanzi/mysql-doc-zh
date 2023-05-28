@@ -15,13 +15,13 @@ pnpm install
 实时查看
 
 ```bash
-pnpm serve
+pnpm docs:dev
 ```
 
 编译
 
 ```bash
-pnpm build
+pnpm docs:build
 ```
 
 ## 贡献

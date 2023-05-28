@@ -1,3 +1,5 @@
-_book/
+# https://github.com/vuejs/vitepress/blob/main/.gitignore
 .DS_Store
-/node_modules
+cache
+dist
+node_modules
