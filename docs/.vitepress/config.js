@@ -11,7 +11,10 @@ export default defineConfig({
           text: "MySQL 8.0 Reference Manual",
           items: [
             {
-              text: "MySQL 8.0 Reference Manual", link: "/en/"
+              text: "MySQL 8.0 Reference Manual", link: "/en/",
+            },
+            {
+              text: "Preface and Legal Notices", link: "/en/preface",
             }
           ]
         }
@@ -22,6 +25,9 @@ export default defineConfig({
           items: [
             {
               text: "MySQL 8.0 参考手册", link: "/zh/"
+            },
+            {
+              text: "前言和法律条款", link: "/zh/preface",
             }
           ]
         }
