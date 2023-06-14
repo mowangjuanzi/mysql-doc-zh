@@ -17,7 +17,13 @@ export default defineConfig({
               text: "Preface and Legal Notices", link: "/en/preface",
             }, {
               text: "Optimization",
-              link: "/en/optimization"
+              link: "/en/optimization",
+              items: [
+                {
+                  text: "Optimization Overview",
+                  link: "/en/optimize-overview.md"
+                }
+              ]
             }
           ]
         }
@@ -31,7 +37,13 @@ export default defineConfig({
             }, {
               text: "前言和法律条款", link: "/zh/preface",
             }, {
-              text: "优化", link: "/zh/optimization"
+              text: "优化", link: "/zh/optimization",
+              items: [
+                {
+                  text: "优化概述",
+                  link: "/zh/optimize-overview.md"
+                }
+              ]
             }
           ]
         }
