@@ -9,10 +9,10 @@ export default defineConfig({
     sidebar: {
       "/en/": [
         {
+          text: "MySQL 8.0 Reference Manual", 
+          link: "/en/",
           items: [
             {
-              text: "MySQL 8.0 Reference Manual", link: "/en/",
-            }, {
               text: "Preface and Legal Notices", link: "/en/preface",
             }, {
               text: "General Information", link: "/en/introduction",
@@ -31,10 +31,10 @@ export default defineConfig({
       ],
       "/zh/": [
         {
+          text: "MySQL 8.0 参考手册",
+          link: "/zh/",
           items: [
             {
-              text: "MySQL 8.0 参考手册", link: "/zh/"
-            }, {
               text: "前言和法律条款", link: "/zh/preface",
             }, {
               text: "基本信息", link: "/zh/introduction",
