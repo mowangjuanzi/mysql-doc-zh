@@ -15,6 +15,8 @@ export default defineConfig({
             }, {
               text: "Preface and Legal Notices", link: "/en/preface",
             }, {
+              text: "General Information", link: "/en/introduction",
+            }, {
               text: "Optimization",
               link: "/en/optimization",
               items: [
@@ -34,6 +36,8 @@ export default defineConfig({
               text: "MySQL 8.0 参考手册", link: "/zh/"
             }, {
               text: "前言和法律条款", link: "/zh/preface",
+            }, {
+              text: "基本信息", link: "/zh/introduction",
             }, {
               text: "优化", link: "/zh/optimization",
               items: [
