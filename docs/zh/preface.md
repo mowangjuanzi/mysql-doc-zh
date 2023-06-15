@@ -1,6 +1,8 @@
 # 前言和法律条款
 
-这是 MySQL 数据库系统 v8.0 到 v8.0.33 的参考手册。Differences between minor versions of MySQL 8.0 are noted in the present text with reference to release numbers (8.0.***x***)。有关许可信息，参阅[法律条款](#法律条款)。
+# Using custom anchors {#my-anchor}
+
+这是 MySQL 数据库系统 v8.0 到 v8.0.33 的参考手册。Differences between minor versions of MySQL 8.0 are noted in the present text with reference to release numbers (8.0.***x***)。有关许可信息，参阅[法律条款](#legal-notices)。
 
 本手册不打算用于较老版本的 MySQL 软件，因为 MySQL 8.0 与之前的版本存在很多功能以及其它方面的差异。如果你使用的是早期版本的 MySQL，请参阅对应的手册。例如，[*MySQL 5.7 参考手册*](https://dev.mysql.com/doc/refman/5.7/en/) 涵盖 5.7 系列 MySQL 软件版本.
 
@@ -8,7 +10,7 @@
 
 **许可信息—MySQL NDB Cluster 8.0.** 如果正在使用 MySQL NDB Cluster 8.0 *商业*版本，参阅 [MySQL NDB Cluster 8.0 商业版本发布许可信息用户手册](https://downloads.mysql.com/docs/licenses/mysqld-8.0-com-en.pdf)获取许可信息，包括可能包含在此商业版本中的第三方软件的许可信息。如果正在使用 MySQL NDB Cluster 8.0 *开源*版本，参阅 [MySQL NDB Cluster 8.0 社区版本发布许可信息用户手册](https://downloads.mysql.com/docs/licenses/cluster-8.0-gpl-en.pdf)获取许可信息，其中包括可能包含在该开源版本中的第三方软件的许可信息。
 
-## 法律条款
+## 法律条款{#legal-notices}
 
 Copyright © 1997，2023，Oracle and/or its affiliates。保留所有权利.
 
