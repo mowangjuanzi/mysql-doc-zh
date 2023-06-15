@@ -1,4 +1,4 @@
-# 简介
+# MySQL 8.0 参考手册
 
 ## 包含 MySQL NDB Cluster 8.0
 
