@@ -20,7 +20,7 @@
 
 4. ***安装发行版。***
 
-    从二进制发行版中安装 MySQL，使用[第 2.2 节 “在 Unix/Linux 上使用通用二进制文件安装 MySQL”](/binary-installation.html) 的说明。或者使用[安全部署指南](https://dev.mysql.com/doc/mysql-secure-deployment-guide/8.0/en/)，该指南提供了部署 MySQL 企业版服务器的通用二进制发行版部署程序，带有用于管理 MySQL 安装安全性的功能。
+    从二进制发行版中安装 MySQL，使用[第 2.2 节 “在 Unix/Linux 上使用通用二进制文件安装 MySQL”](/binary-installation.html) 的说明。或者使用[安全部署教程](https://dev.mysql.com/doc/mysql-secure-deployment-guide/8.0/en/)，该教程提供了部署 MySQL 企业版服务器的通用二进制发行版部署程序，带有用于管理 MySQL 安装安全性的功能。
     
     如果要从源代码或当前的开发源代码树安装 MySQL，请使用[第 2.8 节 “从源码安装 MySQL”](/source-installation.html)中的说明。
 

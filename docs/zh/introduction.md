@@ -14,7 +14,7 @@ MySQL 软件具有双重许可证。用户可以选择按照 GNU 通用公共许
 
 The following list describes some sections of particular interest in this manual:
 
-- 有关 MySQL 服务器性能的讨论，参阅[第 1.2.2 节 “MySQL 的主要功能”](features.html)。
+- 有关 MySQL Database Server 性能的讨论，参阅[第 1.2.2 节 “MySQL 的主要功能”](features.html)。
 
 - 有关 MySQL 新功能的概述，参阅[第 1.3 节“MySQL 8.0 的新特性”](mysql-nutshell.html)。每个版本的相关更改信息，参阅[发布说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/).
 
@@ -22,7 +22,7 @@ The following list describes some sections of particular interest in this manual
 
 - 有关 MySQL 数据库服务器的教程说明，参阅[第 3 章 教程](tutorial.html)。
 
-- 有关配置和管理 MySQL 服务器的说明，参阅[第 5 章 MySQL 服务器管理](server-administration.html).
+- 有关配置和管理 MySQL Server 的说明，参阅[第 5 章 MySQL Server 管理](server-administration.html).
 
 - 有关 MySQL 安全说明，参阅[第 6 章 安全](security.html)。
 
@@ -35,5 +35,5 @@ The following list describes some sections of particular interest in this manual
 - 有关新功能和错误的历史，参阅[发行说明](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/)。
 
 ::: tip 重要
-如果要报告问题或者错误，请使用[第 1.5 节 “如何报告错误或问题”](/bug-reports.html)中的说明。如果在 MySQL 服务器中找到安全漏洞，请立即发送电子邮件到 [<`secalert_us@oracle.com`>](secalert_us@oracle.com) 特别说明：消费者支持应将所有问题，包含安全问题报告给 Oracle 支持。
+如果要报告问题或者错误，请使用[第 1.5 节 “如何报告错误或问题”](/bug-reports.html)中的说明。如果在 MySQL Server 中找到安全漏洞，请立即发送电子邮件到 [<`secalert_us@oracle.com`>](secalert_us@oracle.com) 特别说明：消费者支持应将所有问题，包含安全问题报告给 Oracle 支持。
 :::
