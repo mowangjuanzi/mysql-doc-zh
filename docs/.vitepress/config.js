@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "MySQL 中文文档",
+  title: "MySQL 8.0 文档",
   ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -57,7 +57,12 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mowangjuanzi/mysql-chinese-doc' }
-    ]
+      { icon: 'github', link: 'https://github.com/mowangjuanzi/mysql-doc-zh' }
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/mowangjuanzi/mysql-chinese-doc/tree/master/docs/:path',
+      text: "在 Github 上查看"
+    }
   }
 })
