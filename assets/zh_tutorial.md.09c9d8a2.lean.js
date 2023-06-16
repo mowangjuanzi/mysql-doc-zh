@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as a,O as t}from"./chunks/framework.95b9d657.js";const f=JSON.parse('{"title":"第 3 章 教程","description":"","frontmatter":{},"headers":[],"relativePath":"zh/tutorial.md","filePath":"zh/tutorial.md"}'),l={name:"zh/tutorial.md"},s=t("",7),n=[s];function o(m,c,p,h,d,y){return r(),a("div",null,n)}const i=e(l,[["render",o]]);export{f as __pageData,i as default};
