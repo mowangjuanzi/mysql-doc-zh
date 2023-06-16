@@ -21,6 +21,8 @@ export default defineConfig({
             }, {
               text: "Tutorial", link: "/en/tutorial",
             }, {
+              text: "MySQL Programs", link: "/en/programs",
+            }, {
               text: "Optimization",
               link: "/en/optimization",
               items: [
@@ -46,6 +48,8 @@ export default defineConfig({
               text: "安装和升级 MySQL", link: "/zh/installing",
             }, {
               text: "教程", link: "/zh/tutorial",
+            }, {
+              text: "MySQL 程序", link: "/zh/programs",
             }, {
               text: "优化", link: "/zh/optimization",
               items: [

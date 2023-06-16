@@ -8,7 +8,7 @@
 $> mysql --help
 ```
 
-本章假设 [mysql](/mysql.html) 已经安装到计算机上。并且可以连接到 MySQL 服务器。如果不是这样。请联系 MySQL 管理员。(如果你是管理员。则需要参考本手册的相关部分。如[第 5 章 *MySQL Server 管理*](/server-administration.html).) 
+本章假设 [mysql](/mysql.html) 已经安装到计算机上。并且可以连接到 MySQL 服务器。如果不是这样。请联系 MySQL 管理员。(如果你是管理员。则需要参考本手册的相关部分。如[第 5 章 *MySQL Server 管理*](/server-administration.html)。)
 
 本章描述了创建和使用数据库的整个过程。如果你只对访问现有数据库感兴趣。可以跳过描述如何创建数据库和它包含的表的部分。
 
