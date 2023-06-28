@@ -1,4 +1,4 @@
-## 3.1 Connecting to and Disconnecting from the Server
+# 3.1 Connecting to and Disconnecting from the Server
 
 To connect to the server, you usually need to provide a MySQL user name when you invoke [**mysql**](mysql.html) and, most likely, a password. If the server runs on a machine other than the one where you log in, you must also specify a host name. Contact your administrator to find out what connection parameters you should use to connect (that is, what host, user name, and password to use). Once you know the proper parameters, you should be able to connect like this:
 
