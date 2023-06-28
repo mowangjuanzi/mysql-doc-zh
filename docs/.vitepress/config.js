@@ -23,6 +23,8 @@ export default defineConfig({
                 {
                   text: "Connecting to and Disconnecting from the Server", link: "/en/connecting-disconnecting"
                 }, {
+                  text: "Using mysql in Batch Mode", link: "/en/batch-mode",
+                }, {
                   text: "Using MySQL with Apache", link: "/en/apache"
                 }
               ]
@@ -56,6 +58,8 @@ export default defineConfig({
               text: "教程", link: "/zh/tutorial", items: [
                 {
                   text: "连接到服务器和从服务器断开", link: "/zh/connecting-disconnecting"
+                }, {
+                  text: "在批处理模式使用 mysql", link: "/zh/batch-mode",
                 }, {
                   text: "在 Apache 中使用 MySQL", link: "/zh/apache"
                 }

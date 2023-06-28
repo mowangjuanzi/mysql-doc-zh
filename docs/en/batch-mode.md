@@ -1,9 +1,9 @@
-## 3.5 Using mysql in Batch Mode
+# 3.5 Using mysql in Batch Mode
 
 In the previous sections, you used [`mysql`](mysql.md) interactively to enter statements and view the results. You can also run [`mysql`](mysql.md) in batch mode. To do this, put the statements you want to run in a file, then tell [`mysql`](mysql.md) to read its input from the file:
 
 ```bash
-shell> mysql < batch-file
+$> mysql < batch-file
 ```
 
 If you are running [`mysql`](mysql.md) under Windows and have some special characters in the file that cause problems, you can do this:
@@ -15,13 +15,13 @@ C:\> mysql -e "source batch-file"
 If you need to specify connection parameters on the command line, the command might look like this:
 
 ```bash
-shell> mysql -h host -u user -p < batch-file
+$> mysql -h host -u user -p < batch-file
 Enter password: ********
 ```
 
 When you use [`mysql`](mysql.md) this way, you are creating a script file, then executing the script.
 
-If you want the script to continue even if some of the statements in it produce errors, you should use the [`--force`](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_force) command-line option.
+If you want the script to continue even if some of the statements in it produce errors, you should use the [`--force`](mysql-command-options.html#option_mysql_force) command-line option.
 
 Why use a script? Here are a few reasons:
 
@@ -34,12 +34,12 @@ Why use a script? Here are a few reasons:
 - If you have a query that produces a lot of output, you can run the output through a pager rather than watching it scroll off the top of your screen:
 
     ```bash
-    shell> mysql < batch-file | more
+    $> mysql < batch-file | more
     ```
 - You can catch the output in a file for further processing:
 
     ```bash
-    shell> mysql < batch-file > mysql.out
+    $> mysql < batch-file > mysql.out
     ```
 
 - You can distribute your script to other people so that they can also run the statements.
@@ -80,4 +80,4 @@ mysql> source filename;
 mysql> \. filename
 ```
 
-See [Section 4.5.1.5, “Executing SQL Statements from a Text File”](https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html), for more information.
+See [Section 4.5.1.5, “Executing SQL Statements from a Text File”](mysql-batch-commands.html), for more information.

@@ -1,9 +1,9 @@
-## 3.5 在批处理模式使用 mysql
+# 3.5 在批处理模式使用 mysql
 
 在前几节, 你使用交互式 [`mysql`](mysql.md) 输入语句并查看结果. 你也可以在批处理模式中使用 [`mysql`](mysql.md). 要做到这一点, 把你想要运行的语句放在一个语句中, 然后告诉 [`mysql`](mysql.md) 从文件中读取:
 
 ```bash
-shell> mysql < batch-file
+$> mysql < batch-file
 ```
 
 如果你在 Windows 中运行 [`mysql`](mysql.md), 并且文件中有一些特殊字符可能会导致问题, 你可以这样做:
@@ -15,13 +15,13 @@ C:\> mysql -e "source batch-file"
 如果你需要在命令上指定连接参数, 命令可能如下所示:
 
 ```bash
-shell> mysql -h host -u user -p < batch-file
+$> mysql -h host -u user -p < batch-file
 Enter password: ********
 ```
 
 当你以这种方式使用 [`mysql`](mysql.md) 时, 你可以创建一个脚本文件, 然后执行该脚本.
 
-如果运行的脚本中一些语句产生了错误, 你应该使用 [`--force`](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_force) 命令行选项.
+如果运行的脚本中一些语句产生了错误, 你应该使用 [`--force`](mysql-command-options.html#option_mysql_force) 命令行选项.
 
 为什么要使用脚本? 原因如下:
 
@@ -34,12 +34,12 @@ Enter password: ********
 - 如果你有一个查询产生了大量的输出, 你可以通过 paper 来运行输出而不是看着它从你的屏幕顶部滚动:
 
     ```bash
-    shell> mysql < batch-file | more
+    $> mysql < batch-file | more
     ```
 - 你也可以从文件中捕获输出, 以便进一步处理
 
     ```bash
-    shell> mysql < batch-file > mysql.out
+    $> mysql < batch-file > mysql.out
     ```
 
 - 你也可以将脚本发给其他人, 以便其他人运行查询.
@@ -80,4 +80,4 @@ mysql> source filename;
 mysql> \. filename
 ```
 
-参阅 [Section 4.5.1.5, “从文本文件中执行 SQL 语句”](https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html)获取更多信息.
+参阅 [Section 4.5.1.5, “从文本文件中执行 SQL 语句”](mysql-batch-commands.html)获取更多信息.
