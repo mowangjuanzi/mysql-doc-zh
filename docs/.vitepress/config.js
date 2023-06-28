@@ -22,6 +22,8 @@ export default defineConfig({
               text: "Tutorial", link: "/en/tutorial", items: [
                 {
                   text: "Connecting to and Disconnecting from the Server", link: "/en/connecting-disconnecting"
+                }, {
+                  text: "Using MySQL with Apache", link: "/en/apache"
                 }
               ]
             }, {
@@ -54,6 +56,8 @@ export default defineConfig({
               text: "教程", link: "/zh/tutorial", items: [
                 {
                   text: "连接到服务器和从服务器断开", link: "/zh/connecting-disconnecting"
+                }, {
+                  text: "在 Apache 中使用 MySQL", link: "/zh/apache"
                 }
               ]
             }, {
