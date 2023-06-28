@@ -1,9 +1,9 @@
-### 3.6.8 Calculating Visits Per Day
+# 3.6.8 Calculating Visits Per Day
 
 The following example shows how you can use the bit group functions to calculate the number of days per month a user has visited a Web page.
 
 ```sql
-CREATE TABLE t1 (year YEAR(4), month INT UNSIGNED,
+CREATE TABLE t1 (year YEAR, month INT UNSIGNED,
              day INT UNSIGNED);
 INSERT INTO t1 VALUES(2000,1,1),(2000,1,20),(2000,1,30),(2000,2,2),
             (2000,2,23),(2000,2,23);

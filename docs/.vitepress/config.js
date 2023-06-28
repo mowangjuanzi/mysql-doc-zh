@@ -25,7 +25,11 @@ export default defineConfig({
                 }, {
                   text: "Using mysql in Batch Mode", link: "/en/batch-mode",
                 }, {
-                  text: "Examples of Common Queries", link: "/en/examples",
+                  text: "Examples of Common Queries", link: "/en/examples", items: [
+                    {
+                      text: "Calculating Visits Per Day", link: "/en/calculating-days",
+                    },
+                  ]
                 }, {
                   text: "Using MySQL with Apache", link: "/en/apache"
                 }
@@ -67,7 +71,11 @@ export default defineConfig({
                 }, {
                   text: "在批处理模式使用 mysql", link: "/zh/batch-mode",
                 }, {
-                  text: "常见查询示例", link: "/zh/examples",
+                  text: "常见查询示例", link: "/zh/examples", items: [
+                    {
+                      text: "计算每日访问量", link: "/zh/calculating-days",
+                    },
+                  ]
                 }, {
                   text: "在 Apache 中使用 MySQL", link: "/zh/apache"
                 }
