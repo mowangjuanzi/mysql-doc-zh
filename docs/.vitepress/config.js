@@ -19,7 +19,11 @@ export default defineConfig({
             }, {
               text: "Installing and Upgrading MySQL", link: "/en/installing",
             }, {
-              text: "Tutorial", link: "/en/tutorial",
+              text: "Tutorial", link: "/en/tutorial", items: [
+                {
+                  text: "Connecting to and Disconnecting from the Server", link: "/en/connecting-disconnecting"
+                }
+              ]
             }, {
               text: "MySQL Programs", link: "/en/programs",
             }, {
@@ -47,7 +51,11 @@ export default defineConfig({
             }, {
               text: "安装和升级 MySQL", link: "/zh/installing",
             }, {
-              text: "教程", link: "/zh/tutorial",
+              text: "教程", link: "/zh/tutorial", items: [
+                {
+                  text: "连接到服务器和从服务器断开", link: "/zh/connecting-disconnecting"
+                }
+              ]
             }, {
               text: "MySQL 程序", link: "/zh/programs",
             }, {
