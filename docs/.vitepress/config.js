@@ -37,7 +37,9 @@ export default defineConfig({
                 {
                   text: "Optimization Overview",
                   link: "/en/optimize-overview.md"
-                }
+                }, {
+                  text: "Buffering and Caching", link: "/en/buffering-caching"
+                }, 
               ]
             }
           ]
@@ -72,7 +74,9 @@ export default defineConfig({
                 {
                   text: "优化概述",
                   link: "/zh/optimize-overview.md"
-                }
+                }, {
+                  text: "缓冲和缓存", link: "/zh/buffering-caching"
+                }, 
               ]
             }
           ]
