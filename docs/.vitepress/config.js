@@ -38,6 +38,8 @@ export default defineConfig({
                   text: "Optimization Overview",
                   link: "/en/optimize-overview.md"
                 }, {
+                  text: "Controlling the Query Optimizer", link: "/en/controlling-optimizer"
+                }, {
                   text: "Buffering and Caching", link: "/en/buffering-caching"
                 }, 
               ]
@@ -74,6 +76,8 @@ export default defineConfig({
                 {
                   text: "优化概述",
                   link: "/zh/optimize-overview.md"
+                }, {
+                  text: "控制查询优化器", link: "/zh/controlling-optimizer"
                 }, {
                   text: "缓冲和缓存", link: "/zh/buffering-caching"
                 }, 
