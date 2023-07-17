@@ -1,4 +1,4 @@
-## 3.3 创建和使用数据库
+# 3.3 创建和使用数据库
 
 一旦知道如何输入 SQL 语句, 就可以访问数据库了.
 
@@ -31,7 +31,7 @@ mysql> SHOW DATABASES;
 
 `mysql` 数据库描述了用户访问权限.  `test` 数据库通常作为工作区供用户试用.
 
-语句显示的数据库列表在你的计算机上可能 有所不同; 如果你没有[`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) 权限, [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) 不会展示你没有权限的数据库. 参阅 [Section 13.7.6.14, “SHOW DATABASES 语法”](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html).
+语句显示的数据库列表在你的计算机上可能 有所不同; 如果你没有[`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) 权限, [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) 不会展示你没有权限的数据库. 参阅 [Section 13.7.7.14, “SHOW DATABASES 语句”](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html).
 
 如果 `test` 数据库存在, 尝试访问它:
 

@@ -25,6 +25,8 @@ export default defineConfig({
                 }, {
                   text: "Using mysql in Batch Mode", link: "/en/batch-mode",
                 }, {
+                  text: "Creating and Using a Database", link: "/en/database-use.md"
+                }, {
                   text: "Examples of Common Queries", link: "/en/examples", items: [
                     {
                       text: "Calculating Visits Per Day", link: "/en/calculating-days",
@@ -72,6 +74,8 @@ export default defineConfig({
                   text: "连接到服务器和从服务器断开", link: "/zh/connecting-disconnecting"
                 }, {
                   text: "在批处理模式使用 mysql", link: "/zh/batch-mode",
+                }, {
+                  text: "创建和使用数据库", link: "/zh/database-use.md",
                 }, {
                   text: "常见查询示例", link: "/zh/examples", items: [
                     {

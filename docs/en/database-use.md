@@ -1,4 +1,4 @@
-## 3.3 Creating and Using a Database
+# 3.3 Creating and Using a Database
 
 Once you know how to enter SQL statements, you are ready to access a database.
 
@@ -31,7 +31,7 @@ mysql> SHOW DATABASES;
 
 The `mysql` database describes user access privileges. The `test` database often is available as a workspace for users to try things out.
 
-The list of databases displayed by the statement may be different on your machine; [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) does not show databases that you have no privileges for if you do not have the [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) privilege. See [Section 13.7.6.14, “SHOW DATABASES Syntax”](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html).
+The list of databases displayed by the statement may be different on your machine; [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) does not show databases that you have no privileges for if you do not have the [`SHOW DATABASES`](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html) privilege. See [Section 13.7.7.14, “SHOW DATABASES Statement”](https://dev.mysql.com/doc/refman/8.0/en/show-databases.html).
 
 If the `test` database exists, try to access it:
 
