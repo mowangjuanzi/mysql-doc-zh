@@ -49,6 +49,8 @@ export default defineConfig({
                   text: "Buffering and Caching", link: "/en/buffering-caching"
                 }, 
               ]
+            }, {
+              text: "Data Types", link: "/en/data-types",
             }
           ]
         }
@@ -94,6 +96,8 @@ export default defineConfig({
                   text: "缓冲和缓存", link: "/zh/buffering-caching"
                 }, 
               ]
+            }, {
+              text: "数据结构", link: "/zh/data-types",
             }
           ]
         }
