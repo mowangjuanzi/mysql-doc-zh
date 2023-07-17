@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,O as l}from"./chunks/framework.95b9d657.js";const i=JSON.parse('{"title":"3.6 常见查询示例","description":"","frontmatter":{},"headers":[],"relativePath":"zh/examples.md","filePath":"zh/examples.md"}'),p={name:"zh/examples.md"},o=l("",9),e=[o];function C(c,t,r,y,A,D){return a(),n("div",null,e)}const B=s(p,[["render",C]]);export{i as __pageData,B as default};

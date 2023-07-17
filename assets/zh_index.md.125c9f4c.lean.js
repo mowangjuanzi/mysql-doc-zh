@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as t,U as a}from"./chunks/framework.76b79cb5.js";const m=JSON.parse('{"title":"MySQL 8.0 参考手册","description":"","frontmatter":{},"headers":[],"relativePath":"zh/index.md","filePath":"zh/index.md"}'),s={name:"zh/index.md"},o=a("",9),n=[o];function l(c,d,_,h,p,y){return r(),t("div",null,n)}const S=e(s,[["render",l]]);export{m as __pageData,S as default};

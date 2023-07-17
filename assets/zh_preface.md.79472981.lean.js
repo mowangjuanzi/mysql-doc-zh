@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as r,U as t}from"./chunks/framework.76b79cb5.js";const f=JSON.parse('{"title":"前言和法律条款","description":"","frontmatter":{},"headers":[],"relativePath":"zh/preface.md","filePath":"zh/preface.md"}'),o={name:"zh/preface.md"},n=t("",21),i=[n];function s(l,c,d,p,m,h){return a(),r("div",null,i)}const y=e(o,[["render",s]]);export{f as __pageData,y as default};
